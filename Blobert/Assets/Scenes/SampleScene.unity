@@ -640,7 +640,7 @@ GameObject:
   - component: {fileID: 2037646297}
   - component: {fileID: 2037646296}
   m_Layer: 8
-  m_Name: CratePinkGridSprite
+  m_Name: Wall
   m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
