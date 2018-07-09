@@ -21,8 +21,8 @@ public class GameMaster : MonoBehaviour {
         }
     }
 
-    public static void KillPlayer(BlobertScript player) {
-        Destroy(player.gameObject);
+    public static void KillPlayer() {
+        Destroy(player);
         gm.RespawnPlayer();
     }
 

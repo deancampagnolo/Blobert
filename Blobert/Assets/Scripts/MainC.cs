@@ -39,6 +39,10 @@ public class MainC : MonoBehaviour {
             }
         }
         anim.SetBool("Grounded", grounded);
+
+        if (IsPlayerDead()) {
+            GameMaster.KillPlayer();//FIXME KILL PLAYER DOESN"T WORK
+        }
         //print(rigidbody2D.velocity.x);
         //DecrimentWalkingSpeed();
         //rigidbody2D.
@@ -83,6 +87,12 @@ public class MainC : MonoBehaviour {
     public void Damage(int amount) {
         health -= amount;
         print(health);
+    }
+    public bool IsPlayerDead() {
+        if (health <= 0) {
+            return true;
+        }
+        return false;
     }
 
 }
