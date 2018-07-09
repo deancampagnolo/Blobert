@@ -8,6 +8,7 @@ public class MainC : MonoBehaviour {
     [SerializeField] private float maxSpeed = 10f;
     [SerializeField] private float jumpForce = 400f;
     [SerializeField] private LayerMask whatIsGround;
+    public int health = 100;
 
     private Transform groundCheck;//position marking where to check if the player is grounded
     
@@ -17,6 +18,8 @@ public class MainC : MonoBehaviour {
     private Animator anim;//reference to mainCharacter component
     private Rigidbody2D rigidbody2D;
     private bool facingRight = true;
+    private Vector2 currentWalkingSpeed;
+    private Vector2 walkingVelocity;
 
     // Use this for initialization
     private void Awake () {
@@ -36,7 +39,10 @@ public class MainC : MonoBehaviour {
             }
         }
         anim.SetBool("Grounded", grounded);
-
+        //print(rigidbody2D.velocity.x);
+        //DecrimentWalkingSpeed();
+        //rigidbody2D.
+        //rigidbody2D.velocity = currentWalkingSpeed;
     }
 
     public void Move(float move, bool jump) {
@@ -49,7 +55,9 @@ public class MainC : MonoBehaviour {
 
         anim.SetFloat("Speed", move);
 
-        rigidbody2D.velocity = new Vector2(move * maxSpeed, rigidbody2D.velocity.y);
+        //currentWalkingSpeed = new Vector2(move * maxSpeed, rigidbody2D.velocity.y);
+        walkingVelocity = new Vector2(move * maxSpeed, rigidbody2D.velocity.y);
+        SetVelocity();
 
         if(grounded && jump) {//why is the anim bool suggested here?
 
@@ -60,11 +68,21 @@ public class MainC : MonoBehaviour {
         }
     }
 
+    public void SetVelocity() {
+        rigidbody2D.velocity = walkingVelocity + GameMaster.GetRocketBlastOnPlayer();
+    }
+
     public void Attack(String attack, bool value) {
         anim.SetBool(attack, value);//FIXME FIGURE OUT HOW TO DO ANIM UNTIL IT FINISHES.
     }
 
+    public void AddToCurrentSpeed(Vector2 vector2) {
+        rigidbody2D.velocity = currentWalkingSpeed;
+    }
 
-
+    public void Damage(int amount) {
+        health -= amount;
+        print(health);
+    }
 
 }

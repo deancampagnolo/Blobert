@@ -8,8 +8,11 @@ using Pathfinding; //This is also imported;
 public class ZombieAiScript : MonoBehaviour {
 
     public Transform target;
-
+    [SerializeField] private LayerMask whatToHit;
     public float updateRate = 2f;
+    public int power = 10;
+    public float secondsBetweenAttacks = 1f;
+    private bool directionIsReversed = false;
 
     private Seeker seeker;
     private Rigidbody2D rb;
@@ -44,11 +47,32 @@ public class ZombieAiScript : MonoBehaviour {
         seeker.StartPath(transform.position, target.position, OnPathComplete);
 		
 	}
-	
-	// Update is called once per frame
-	void Update () {
+
+    private void IsInAttackingRange() {
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, target.position, Mathf.Infinity, whatToHit);
+        Debug.DrawLine(transform.position, target.position);
+        
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision) {
+        if (collision.gameObject.Equals(GameObject.FindGameObjectWithTag("Player"))) {
+            GameMaster.DamagePlayer(power);
+            StartCoroutine(RechargingForAttack());
+
+        }
+    }
+
+    // Update is called once per frame
+    void Update () {
 		
 	}
+
+    private IEnumerator RechargingForAttack() {
+
+        directionIsReversed = true;
+        yield return new WaitForSeconds(secondsBetweenAttacks);
+        directionIsReversed = false;
+    }
 
     IEnumerator SearchForPlayer() {
         GameObject sResult = GameObject.FindGameObjectWithTag("Player");
@@ -101,8 +125,12 @@ public class ZombieAiScript : MonoBehaviour {
             return;
         }
         pathIsEnded = false;
+        
 
         Vector3 dir = (path.vectorPath[currentWaypoint] - transform.position).normalized;
+        if (directionIsReversed) {
+            dir *= -1;
+        }
         dir *= speed * Time.fixedDeltaTime;
 
         rb.AddForce(dir, fMode);
@@ -112,6 +140,7 @@ public class ZombieAiScript : MonoBehaviour {
             currentWaypoint++;
             return;
         }
+        //IsInAttackingRange();
 
     }
 

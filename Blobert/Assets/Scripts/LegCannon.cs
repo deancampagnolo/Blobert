@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class LegCannon : MonoBehaviour {
 
-    public int Damage = 10;
+    public int damage = 10;
+    public int force = 30;
     [SerializeField] private LayerMask whatToHit;
     [SerializeField] private Transform laserBeam;
     [SerializeField] private Transform muzzleFlash;
@@ -44,8 +45,9 @@ public class LegCannon : MonoBehaviour {
                 //Debug.Log("hit" + hit.collider);
                 //Debug.Log(hit.distance + " vs " + laserClone.GetComponent<SpriteRenderer>().bounds.size.x);
                 if (hit.collider.tag.Equals("Enemy")){
-                    GameMaster.DamageEnemy(hit.collider.gameObject, Damage);
+                    GameMaster.DamageEnemy(hit.collider.gameObject, damage);
                 }
+                GameMaster.AddRocketBlastOnPlayer(new Vector2(force, 0));
             } else {
                 laserClone = Instantiate(laserBeam, transform.position, transform.rotation);
                 //laserClone.localScale += new Vector3(100, 0, 0);//FIXME Im pretty sure this is hard coding.

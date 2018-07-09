@@ -335,6 +335,15 @@ Prefab:
       propertyPath: speed
       value: 1000
       objectReference: {fileID: 0}
+    - target: {fileID: 1406211580158618, guid: cbe9ec3f4b6b1e843843754904a20ede, type: 2}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 114421595084963238, guid: cbe9ec3f4b6b1e843843754904a20ede,
+        type: 2}
+      propertyPath: whatToHit.m_Bits
+      value: 256
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cbe9ec3f4b6b1e843843754904a20ede, type: 2}
   m_IsPrefabParent: 0
@@ -512,6 +521,36 @@ Prefab:
         type: 2}
       propertyPath: whatIsGround.m_Bits
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 114419288140301282, guid: 072c516ab021f3148ad5cb206f729888,
+        type: 2}
+      propertyPath: force
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 50555336705339950, guid: 072c516ab021f3148ad5cb206f729888,
+        type: 2}
+      propertyPath: m_LinearDrag
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1396740686973058, guid: 072c516ab021f3148ad5cb206f729888, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1485557548834810, guid: 072c516ab021f3148ad5cb206f729888, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1963779061117924, guid: 072c516ab021f3148ad5cb206f729888, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1086190644448378, guid: 072c516ab021f3148ad5cb206f729888, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1082424612358596, guid: 072c516ab021f3148ad5cb206f729888, type: 2}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 072c516ab021f3148ad5cb206f729888, type: 2}
