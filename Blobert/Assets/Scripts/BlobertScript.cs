@@ -12,7 +12,7 @@ public class BlobertScript : MonoBehaviour {
 
     // Use this for initialization
     private void Awake() {
-        GameObject.Find("_GM");
+        //GameObject.Find("_GM");
     }
 
     void Start () {

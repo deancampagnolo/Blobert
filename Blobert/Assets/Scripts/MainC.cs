@@ -41,7 +41,8 @@ public class MainC : MonoBehaviour {
         anim.SetBool("Grounded", grounded);
 
         if (IsPlayerDead()) {
-            GameMaster.KillPlayer();//FIXME KILL PLAYER DOESN"T WORK
+            GameMaster.KillPlayer();
+            print("kill");//FIXME KILL PLAYER DOESN"T WORK
         }
         //print(rigidbody2D.velocity.x);
         //DecrimentWalkingSpeed();
