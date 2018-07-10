@@ -25,6 +25,10 @@ public class GameMaster : MonoBehaviour {
         beginningSpawnPoint = beginningSpawnPointForInspector;
     }
 
+    public static GameObject GetPlayer() {
+        return player;
+    }
+
     private void Start() {
         player = GameObject.Find("Player");
         

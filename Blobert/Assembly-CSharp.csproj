@@ -167,6 +167,7 @@
     <Compile Include="Assets\AstarPathfindingProject\Utilities\ProfileHelper.cs" />
     <Compile Include="Assets\AstarPathfindingProject\Utilities\RetainedGizmos.cs" />
     <Compile Include="Assets\AstarPathfindingProject\Utilities\UnityReferenceHelper.cs" />
+    <Compile Include="Assets\camera.cs" />
     <Compile Include="Assets\Scripts\AnimationListener.cs" />
     <Compile Include="Assets\Scripts\BlobertScript.cs" />
     <Compile Include="Assets\Scripts\GameMaster.cs" />
@@ -175,6 +176,7 @@
     <Compile Include="Assets\Scripts\MainCController.cs" />
     <Compile Include="Assets\Scripts\NPCStats.cs" />
     <Compile Include="Assets\Scripts\ZombieAiScript.cs" />
+    <Compile Include="Assets\Tiling.cs" />
     <None Include="Assets\AstarPathfindingProject\Plugins\DotNetZip\DotNetZipLicense.txt" />
     <None Include="Assets\AstarPathfindingProject\ExampleScenes\Materials\DiffuseAlwaysVisible.shader" />
     <None Include="Assets\AstarPathfindingProject\Plugins\dependencies.txt" />
