@@ -31,7 +31,7 @@ public class LegCannon : MonoBehaviour {
 
        if (direction < 0) {
 
-
+            GameMaster.AddRocketBlastOnPlayer(new Vector2(force, 0));
             Vector2 leftInfinity = new Vector2(transform.position.x-100, transform.position.y);
             RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.left, 100, whatToHit);
             RaycastHit2D hitk = Physics2D.Raycast(transform.position, Vector2.left, 100);
@@ -47,7 +47,7 @@ public class LegCannon : MonoBehaviour {
                 if (hit.collider.tag.Equals("Enemy")){
                     GameMaster.DamageEnemy(hit.collider.gameObject, damage);
                 }
-                GameMaster.AddRocketBlastOnPlayer(new Vector2(force, 0));
+                
             } else {
                 laserClone = Instantiate(laserBeam, transform.position, transform.rotation);
                 //laserClone.localScale += new Vector3(100, 0, 0);//FIXME Im pretty sure this is hard coding.
