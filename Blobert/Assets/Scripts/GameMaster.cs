@@ -49,11 +49,11 @@ public class GameMaster : MonoBehaviour {
     }
 
     public static void DamageEnemy(GameObject NPCObject, int amount) {
-        NPCObject.GetComponent<NPCStats>().Damage(amount);
+        NPCObject.GetComponent<ZombieAiScript>().Damage(amount);
     }
 
     public static void HealEnemy(GameObject NPCObject, int amount) {
-        NPCObject.GetComponent<NPCStats>().Heal(amount);
+        NPCObject.GetComponent<ZombieAiScript>().Heal(amount);
     }
 
     public static void RespawnPlayer(Transform playerPrefab, Transform beginningSpawnPoint) {

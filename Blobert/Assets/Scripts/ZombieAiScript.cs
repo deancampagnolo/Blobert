@@ -32,11 +32,16 @@ public class ZombieAiScript : MonoBehaviour {
     //public float nextWaypointDistance = 3
 
     private int currentWaypoint = 0;
-	// Use this for initialization
+    // Use this for initialization
 
-	void Start () {
+
+
+    private int health;
+
+    void Start () {
         seeker = GetComponent<Seeker>();
         rb = GetComponent<Rigidbody2D>();
+        health = 10;
 
         if(target == null) {
             if (!searchingForPlayer) {
@@ -64,8 +69,27 @@ public class ZombieAiScript : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-		
-	}
+        print(health);
+        if (IsDead()) {//I have no idea how this doesn't work.
+            Destroy(gameObject.transform.parent.gameObject);
+        }
+    }
+
+    public bool IsDead() {
+        if (health <= 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public void Damage(int amount) {
+        health -= amount;
+    }
+
+    public void Heal(int amount) {
+        health += amount;
+    }
 
     private IEnumerator RechargingForAttack() {
 
@@ -140,18 +164,11 @@ public class ZombieAiScript : MonoBehaviour {
             currentWaypoint++;
             return;
         }
+        print(health);
         //IsInAttackingRange();
 
     }
-
-
-
-
-
-
-
-
-
+    
 
 
 }

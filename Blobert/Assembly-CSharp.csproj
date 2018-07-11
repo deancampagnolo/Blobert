@@ -168,6 +168,8 @@
     <Compile Include="Assets\AstarPathfindingProject\Utilities\RetainedGizmos.cs" />
     <Compile Include="Assets\AstarPathfindingProject\Utilities\UnityReferenceHelper.cs" />
     <Compile Include="Assets\camera.cs" />
+    <Compile Include="Assets\EvilDiamond.cs" />
+    <Compile Include="Assets\Other\Attribution.cs" />
     <Compile Include="Assets\Scripts\AnimationListener.cs" />
     <Compile Include="Assets\Scripts\BlobertScript.cs" />
     <Compile Include="Assets\Scripts\GameMaster.cs" />
