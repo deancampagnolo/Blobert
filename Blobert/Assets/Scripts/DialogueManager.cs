@@ -9,6 +9,10 @@ public class DialogueManager : MonoBehaviour{
 	void Start () {
 	    setnances = new Queue<string>();	
 	}
+
+    public void StartDialogoue(Dialogue dialogue) {
+
+    }
 	
 	
 }

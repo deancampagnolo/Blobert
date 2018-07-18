@@ -285,6 +285,7 @@ MonoBehaviour:
   whatIsGround:
     serializedVersion: 2
     m_Bits: 512
+  maxHealth: 100
   health: 100
 --- !u!114 &114494703383751512
 MonoBehaviour:

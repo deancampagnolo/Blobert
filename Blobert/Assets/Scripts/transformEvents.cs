@@ -9,8 +9,11 @@ public class transformEvents : MonoBehaviour {
     public GameMaster gm;
     public GameObject evilMoop;
     private Transform pointOfNoReturn;
+    private DialogueManager dialogueManager;
 	// Use this for initialization
 	void Start () {
+        dialogueManager = GameObject.Find("Canvas").GetComponent<DialogueManager>();
+        
         events = new Queue<Transform>();
         pointOfNoReturn = GameObject.Find("Level3").transform.Find("Point of No Return");
         if(pointOfNoReturn == null) {
@@ -39,5 +42,8 @@ public class transformEvents : MonoBehaviour {
             PointOfNoReturnEvent(events.Peek().parent.Find("MoopSpawner"));
         }
 
+    }
+    public void TriggerDialogoue() {
+       // dialogueManager.
     }
 }

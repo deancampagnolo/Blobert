@@ -351,7 +351,8 @@ GameObject:
   - component: {fileID: 194456468}
   - component: {fileID: 194456467}
   - component: {fileID: 194456466}
-  - component: {fileID: 194456470}
+  - component: {fileID: 194456472}
+  - component: {fileID: 194456471}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -437,17 +438,101 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!225 &194456470
-CanvasGroup:
+--- !u!114 &194456471
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 194456465}
   m_Enabled: 1
-  m_Alpha: 0.75
-  m_Interactable: 1
-  m_BlocksRaycasts: 1
-  m_IgnoreParentGroups: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffb90d67b3ff1184d93b8564330d0cc2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &194456472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 194456465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de5e41acc888683459101918ca33f58f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: Blobert
+  sentances:
+  - Dont get hit retard.
+  - 
+  - 
+--- !u!1 &207648746
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 207648747}
+  - component: {fileID: 207648749}
+  - component: {fileID: 207648748}
+  m_Layer: 5
+  m_Name: Face
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &207648747
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 207648746}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1530147125}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: 40, y: 0}
+  m_SizeDelta: {x: 100, y: 90}
+  m_Pivot: {x: 0, y: 0.5}
+--- !u!114 &207648748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 207648746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: 300c6a536199c5b4b909dfbb1c94a469, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &207648749
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 207648746}
 --- !u!1001 &221194412
 Prefab:
   m_ObjectHideFlags: 0
@@ -819,7 +904,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a1c7354c6859304685fea9d82cc35cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  events: []
   gm: {fileID: 0}
   evilMoop: {fileID: 1406211580158618, guid: cbe9ec3f4b6b1e843843754904a20ede, type: 2}
 --- !u!1 &607328946
@@ -1801,8 +1885,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1067661591}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -31.24, y: -3.81, z: 0}
-  m_LocalScale: {x: 10000, y: 1, z: 0}
+  m_LocalPosition: {x: -31.24, y: -5.07, z: 0}
+  m_LocalScale: {x: 10000, y: 2, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 13
@@ -1933,7 +2017,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1225650547}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 3.22, z: -10}
+  m_LocalPosition: {x: 0, y: 2.8, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1968,7 +2052,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 7
+  orthographic size: 8
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -2310,6 +2394,8 @@ GameObject:
   - component: {fileID: 1530147127}
   - component: {fileID: 1530147126}
   - component: {fileID: 1530147128}
+  - component: {fileID: 1530147129}
+  - component: {fileID: 1530147130}
   m_Layer: 5
   m_Name: DialogueBox
   m_TagString: Untagged
@@ -2328,6 +2414,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1788773700}
+  - {fileID: 207648747}
   m_Father: {fileID: 194456469}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2348,7 +2435,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.7075472, g: 0.6574849, b: 0.6574849, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -2380,6 +2467,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffb90d67b3ff1184d93b8564330d0cc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1530147129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1530147124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de5e41acc888683459101918ca33f58f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: 
+  sentances: []
+--- !u!225 &1530147130
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1530147124}
+  m_Enabled: 1
+  m_Alpha: 0.5
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1577221193 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1045429001548304, guid: cbe9ec3f4b6b1e843843754904a20ede,
@@ -2676,7 +2787,6 @@ GameObject:
   - component: {fileID: 1788773700}
   - component: {fileID: 1788773703}
   - component: {fileID: 1788773702}
-  - component: {fileID: 1788773701}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -2697,22 +2807,11 @@ RectTransform:
   m_Father: {fileID: 1530147125}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -27}
-  m_SizeDelta: {x: 160, y: 30}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1788773701
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1788773699}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4cf45f2534fd194690e0b97a9c94fac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_AnchorMin: {x: 1, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 750, y: 50}
+  m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &1788773702
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2733,11 +2832,11 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_Font: {fileID: 12800000, guid: 89ee93151f9202a4fb16dacb5ab884cd, type: 3}
+    m_FontSize: 25
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 0
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -2745,7 +2844,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: Welcome to Blobert.
 --- !u!222 &1788773703
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2928,6 +3027,7 @@ GameObject:
   - component: {fileID: 1921030813}
   - component: {fileID: 1921030812}
   - component: {fileID: 1921030814}
+  - component: {fileID: 1921030815}
   m_Layer: 5
   m_Name: BlobertPicturesUI
   m_TagString: Untagged
@@ -3001,6 +3101,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ddf5e95e989cef4cbf18f5b183237f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!225 &1921030815
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1921030810}
+  m_Enabled: 1
+  m_Alpha: 0.75
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!4 &1947425972 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4080325642215686, guid: 7846e44f3c400d04f885f1ff59899459,
