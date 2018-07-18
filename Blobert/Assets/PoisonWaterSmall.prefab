@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 212827912230268676}
   - component: {fileID: 61568560015489864}
   m_Layer: 4
-  m_Name: PoisonWater
+  m_Name: PoisonWaterSmall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -57,7 +57,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 1, y: 0.664}
     newSize: {x: 2.5, y: 2.5}
     adaptiveTilingThreshold: 0.5
     drawMode: 0

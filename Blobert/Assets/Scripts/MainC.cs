@@ -8,7 +8,11 @@ public class MainC : MonoBehaviour {
     [SerializeField] private float maxSpeed = 10f;
     [SerializeField] private float jumpForce = 400f;
     [SerializeField] private LayerMask whatIsGround;
-    public int health = 100;
+    public int maxHealth = 100;
+    public int health;
+    private int maxBloodLust = 100;
+    private int bloodLust;
+    
 
     private Transform groundCheck;//position marking where to check if the player is grounded
     
@@ -29,8 +33,14 @@ public class MainC : MonoBehaviour {
         //anim = GetComponent<Animator>();
         rigidbody2D = GetComponent<Rigidbody2D>();
 	}
-	
+
+    private void Start() {
+        health = maxHealth;
+        bloodLust = 0;
+    }
+
     private void FixedUpdate() {
+        
         grounded = false;
         Collider2D[] colliders = Physics2D.OverlapCircleAll(groundCheck.position, groundedRadius, whatIsGround);
         for(int i = 0; i < colliders.Length; i++) {
@@ -77,23 +87,44 @@ public class MainC : MonoBehaviour {
         rigidbody2D.velocity = walkingVelocity + GameMaster.GetRocketBlastOnPlayer();
     }
 
+    public void AddToVelocity(Vector2 amount) {
+        rigidbody2D.velocity = rigidbody2D.velocity + amount;
+    }
+
     public void Attack(String attack, bool value) {
         anim.SetBool(attack, value);//FIXME FIGURE OUT HOW TO DO ANIM UNTIL IT FINISHES.
     }
 
-    public void AddToCurrentSpeed(Vector2 vector2) {
-        rigidbody2D.velocity = currentWalkingSpeed;
-    }
+   
 
     public void Damage(int amount) {
         health -= amount;
         print(health);
+        StaticCoroutine.DoCoroutine(GameMaster.flashScreenRed());
     }
     public bool IsPlayerDead() {
         if (health <= 0) {
             return true;
         }
         return false;
+    }
+    public int GetHealth() {
+        return health;
+    }
+    public int GetMaxHealth() {
+        return maxHealth;
+    }
+    public int GetBloodLust() {
+        return bloodLust;
+    }
+    public int GetMaxBloodLust() {
+        return maxBloodLust;
+    }
+    public void AddBloodLust(int amount) {
+        bloodLust += amount;
+    }
+    public void SubtractBloodLust(int amount) {
+        bloodLust -= amount;
     }
 
 }

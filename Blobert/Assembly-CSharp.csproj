@@ -167,9 +167,15 @@
     <Compile Include="Assets\AstarPathfindingProject\Utilities\ProfileHelper.cs" />
     <Compile Include="Assets\AstarPathfindingProject\Utilities\RetainedGizmos.cs" />
     <Compile Include="Assets\AstarPathfindingProject\Utilities\UnityReferenceHelper.cs" />
+    <Compile Include="Assets\BarCalculators.cs" />
     <Compile Include="Assets\camera.cs" />
+    <Compile Include="Assets\Dialogue.cs" />
+    <Compile Include="Assets\DialogueManager.cs" />
+    <Compile Include="Assets\EnvironmentalHazards.cs" />
     <Compile Include="Assets\EvilDiamond.cs" />
+    <Compile Include="Assets\FriendlyAnimalScript.cs" />
     <Compile Include="Assets\Other\Attribution.cs" />
+    <Compile Include="Assets\rightBite.cs" />
     <Compile Include="Assets\Scripts\AnimationListener.cs" />
     <Compile Include="Assets\Scripts\BlobertScript.cs" />
     <Compile Include="Assets\Scripts\GameMaster.cs" />
@@ -177,8 +183,11 @@
     <Compile Include="Assets\Scripts\MainC.cs" />
     <Compile Include="Assets\Scripts\MainCController.cs" />
     <Compile Include="Assets\Scripts\NPCStats.cs" />
+    <Compile Include="Assets\Scripts\StaticCoroutine.cs" />
     <Compile Include="Assets\Scripts\ZombieAiScript.cs" />
+    <Compile Include="Assets\Sheep.cs" />
     <Compile Include="Assets\Tiling.cs" />
+    <Compile Include="Assets\transformEvents.cs" />
     <None Include="Assets\AstarPathfindingProject\Plugins\DotNetZip\DotNetZipLicense.txt" />
     <None Include="Assets\AstarPathfindingProject\ExampleScenes\Materials\DiffuseAlwaysVisible.shader" />
     <None Include="Assets\AstarPathfindingProject\Plugins\dependencies.txt" />

@@ -8,6 +8,7 @@ TagManager:
   - Wall
   - Enemy
   - Background
+  - FriendlyAnimal
   layers:
   - Default
   - TransparentFX

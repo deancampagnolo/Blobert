@@ -15,9 +15,15 @@ public class GameMaster : MonoBehaviour {
     public static Vector2 rocketBlastOnPlayer;
     public static float minimumMomentumSpeed = 1f;//minimum speed needed to calculate momentum
     public static int momentumFactor = 20; // the speed divided by this is then subtracted to the speed (e.g. if speed is 30 with momentumFactor 4 then it would return 30 - (30/4);
+    public static GameObject screenFlashRed;
 
     private void Awake() {
         forInspectorVars();
+        player = GameObject.Find("Player");
+    }
+
+    private void Start() {
+        screenFlashRed = GameObject.Find("Canvas").transform.Find("ScreenFlashRed").gameObject;
     }
 
     private void forInspectorVars() {//FIXME I am pretty sure that this isn't right
@@ -29,10 +35,6 @@ public class GameMaster : MonoBehaviour {
         return player;
     }
 
-    private void Start() {
-        player = GameObject.Find("Player");
-        
-    }
 
     public static void KillPlayer() {
         print(player.name);
@@ -57,8 +59,8 @@ public class GameMaster : MonoBehaviour {
     }
 
     public static void RespawnPlayer(Transform playerPrefab, Transform beginningSpawnPoint) {
-        Instantiate(playerPrefab, beginningSpawnPoint.position, beginningSpawnPoint.rotation);
-        player = GameObject.FindGameObjectWithTag("Player");
+        player = Instantiate(playerPrefab, beginningSpawnPoint.position, beginningSpawnPoint.rotation).gameObject;
+        //player = GameObject.FindGameObjectWithTag("Player");
         if (player == null) {
             print("OHNO");
         }
@@ -104,5 +106,15 @@ public class GameMaster : MonoBehaviour {
         /*if(player != null) {
             print("yay");
         }*/
+    }
+
+    public static IEnumerator flashScreenRed() {
+        screenFlashRed.SetActive(true);
+        yield return new WaitForSeconds(.2f);
+        screenFlashRed.SetActive(false);
+
+    }
+    public void flashScreenRedStart() {
+      // StartCoroutine
     }
 }
