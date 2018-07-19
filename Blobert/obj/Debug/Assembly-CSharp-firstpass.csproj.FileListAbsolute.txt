@@ -505,3 +505,5 @@ C:\Users\momok\Desktop\Blobert-3512225680c8ad9af2a8ef6aea8a145cb6e36357\Blobert-
 C:\Users\momok\Desktop\Blobert-3512225680c8ad9af2a8ef6aea8a145cb6e36357\Blobert-3512225680c8ad9af2a8ef6aea8a145cb6e36357\Blobert\obj\Debug\Assembly-CSharp-firstpass.csproj.CopyComplete
 C:\Users\momok\Desktop\Blobert-3512225680c8ad9af2a8ef6aea8a145cb6e36357\Blobert-3512225680c8ad9af2a8ef6aea8a145cb6e36357\Blobert\obj\Debug\Assembly-CSharp-firstpass.dll
 C:\Users\momok\Desktop\Blobert-3512225680c8ad9af2a8ef6aea8a145cb6e36357\Blobert-3512225680c8ad9af2a8ef6aea8a145cb6e36357\Blobert\obj\Debug\Assembly-CSharp-firstpass.pdb
+C:\Users\momok\Documents\Blobert\Blobert\Temp\bin\Debug\TextMeshPro-2017.3-Editor.dll
+C:\Users\momok\Documents\Blobert\Blobert\Temp\bin\Debug\TextMeshPro-2017.3-Runtime.dll

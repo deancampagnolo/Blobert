@@ -7,8 +7,10 @@ public class GameMaster : MonoBehaviour {
     public static GameMaster gm;// not entirely sure why this is here
 
     public static Transform playerPrefab;
+    public static GameObject evilMoopPrefab;
     public static Transform beginningSpawnPoint;
     public Transform playerPrefabForInspector;
+    public GameObject evilMoopForInspector;
     public Transform beginningSpawnPointForInspector;
     public float fallOffMap;
     private static GameObject player;
@@ -16,6 +18,7 @@ public class GameMaster : MonoBehaviour {
     public static float minimumMomentumSpeed = 1f;//minimum speed needed to calculate momentum
     public static int momentumFactor = 20; // the speed divided by this is then subtracted to the speed (e.g. if speed is 30 with momentumFactor 4 then it would return 30 - (30/4);
     public static GameObject screenFlashRed;
+    public static GameObject canvas;
 
     private void Awake() {
         forInspectorVars();
@@ -23,16 +26,37 @@ public class GameMaster : MonoBehaviour {
     }
 
     private void Start() {
-        screenFlashRed = GameObject.Find("Canvas").transform.Find("ScreenFlashRed").gameObject;
+        canvas = GameObject.Find("Canvas");
+        screenFlashRed = canvas.transform.Find("ScreenFlashRed").gameObject;
+    }
+
+    private void FixedUpdate() {
+        rocketBlastOnPlayer = CalculateXMomentum(rocketBlastOnPlayer);
+        if (player == null) {//FIXME I DONT KNOW WHY THIS BELONGS HERE
+            player = GameObject.FindGameObjectWithTag("Player");
+            print("reedoo");
+        }
+        if (player == null) {
+            print("player is null");
+        }
+        
+    }
+
+    public static GameObject getCanvas() {
+        return canvas;
     }
 
     private void forInspectorVars() {//FIXME I am pretty sure that this isn't right
         playerPrefab = playerPrefabForInspector;
         beginningSpawnPoint = beginningSpawnPointForInspector;
+        evilMoopPrefab = evilMoopForInspector;
     }
 
     public static GameObject GetPlayer() {
         return player;
+    }
+    public static GameObject GetEvilMoop() {
+        return evilMoopPrefab;
     }
 
 
@@ -93,20 +117,7 @@ public class GameMaster : MonoBehaviour {
 	
 
 
-    private void FixedUpdate() {
-        //print(player.name);
-        rocketBlastOnPlayer = CalculateXMomentum(rocketBlastOnPlayer);
-        if(player == null) {//FIXME I DONT KNOW WHY THIS BELONGS HERE
-            player = GameObject.FindGameObjectWithTag("Player");
-            print("reedoo");
-        }
-        if(player == null) {
-            print("player is null");
-        }
-        /*if(player != null) {
-            print("yay");
-        }*/
-    }
+    
 
     public static IEnumerator flashScreenRed() {
         screenFlashRed.SetActive(true);

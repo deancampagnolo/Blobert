@@ -20,5 +20,6 @@ public class rightBite : MonoBehaviour {
         if (collision.gameObject.tag.Equals("FriendlyAnimal")) {
             mainC.AddBloodLust(collision.gameObject.GetComponent<FriendlyAnimalScript>().Eaten());
         }
+        //TODO implement eating an evil moop
     }
 }

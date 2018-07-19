@@ -168,26 +168,28 @@
     <Compile Include="Assets\AstarPathfindingProject\Utilities\RetainedGizmos.cs" />
     <Compile Include="Assets\AstarPathfindingProject\Utilities\UnityReferenceHelper.cs" />
     <Compile Include="Assets\Other\Attribution.cs" />
-    <Compile Include="Assets\Scripts\AnimationListener.cs" />
-    <Compile Include="Assets\Scripts\BarCalculators.cs" />
-    <Compile Include="Assets\Scripts\BlobertScript.cs" />
-    <Compile Include="Assets\Scripts\camera.cs" />
-    <Compile Include="Assets\Scripts\Dialogue.cs" />
-    <Compile Include="Assets\Scripts\DialogueManager.cs" />
-    <Compile Include="Assets\Scripts\EnvironmentalHazards.cs" />
-    <Compile Include="Assets\Scripts\EvilDiamond.cs" />
-    <Compile Include="Assets\Scripts\FriendlyAnimalScript.cs" />
-    <Compile Include="Assets\Scripts\GameMaster.cs" />
-    <Compile Include="Assets\Scripts\LegCannon.cs" />
-    <Compile Include="Assets\Scripts\MainC.cs" />
-    <Compile Include="Assets\Scripts\MainCController.cs" />
-    <Compile Include="Assets\Scripts\NPCStats.cs" />
-    <Compile Include="Assets\Scripts\rightBite.cs" />
-    <Compile Include="Assets\Scripts\Sheep.cs" />
-    <Compile Include="Assets\Scripts\StaticCoroutine.cs" />
-    <Compile Include="Assets\Scripts\Tiling.cs" />
-    <Compile Include="Assets\Scripts\transformEvents.cs" />
-    <Compile Include="Assets\Scripts\ZombieAiScript.cs" />
+    <Compile Include="Assets\Scripts\Having To Do With Prefabs\AnimationListener.cs" />
+    <Compile Include="Assets\Scripts\Having To Do With Prefabs\BlobertScript.cs" />
+    <Compile Include="Assets\Scripts\Having To Do With Prefabs\EnvironmentalHazards.cs" />
+    <Compile Include="Assets\Scripts\Having To Do With Prefabs\EvilDiamond.cs" />
+    <Compile Include="Assets\Scripts\Having To Do With Prefabs\FriendlyAnimalScript.cs" />
+    <Compile Include="Assets\Scripts\Having To Do With Prefabs\LegCannon.cs" />
+    <Compile Include="Assets\Scripts\Having To Do With Prefabs\MainC.cs" />
+    <Compile Include="Assets\Scripts\Having To Do With Prefabs\MainCController.cs" />
+    <Compile Include="Assets\Scripts\Having To Do With Prefabs\NPCStats.cs" />
+    <Compile Include="Assets\Scripts\Having To Do With Prefabs\rightBite.cs" />
+    <Compile Include="Assets\Scripts\Having To Do With Prefabs\Sheep.cs" />
+    <Compile Include="Assets\Scripts\Having To Do With Prefabs\ZombieAiScript.cs" />
+    <Compile Include="Assets\Scripts\Not Having To Do With Prefabs\BarCalculators.cs" />
+    <Compile Include="Assets\Scripts\Not Having To Do With Prefabs\camera.cs" />
+    <Compile Include="Assets\Scripts\Not Having To Do With Prefabs\Dialogue.cs" />
+    <Compile Include="Assets\Scripts\Not Having To Do With Prefabs\DialogueManager.cs" />
+    <Compile Include="Assets\Scripts\Not Having To Do With Prefabs\GameMaster.cs" />
+    <Compile Include="Assets\Scripts\Not Having To Do With Prefabs\StaticCoroutine.cs" />
+    <Compile Include="Assets\Scripts\Not Having To Do With Prefabs\Tiling.cs" />
+    <Compile Include="Assets\Scripts\Not Having To Do With Prefabs\TransformEventBeginningScript.cs" />
+    <Compile Include="Assets\Scripts\Not Having To Do With Prefabs\TransformEventLevelScript.cs" />
+    <Compile Include="Assets\Scripts\Not Having To Do With Prefabs\TransformEvents.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
@@ -221,6 +223,8 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
+    <Compile Include="Assets\TransformEventLevel4Script.cs" />
+    <Compile Include="Assets\TransformEventPlaceHolderScript.cs" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Anton OFL.txt" />
@@ -454,6 +458,12 @@
     <Reference Include="Pathfinding.Ionic.Zip.Reduced">
       <HintPath>C:/Users/momok/Documents/Blobert/Blobert/Assets/AstarPathfindingProject/Plugins/DotNetZip/Pathfinding.Ionic.Zip.Reduced.dll</HintPath>
     </Reference>
+    <Reference Include="TextMeshPro-2017.3-Editor">
+      <HintPath>C:/Users/momok/Documents/Blobert/Blobert/Assets/TextMesh Pro/Plugins/Editor DLL/TextMeshPro-2017.3-Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="TextMeshPro-2017.3-Runtime">
+      <HintPath>C:/Users/momok/Documents/Blobert/Blobert/Assets/TextMesh Pro/Plugins/Editor DLL/TextMeshPro-2017.3-Runtime.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.Analytics">
       <HintPath>C:/Users/momok/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.16/UnityEngine.Analytics.dll</HintPath>
     </Reference>
@@ -462,12 +472,6 @@
     </Reference>
     <Reference Include="UnityEngine.StandardEvents">
       <HintPath>C:/Users/momok/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.13/UnityEngine.StandardEvents.dll</HintPath>
-    </Reference>
-    <Reference Include="TextMeshPro-2017.3-Runtime">
-      <HintPath>C:/Users/momok/Documents/Blobert/Blobert/Assets/TextMesh Pro/Plugins/Editor DLL/TextMeshPro-2017.3-Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="TextMeshPro-2017.3-Editor">
-      <HintPath>C:/Users/momok/Documents/Blobert/Blobert/Assets/TextMesh Pro/Plugins/Editor DLL/TextMeshPro-2017.3-Editor.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>C:/Program Files/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unity/mscorlib.dll</HintPath>
