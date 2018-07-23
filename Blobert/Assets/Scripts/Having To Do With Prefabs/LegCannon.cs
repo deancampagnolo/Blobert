@@ -14,16 +14,29 @@ public class LegCannon : MonoBehaviour {
     [SerializeField] private float howLongTillDestroyFlash = .02f;//FIXME ^^^
     Transform laserClone;
     Transform flashClone;
-    bool bingbong  = false;
+    bool isFireing = false;
 
     public void Update() {
         if(laserClone!= null) {
             laserClone.SetPositionAndRotation(transform.position, transform.rotation);
             flashClone.SetPositionAndRotation(transform.position, transform.rotation);
         }
+    }
+
+    private void FixedUpdate() {
+        SetRocketBlastVelocity();
+    }
+
+    public void SetRocketBlastVelocity() {
+        if (isFireing) {
+            isFireing = false;
+            GameMaster.SetMainCRocketBlastVelocity(new Vector2(force,0));
+            
+        } else {
+            GameMaster.SetMainCRocketBlastVelocity(Vector2.zero);
+        }
         
 
-    
     }
 
     public void Fire(int direction) {//Should this be static?
@@ -31,7 +44,7 @@ public class LegCannon : MonoBehaviour {
 
        if (direction < 0) {
 
-            GameMaster.AddRocketBlastOnPlayer(new Vector2(force, 0));
+            isFireing = true;
             Vector2 leftInfinity = new Vector2(transform.position.x-100, transform.position.y);
             RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.left, 100, whatToHit);
             RaycastHit2D hitk = Physics2D.Raycast(transform.position, Vector2.left, 100);

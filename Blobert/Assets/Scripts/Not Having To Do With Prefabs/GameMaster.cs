@@ -12,11 +12,16 @@ public class GameMaster : MonoBehaviour {
     public Transform playerPrefabForInspector;
     public GameObject evilMoopForInspector;
     public Transform beginningSpawnPointForInspector;
-    public float fallOffMap;
+
     private static GameObject player;
+    private static float mainCWalkingVelocityX;
+    private static float mainCRocketBlastVelocityX;
+    private static float mainCOtherVelocity;
+    private static Vector2 mainCCurrentVelocity;
+
     public static Vector2 rocketBlastOnPlayer;
     public static float minimumMomentumSpeed = 1f;//minimum speed needed to calculate momentum
-    public static int momentumFactor = 20; // the speed divided by this is then subtracted to the speed (e.g. if speed is 30 with momentumFactor 4 then it would return 30 - (30/4);
+    public static int momentumFactor = 100; // the speed divided by this is then subtracted to the speed (e.g. if speed is 30 with momentumFactor 4 then it would return 30 - (30/4);
     public static GameObject screenFlashRed;
     public static GameObject canvas;
 
@@ -28,10 +33,14 @@ public class GameMaster : MonoBehaviour {
     private void Start() {
         canvas = GameObject.Find("Canvas");
         screenFlashRed = canvas.transform.Find("ScreenFlashRed").gameObject;
+        mainCWalkingVelocityX = 0;
+        mainCRocketBlastVelocityX = 0;
+        mainCOtherVelocity = 0;
+        mainCCurrentVelocity = Vector2.zero;
     }
 
     private void FixedUpdate() {
-        rocketBlastOnPlayer = CalculateXMomentum(rocketBlastOnPlayer);
+
         if (player == null) {//FIXME I DONT KNOW WHY THIS BELONGS HERE
             player = GameObject.FindGameObjectWithTag("Player");
             print("reedoo");
@@ -39,7 +48,7 @@ public class GameMaster : MonoBehaviour {
         if (player == null) {
             print("player is null");
         }
-        
+
     }
 
     public static GameObject getCanvas() {
@@ -90,34 +99,14 @@ public class GameMaster : MonoBehaviour {
         }
     }
 
-    public static void AddForceToNPC(GameObject theObject, Vector2 force) {
-        theObject.GetComponent<Rigidbody2D>().AddForce(force, ForceMode2D.Impulse);
-    }
 
-    public static void AddRocketBlastOnPlayer(Vector2 newVelocity) {
-        rocketBlastOnPlayer += newVelocity;
-    }
-
-    public static Vector2 GetRocketBlastOnPlayer() {
-        return rocketBlastOnPlayer;
-    }
-
-    public static Vector2 CalculateXMomentum(Vector2 Momentum) {
-        if (Momentum.x > minimumMomentumSpeed) {
-            return new Vector2(Momentum.x - (Momentum.x / momentumFactor), Momentum.y);
-        }
-        return new Vector2(0, Momentum.y);
-    }
-
-    public IEnumerator IsFallOff() {
-        while (true) {
-       
+    private static float CalculateMomentum(float velocity) {
+        if (Mathf.Abs(velocity) > minimumMomentumSpeed) {
+            return velocity - (velocity / momentumFactor);
+        } else {
+            return 0;
         }
     }
-	
-
-
-    
 
     public static IEnumerator flashScreenRed() {
         screenFlashRed.SetActive(true);
@@ -125,7 +114,42 @@ public class GameMaster : MonoBehaviour {
         screenFlashRed.SetActive(false);
 
     }
-    public void flashScreenRedStart() {
-      // StartCoroutine
+
+    public static void SetMainCWalkingVelocity(Vector2 amount) {
+        if (Mathf.Abs(amount.x) >= Mathf.Abs(mainCWalkingVelocityX)) {
+            mainCWalkingVelocityX = amount.x;
+        } else {
+           mainCWalkingVelocityX = CalculateMomentum(mainCWalkingVelocityX);
+        }
     }
+
+
+    public static void SetMainCRocketBlastVelocity(Vector2 amount) {
+        mainCRocketBlastVelocityX = CalculateMomentum(mainCRocketBlastVelocityX);
+        mainCRocketBlastVelocityX += amount.x;
+
+        /*if (Mathf.Abs(amount.x) > mainCRocketBlastVelocityX) {// this code snippit is if i wanted the rocket blast to go a fixed speed
+            mainCRocketBlastVelocityX = amount.x;
+        } else {
+            mainCRocketBlastVelocityX = CalculateMomentum(mainCRocketBlastVelocityX);
+        }*/
+        
+    }
+
+    /*public static void SetMainCOtherVelocity(Vector2 amount) {
+        mainCOtherVelocity = CalculateMomentum(mainCOtherVelocity);
+        mainCOtherVelocity += amount;
+    }*/
+
+    public static Vector2 GetMainCVelocity() {
+        CalculateMainCVelocity();
+        return mainCCurrentVelocity;
+    }
+
+    private static void CalculateMainCVelocity() {
+        //if(mainCWalkingVelocity < player.GetComponent<MainC>().GetMaxSpeed())
+        mainCCurrentVelocity = new Vector2(mainCWalkingVelocityX, 0) + player.GetComponent<MainC>().GetMainCVelocityY() + new Vector2(mainCRocketBlastVelocityX, 0);// + mainCOtherVelocity;//other velocity not used yet 
+    }
+
+
 }

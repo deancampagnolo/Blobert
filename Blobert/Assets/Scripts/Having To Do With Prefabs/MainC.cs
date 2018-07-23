@@ -58,6 +58,7 @@ public class MainC : MonoBehaviour {
         //DecrimentWalkingSpeed();
         //rigidbody2D.
         //rigidbody2D.velocity = currentWalkingSpeed;
+        //rigidbody2D.velocity = GameMaster.GetMainCVelocity();
     }
 
     public void Move(float move, bool jump) {
@@ -70,32 +71,30 @@ public class MainC : MonoBehaviour {
 
         anim.SetFloat("Speed", move);
 
-        //currentWalkingSpeed = new Vector2(move * maxSpeed, rigidbody2D.velocity.y);
-        walkingVelocity = new Vector2(move * maxSpeed, rigidbody2D.velocity.y);
-        SetVelocity();
-
-        if(grounded && jump) {//why is the anim bool suggested here?
+        //currentWalkingSpeed = 
+        
+        GameMaster.SetMainCWalkingVelocity( new Vector2(move * maxSpeed, 0));
+        rigidbody2D.velocity = GameMaster.GetMainCVelocity();
+        print("rigid Velocity" + rigidbody2D.velocity.x);
+        
+        if (grounded && jump) {
 
             grounded = false;
             anim.SetBool("Grounded", false);
-            rigidbody2D.AddForce(new Vector2(0f, jumpForce));
+            rigidbody2D.AddForce(new Vector2(200f, jumpForce));
 
         }
     }
 
-    public void SetVelocity() {
-        rigidbody2D.velocity = walkingVelocity + GameMaster.GetRocketBlastOnPlayer();
+    public Vector2 GetMainCVelocityY() {
+        return new Vector2(0, this.rigidbody2D.velocity.y);
     }
 
-    public void AddToVelocity(Vector2 amount) {
-        rigidbody2D.velocity = rigidbody2D.velocity + amount;
-    }
 
     public void Attack(String attack, bool value) {
         anim.SetBool(attack, value);//FIXME FIGURE OUT HOW TO DO ANIM UNTIL IT FINISHES.
     }
-
-   
+    
 
     public void Damage(int amount) {
         health -= amount;
@@ -125,6 +124,9 @@ public class MainC : MonoBehaviour {
     }
     public void SubtractBloodLust(int amount) {
         bloodLust -= amount;
+    }
+    public float GetMaxSpeed() {
+        return maxSpeed;
     }
 
 }

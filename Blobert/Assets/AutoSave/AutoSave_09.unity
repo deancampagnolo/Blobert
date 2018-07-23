@@ -731,12 +731,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 575493205}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1000, y: 1.3750979, z: -0.17578125}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 989.4057, y: 6.935219, z: 0.30859375}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_Father: {fileID: 1623283976}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &589651014
 GameObject:
@@ -768,9 +768,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerPrefabForInspector: {fileID: 4460826004038092, guid: 6b7373f66f4eb8d44a3267a33247e16e,
     type: 2}
+  evilMoopForInspector: {fileID: 1406211580158618, guid: cbe9ec3f4b6b1e843843754904a20ede,
+    type: 2}
   beginningSpawnPointForInspector: {fileID: 4879713775475118, guid: 7e168ed191cc86440bfbe5268661617a,
     type: 2}
-  fallOffMap: 0
 --- !u!4 &589651016
 Transform:
   m_ObjectHideFlags: 0
@@ -2047,7 +2048,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1361120207}
   m_Layer: 0
-  m_Name: MoopSpawner
+  m_Name: EvilMoopSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2173,7 +2174,6 @@ GameObject:
   - component: {fileID: 1530147127}
   - component: {fileID: 1530147126}
   - component: {fileID: 1530147128}
-  - component: {fileID: 1530147129}
   - component: {fileID: 1530147130}
   m_Layer: 5
   m_Name: DialogueBox
@@ -2246,19 +2246,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffb90d67b3ff1184d93b8564330d0cc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1530147129
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1530147124}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de5e41acc888683459101918ca33f58f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  name: 
-  sentances: []
 --- !u!225 &1530147130
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -2479,6 +2466,7 @@ Transform:
   - {fileID: 1632633622}
   - {fileID: 12055039}
   - {fileID: 1901877442}
+  - {fileID: 575493207}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

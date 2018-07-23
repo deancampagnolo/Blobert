@@ -772,7 +772,6 @@ MonoBehaviour:
     type: 2}
   beginningSpawnPointForInspector: {fileID: 4879713775475118, guid: 7e168ed191cc86440bfbe5268661617a,
     type: 2}
-  fallOffMap: 0
 --- !u!4 &589651016
 Transform:
   m_ObjectHideFlags: 0
@@ -2175,7 +2174,6 @@ GameObject:
   - component: {fileID: 1530147127}
   - component: {fileID: 1530147126}
   - component: {fileID: 1530147128}
-  - component: {fileID: 1530147129}
   - component: {fileID: 1530147130}
   m_Layer: 5
   m_Name: DialogueBox
@@ -2248,19 +2246,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffb90d67b3ff1184d93b8564330d0cc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1530147129
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1530147124}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de5e41acc888683459101918ca33f58f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  name: 
-  sentances: []
 --- !u!225 &1530147130
 CanvasGroup:
   m_ObjectHideFlags: 0
