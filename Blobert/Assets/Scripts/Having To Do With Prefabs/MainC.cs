@@ -52,7 +52,7 @@ public class MainC : MonoBehaviour {
 
         if (IsPlayerDead()) {
             GameMaster.KillPlayer();
-            print("kill");//FIXME KILL PLAYER DOESN"T WORK
+            
         }
         //print(rigidbody2D.velocity.x);
         //DecrimentWalkingSpeed();
@@ -75,7 +75,7 @@ public class MainC : MonoBehaviour {
         
         GameMaster.SetMainCWalkingVelocity( new Vector2(move * maxSpeed, 0));
         rigidbody2D.velocity = GameMaster.GetMainCVelocity();
-        print("rigid Velocity" + rigidbody2D.velocity.x);
+        
         
         if (grounded && jump) {
 
@@ -98,7 +98,7 @@ public class MainC : MonoBehaviour {
 
     public void Damage(int amount) {
         health -= amount;
-        print(health);
+        
         StaticCoroutine.DoCoroutine(GameMaster.flashScreenRed());
     }
     public bool IsPlayerDead() {

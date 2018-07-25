@@ -28,10 +28,11 @@ public class GameMaster : MonoBehaviour {
     private void Awake() {
         forInspectorVars();
         player = GameObject.Find("Player");
+        canvas = GameObject.Find("Canvas");
     }
 
     private void Start() {
-        canvas = GameObject.Find("Canvas");
+        
         screenFlashRed = canvas.transform.Find("ScreenFlashRed").gameObject;
         mainCWalkingVelocityX = 0;
         mainCRocketBlastVelocityX = 0;

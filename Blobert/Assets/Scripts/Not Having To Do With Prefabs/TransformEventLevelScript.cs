@@ -3,8 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public abstract class TransformEventLevelScript : MonoBehaviour {
-    int i = 1;
-	
+    public DialogueManager theDialogueManager;
+
+    protected void Start() {
+        
+        theDialogueManager = GameMaster.getCanvas().transform.Find("DialogueBox").GetComponent<DialogueManager>();
+        
+    }
+
 
     public float GetXPosition() {
         return this.transform.position.x;

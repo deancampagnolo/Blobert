@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class TransformEventBeginningScript : TransformEventLevelScript {
-
+    [SerializeField] private string[] dialogue;
 	// Use this for initialization
-	void Start () {
-		
+	new void Start () {//honestly confused why there needs to be new keyword here.
+        base.Start();
 	}
 	
 	// Update is called once per frame
@@ -15,6 +15,7 @@ public class TransformEventBeginningScript : TransformEventLevelScript {
 	}
 
     public override void DoEvent() {
-        print("yay it works");
+    
+        base.theDialogueManager.SendDialogue("troblob", "Hello blobert");
     }
 }

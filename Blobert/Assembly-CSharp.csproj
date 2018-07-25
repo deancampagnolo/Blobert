@@ -188,7 +188,9 @@
     <Compile Include="Assets\Scripts\Not Having To Do With Prefabs\StaticCoroutine.cs" />
     <Compile Include="Assets\Scripts\Not Having To Do With Prefabs\Tiling.cs" />
     <Compile Include="Assets\Scripts\Not Having To Do With Prefabs\TransformEventBeginningScript.cs" />
+    <Compile Include="Assets\Scripts\Not Having To Do With Prefabs\TransformEventLevel4Script.cs" />
     <Compile Include="Assets\Scripts\Not Having To Do With Prefabs\TransformEventLevelScript.cs" />
+    <Compile Include="Assets\Scripts\Not Having To Do With Prefabs\TransformEventPlaceHolderScript.cs" />
     <Compile Include="Assets\Scripts\Not Having To Do With Prefabs\TransformEvents.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
@@ -223,8 +225,6 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
-    <Compile Include="Assets\TransformEventLevel4Script.cs" />
-    <Compile Include="Assets\TransformEventPlaceHolderScript.cs" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Anton OFL.txt" />
