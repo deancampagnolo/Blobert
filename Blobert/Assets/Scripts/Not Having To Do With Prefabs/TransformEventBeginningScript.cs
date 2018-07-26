@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class TransformEventBeginningScript : TransformEventLevelScript {
     [SerializeField] private string[] dialogue;
 	// Use this for initialization
@@ -16,6 +17,8 @@ public class TransformEventBeginningScript : TransformEventLevelScript {
 
     public override void DoEvent() {
     
-        base.theDialogueManager.SendDialogue("troblob", "Hello blobert");
+        base.theDialogueManager.SendDialogue("troblob", "Hello Blobert");
+        base.theDialogueManager.SendDialogue("blobert", "Fuck off Troblob");
+        base.theDialogueManager.SendDialogue("troblob", "ok, have fun with this hehehe");
     }
 }
