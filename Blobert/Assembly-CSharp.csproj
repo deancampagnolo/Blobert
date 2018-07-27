@@ -167,6 +167,8 @@
     <Compile Include="Assets\AstarPathfindingProject\Utilities\ProfileHelper.cs" />
     <Compile Include="Assets\AstarPathfindingProject\Utilities\RetainedGizmos.cs" />
     <Compile Include="Assets\AstarPathfindingProject\Utilities\UnityReferenceHelper.cs" />
+    <Compile Include="Assets\DialogueManagerIntro.cs" />
+    <Compile Include="Assets\IntroEvents.cs" />
     <Compile Include="Assets\MainMenu.cs" />
     <Compile Include="Assets\Other\Attribution.cs" />
     <Compile Include="Assets\Scripts\Having To Do With Prefabs\AnimationListener.cs" />

@@ -11,11 +11,12 @@ public class DialogueManager : MonoBehaviour{
     private Image theImage;
     [SerializeField] private Sprite blobertFace;
     [SerializeField] private Sprite troblobFace;
+    [SerializeField] private Sprite questionMark;
 	// Use this for initialization
 	void Start () {
 	    sentence = new Queue<string[]>();
-        theText = GameMaster.getCanvas().transform.Find("DialogueBox").Find("Text").GetComponent<Text>();
-        theImage = GameMaster.getCanvas().transform.Find("DialogueBox").Find("Face").GetComponent<Image>();
+        theText = this.transform.Find("Text").GetComponent<Text>();
+        theImage = this.transform.Find("Face").GetComponent<Image>();
        
         // theImage.sprite;
     }
@@ -51,6 +52,9 @@ public class DialogueManager : MonoBehaviour{
                 break;
             case "troblob":
                 theImage.sprite = troblobFace;
+                break;
+            case "unknown":
+                theImage.sprite = questionMark;
                 break;
             default:
                 throw new System.Exception("ChangePicture Is called but the author does not exist");
