@@ -39,8 +39,9 @@ public class DialogueManager : MonoBehaviour{
         while (sentence.Count != 0) { 
             sendDialogueToScreenIsRunning = true;
             ChangePicture(sentence.Peek()[0]);
-            ChangeText(sentence.Dequeue()[1]);
+            ChangeText(sentence.Peek()[1]);
             yield return new WaitForSeconds(2f);//placeholder value possibly wait until audio is done if i choose to do voice acting.
+            sentence.Dequeue();
         }
         sendDialogueToScreenIsRunning = false;
     }
@@ -64,6 +65,11 @@ public class DialogueManager : MonoBehaviour{
 
     private void ChangeText(string text) {
         theText.text = text;
+    }
+
+    public string[] getSentencePeek() {
+
+        return sentence.Peek();
     }
 
 }
