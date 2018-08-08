@@ -4,12 +4,16 @@ using UnityEngine;
 
 public abstract class TransformEventLevelScript : MonoBehaviour {
     public DialogueManager theDialogueManager;
+    protected ObjectiveManager theObjectiveManager;
 
     protected void Start() {
         
         theDialogueManager = GameMaster.getCanvas().transform.Find("DialogueBox").GetComponent<DialogueManager>();
-        
+        theObjectiveManager = theDialogueManager.transform.parent.Find("ObjectiveBox").GetComponent<ObjectiveManager>();
+
     }
+
+
 
 
     public float GetXPosition() {

@@ -31,8 +31,8 @@ public class TransformEvents : MonoBehaviour {
 
     // Update is called once per frame
     void FixedUpdate() {
-        print(GameMaster.GetPlayer().transform.position.x);
-        print(allPoints[currentEvent].GetXPosition());
+        //print(GameMaster.GetPlayer().transform.position.x);
+        //print(allPoints[currentEvent].GetXPosition());
         if ((GameMaster.GetPlayer().transform.position.x > allPoints[currentEvent].GetXPosition())) {
             allPoints[currentEvent].DoEvent();
             currentEvent++;

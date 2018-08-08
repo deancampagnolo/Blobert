@@ -172,6 +172,7 @@
     <Compile Include="Assets\DialogueManagerIntro.cs" />
     <Compile Include="Assets\IntroEvents.cs" />
     <Compile Include="Assets\MainMenu.cs" />
+    <Compile Include="Assets\ObjectiveManager.cs" />
     <Compile Include="Assets\Other\Attribution.cs" />
     <Compile Include="Assets\Scripts\Having To Do With Prefabs\AnimationListener.cs" />
     <Compile Include="Assets\Scripts\Having To Do With Prefabs\BlobertScript.cs" />
