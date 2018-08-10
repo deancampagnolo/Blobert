@@ -17,6 +17,11 @@ public class IntroEvents : MonoBehaviour {
         GameObject canvas = GameObject.Find("Canvas");
 
         theDialogueManager = canvas.transform.Find("DialogueBox").GetComponent<DialogueManager>();
+        if (theDialogueManager == null) {
+            throw new System.Exception("DialogueBox Never Found");
+
+        }
+
         boy = canvas.transform.Find("Boy").gameObject;
         girl = canvas.transform.Find("Girl").gameObject;
         other = canvas.transform.Find("Other").gameObject;

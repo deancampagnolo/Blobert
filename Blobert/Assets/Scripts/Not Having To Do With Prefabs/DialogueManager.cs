@@ -12,16 +12,23 @@ public class DialogueManager : MonoBehaviour{
     [SerializeField] private Sprite blobertFace;
     [SerializeField] private Sprite troblobFace;
     [SerializeField] private Sprite questionMark;
-	// Use this for initialization
-	void Start () {
-	    sentence = new Queue<string[]>();
+    // Use this for initialization
+    private void Awake() {
+        sentence = new Queue<string[]>();
         theText = this.transform.Find("Text").GetComponent<Text>();
         theImage = this.transform.Find("Face").GetComponent<Image>();
+    }
+
+    void Start () { 
+        
        
         // theImage.sprite;
     }
 
     public void SendDialogue(string author, string lines) {//this is what other methods would be typing.
+        if (sentence == null) {
+            print("oh fuck");
+        }
         sentence.Enqueue(new string[] { author, lines });
         if(sendDialogueToScreenIsRunning == false) {
             StartCoroutine(SendDialogueToScreen());
