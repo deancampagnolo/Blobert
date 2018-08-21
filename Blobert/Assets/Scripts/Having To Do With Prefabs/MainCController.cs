@@ -110,6 +110,14 @@ public class MainCController : MonoBehaviour {
         return jump;//I'm not sure if when this is called it is ran before or after fixedUpdate
     }
 
+    public bool isWalkingLeft() {
+        return leftWalk;
+    }
+
+    public bool isWalkingRight() {
+        return rightWalk;
+    }
+
     public string getBiteKey() {
         return biteKey.ToString();
     }

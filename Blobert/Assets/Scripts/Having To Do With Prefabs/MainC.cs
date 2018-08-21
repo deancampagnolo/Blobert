@@ -62,7 +62,7 @@ public class MainC : MonoBehaviour {
     }
 
     public void Move(float move) {
-        print(move);
+        
         if(move == -1) { //notice that both anims have the setbool at "FacingRight" do not change.
             anim.SetBool("FacingRight", false);
             anim.SetFloat("Speed", -1);
@@ -87,7 +87,7 @@ public class MainC : MonoBehaviour {
     public void Jump(bool jump) {
         if(jump && grounded) {
             grounded = false;
-            anim.SetBool("grounded", false);
+            anim.SetBool("grounded", false);//FIXME for some reason when i jump it says that grounded doesn't work
             rigidbody2D.AddForce(new Vector2(200f, jumpForce));
         }
     }

@@ -27,17 +27,23 @@ public class ObjectiveManager : MonoBehaviour {
 
     private IEnumerator FlashTextRed() {
         for (int i = 0; i < timesToFlash*2; i++) {//times to flash is *2 because that would be a whole cycle of a flash
+
+            if (theText.color.Equals(Color.green)) {//if objective complete
+                break;
+            }
+
             if (i % 2 == 0) {
                theText.color = Color.red;
             } else {
                 theText.color = Color.white;
             }
-           
+          
             yield return new WaitForSeconds(.5f);
         }
     }
 
     public void ObjectiveCompleted() {
-        print("Objective Completed");
+        print("ObjectiveCompleted");
+        theText.color = Color.green;
     }
 }

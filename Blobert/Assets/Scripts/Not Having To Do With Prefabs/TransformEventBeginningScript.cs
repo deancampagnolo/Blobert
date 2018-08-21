@@ -5,9 +5,12 @@ using UnityEngine;
 
 
 public class TransformEventBeginningScript : TransformEventLevelScript {
-	// Use this for initialization
-	new void Start () {//honestly confused why there needs to be new keyword here.
+    // Use this for initialization
+    private bool objectiveLeftRightComplete;
+
+    new void Start () {//honestly confused why there needs to be new keyword here.
         base.Start();
+        objectiveLeftRightComplete = false;
 	}
 	
 
@@ -29,11 +32,38 @@ public class TransformEventBeginningScript : TransformEventLevelScript {
     }
 
     private IEnumerator StartObjectiveLeftRight() {
+        bool hasGoneLeft = false;
+        bool hasGoneRight = true;
         while (!theDialogueManager.getSentencePeek()[1].Equals("Aite")) {// while !=
             yield return null;
         }
         theObjectiveManager.SendObjective("Objective: Walk Left and Right");
+
+
+        yield return new WaitForSeconds(2f);
+        while (!objectiveLeftRightComplete) {// while not complete
+            if (hasGoneLeft == false) {
+                print(GameMaster.GetPlayer().GetComponent<MainCController>().isWalkingLeft());
+                if (GameMaster.GetPlayer().GetComponent<MainCController>().isWalkingLeft()) {
+                    hasGoneLeft = true;
+                }
+            }
+            if (hasGoneRight == false) {
+                print(GameMaster.GetPlayer().GetComponent<MainCController>().isWalkingRight());
+                if (GameMaster.GetPlayer().GetComponent<MainCController>().isWalkingRight()) {
+                    hasGoneRight = true;
+                }
+            }
+            if( hasGoneLeft && hasGoneRight) {
+                objectiveLeftRightComplete = true;
+            }
+            yield return null;
+        }
+        
+        theObjectiveManager.ObjectiveCompleted();
+
     }
+    
 
 
 }

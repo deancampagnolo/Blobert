@@ -1975,57 +1975,6 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1044907022}
   m_CullTransparentMesh: 0
---- !u!1001 &1050294672
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1986419313}
-    m_Modifications:
-    - target: {fileID: 4832345380798966, guid: 1222bbe3fcdf462449f49f7aff178d4f, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 93.52
-      objectReference: {fileID: 0}
-    - target: {fileID: 4832345380798966, guid: 1222bbe3fcdf462449f49f7aff178d4f, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0.1183753
-      objectReference: {fileID: 0}
-    - target: {fileID: 4832345380798966, guid: 1222bbe3fcdf462449f49f7aff178d4f, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: -0.49414062
-      objectReference: {fileID: 0}
-    - target: {fileID: 4832345380798966, guid: 1222bbe3fcdf462449f49f7aff178d4f, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4832345380798966, guid: 1222bbe3fcdf462449f49f7aff178d4f, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4832345380798966, guid: 1222bbe3fcdf462449f49f7aff178d4f, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4832345380798966, guid: 1222bbe3fcdf462449f49f7aff178d4f, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4832345380798966, guid: 1222bbe3fcdf462449f49f7aff178d4f, type: 2}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1413376893168250, guid: 1222bbe3fcdf462449f49f7aff178d4f, type: 2}
-      propertyPath: m_Name
-      value: DisappearingWall
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 1222bbe3fcdf462449f49f7aff178d4f, type: 2}
-  m_IsPrefabAsset: 0
---- !u!4 &1050294673 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4832345380798966, guid: 1222bbe3fcdf462449f49f7aff178d4f,
-    type: 2}
-  m_PrefabInternal: {fileID: 1050294672}
 --- !u!1 &1059324860
 GameObject:
   m_ObjectHideFlags: 0
@@ -3369,7 +3318,6 @@ Transform:
   - {fileID: 1037076568}
   - {fileID: 1700439950}
   - {fileID: 143349077}
-  - {fileID: 1050294673}
   m_Father: {fileID: 1623283976}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
