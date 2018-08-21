@@ -421,6 +421,31 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 224508260579769260, guid: 44457c5c5e84a3e4390dac3ff39187c7,
+        type: 2}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224508260579769260, guid: 44457c5c5e84a3e4390dac3ff39187c7,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224508260579769260, guid: 44457c5c5e84a3e4390dac3ff39187c7,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 224508260579769260, guid: 44457c5c5e84a3e4390dac3ff39187c7,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224508260579769260, guid: 44457c5c5e84a3e4390dac3ff39187c7,
+        type: 2}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 44457c5c5e84a3e4390dac3ff39187c7, type: 2}
   m_IsPrefabAsset: 0
@@ -514,10 +539,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -578,10 +603,10 @@ MonoBehaviour:
   m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1280, y: 720}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -1050,7 +1075,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   data:
-    dataString: UEsDBBQAAAgIAACAn+vGqRGtQAIAANAEAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVMuS2jAQ/BVK55CyeRSQW2JYkgO71JKtXHwR8hirkCWXHsvCFv+ekWxjxzkheh7q7hn5k3BpKmBW6a3m2U5lQL6NiD+TLyNCQ+yVWq4QjhHhRpVgNWff5Un43AhBJ3mudLnJTpAoYw3CORUGMKSV9dUSoc8R+cCf8cqXXPE0WfjTDU+raHTHIwNpQXep8axNbRPrPCeZoGUF2YHfoEufRm16XOdJlNOkeO5MCcFNQ4bYaxW0JrQyDqVgQsYpigsMoq9zBArgp8J6qv3ylzw3YBtWml7XXKNLdV/yQ9nC9yqpOdfU3qlw8OBet9z9Fx3HIZxrVf5sb42DIFtwdn6lV0aN7Tnbh9cd8Tj4c6HiTI8C/hQgn9VWKyczDFrtfKkzMFl3fx/CkgLYucNrqgPQVZ3hw+l4Dfeg/SMRvDwGH2c1cBAq+B2mDxon8wsJh90wTQtEPYs3A7/pqb9ETeCJa2Mx1KiUnt5ROe1TySZ45tU4mygtIcAN6QokFfa6xzZ2OMBBrHftIPJE/TNpLm9i7SsYlAS4y4+iQWivLo9hmUJddmCKF2cFl9CR9oFn9ClRUtb71fekLTs4nVPWKzs5nv27WmQOi3g2i5csXsWLPFqO50Anyyms6HR5pDBbkbB7XKJOKvY10cYenJrsmkvcs/YDMdpqWoVdzzS9bPmtVD3LuczVgWkA+VJ3eBAHjZfgq8w2GUeDDmAtl2He5DMlQrEzZOmjURqUbj6spmnXJSUVf1fWIylJwmcjJXdy/wtQSwMEFAAACAgAAICf60ZBS35tAAAAeAAAAAkAJABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQGrVipLLSrOzM9TslIw0TPUMzTTUVBKL0osyCgGihiCOKWZKSB2tJJpqrmhiYmhRbKhpaF5moGFrmlqopGFcaplorFFUmKqiaVSLFB9SWVBql9ibipET0BiSUZaZl5KZl66nntRZoo7yGil2FoAUEsBAi0AFAAACAgAAICf68apEa1AAgAA0AQAAAsAJAAAAAAAAAAAAAAAAAAAAGdyYXBoMC5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsBAi0AFAAACAgAAICf60ZBS35tAAAAeAAAAAkAJAAAAAAAAAAAAAAAjQIAAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLBQYAAAAAAgACALgAAABFAwAAAAA=
+    dataString: UEsDBBQAAAgIAACAn+s4AZIjQAIAANIEAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVMuS2jAQ/BVK55CyWSggt8SwJIfdpZZs5eKLkMdYhSy59Fhexb9nJNvYcU6Inp5R98zIN8KlqYBZpTeaZy8qA/JtRPyZfBkRGmLv1HKFcIwIN6oEqzn7Lg/CcyMEneS50uU6O0CijDUI51QYwJBW1mdLhG4jcsaf8dKnXPA0mfvTFU/LaHTHIwNpQXfUeNpSW2LNc5IJWlaQ7fgVevQoavlxTZTop+F48UwJwU2jhthLFcwmtDIOvSAh4xTdBQnR1xkCBfBDYb3WfvpbnhuwjSxNLyuusU11XfJD2cLXKqk51to+qXDwEF+XfPkvOo5DONeq/NneGgdDtuDs+E4vjBrba20fXnXC49CgExVHuhfwpwD5qjZaOZlh0GrnU52Byar7+zCWFMCOHV5LHYCu6jo+HI/3cA/ez4ng5T70cVoDO6FCv8P4QeNkfqHgsBymKYGoV/Fh4Dc99LeoCTxzbSyGGpfSy9srpz2VrEPPvBtnE6UlBLgRXYGkwl62WMYOBziI9a4dRJ6pfyfN5U2sfQaDlAB3/CgahLbq9BiWKdTpBUzx5qzgEjrRPvCKfUqUlPV+9XvSpu2czinrpR0cz/5dLTKDeTydxgsWL+N5Hi3GM6CTxRMs6dNiT2G6JGH3uESfVGxroU17cGqyKy5xz9ovxGijaRV2PdP0tOHXUvUFcpmrHdMA8q0u8VAOGm/BZ5mtM44d2oG1XIaBk1tKhGJHyNLHnWmwuj5bTdOuSkoq/qmsR1KShA9HSu7k/hdQSwMEFAAACAgAAICf60ZBS35tAAAAeAAAAAkAJABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQGrVipLLSrOzM9TslIw0TPUMzTTUVBKL0osyCgGihiCOKWZKSB2tJJpqrmhiYmhRbKhpaF5moGFrmlqopGFcaplorFFUmKqiaVSLFB9SWVBql9ibipET0BiSUZaZl5KZl66nntRZoo7yGil2FoAUEsBAi0AFAAACAgAAICf6zgBkiNAAgAA0gQAAAsAJAAAAAAAAAAAAAAAAAAAAGdyYXBoMC5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsBAi0AFAAACAgAAICf60ZBS35tAAAAeAAAAAkAJAAAAAAAAAAAAAAAjQIAAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLBQYAAAAAAgACALgAAABFAwAAAAA=
     upgradeData: 
     file_cachedStartup: {fileID: 0}
     data_cachedStartup: 
@@ -1232,7 +1257,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 812a2bed9b6a19e46a1950c870755762, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timesToFlash: 3
+  timesToFlash: 6
 --- !u!4 &688983186 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4258746806510270, guid: 8a2bff24ba569b84f869bd7bee09d0a8,
@@ -2091,8 +2116,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1067661591}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -31.24, y: -5.07, z: 0}
-  m_LocalScale: {x: 10000, y: 2, z: 0}
+  m_LocalPosition: {x: -31.24, y: -5.4, z: 0}
+  m_LocalScale: {x: 10000, y: 2.26, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
@@ -2808,24 +2833,6 @@ Prefab:
     - target: {fileID: 1329893722315344, guid: d7dfab60d61a21c49bb7223be35eac15, type: 2}
       propertyPath: m_Name
       value: forestOriginal
-      objectReference: {fileID: 0}
-    - target: {fileID: 1329893722315344, guid: d7dfab60d61a21c49bb7223be35eac15, type: 2}
-      propertyPath: m_Layer
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 212722518575636770, guid: d7dfab60d61a21c49bb7223be35eac15,
-        type: 2}
-      propertyPath: m_SortingLayerID
-      value: 1042069125
-      objectReference: {fileID: 0}
-    - target: {fileID: 212722518575636770, guid: d7dfab60d61a21c49bb7223be35eac15,
-        type: 2}
-      propertyPath: m_SortingLayer
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1329893722315344, guid: d7dfab60d61a21c49bb7223be35eac15, type: 2}
-      propertyPath: m_StaticEditorFlags
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d7dfab60d61a21c49bb7223be35eac15, type: 2}

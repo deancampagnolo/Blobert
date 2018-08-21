@@ -61,28 +61,34 @@ public class MainC : MonoBehaviour {
         //rigidbody2D.velocity = GameMaster.GetMainCVelocity();
     }
 
-    public void Move(float move, bool jump) {
-
-        if(move > .1) {
-            anim.SetBool("FacingRight", true);
-        } else if(move < -.1) {
+    public void Move(float move) {
+        print(move);
+        if(move == -1) { //notice that both anims have the setbool at "FacingRight" do not change.
             anim.SetBool("FacingRight", false);
+            anim.SetFloat("Speed", -1);
+        } else if(move == 1) {
+            anim.SetBool("FacingRight", true);
+            anim.SetFloat("Speed", 1);
+        } else if(move == 0) {//Fixme Mechanics may be too hard for people to get used to.
+            anim.SetFloat("Speed", 0);
         }
 
-        anim.SetFloat("Speed", move);
 
         //currentWalkingSpeed = 
-        
-        GameMaster.SetMainCWalkingVelocity( new Vector2(move * maxSpeed, 0));
-        rigidbody2D.velocity = GameMaster.GetMainCVelocity();
-        
-        
-        if (grounded && jump) {
 
+        if (move != 2) {//if 2 then "change nothing"
+            GameMaster.SetMainCWalkingVelocity(new Vector2(move * maxSpeed, 0));
+            rigidbody2D.velocity = GameMaster.GetMainCVelocity();
+        }
+        
+        
+    }
+
+    public void Jump(bool jump) {
+        if(jump && grounded) {
             grounded = false;
-            anim.SetBool("Grounded", false);
+            anim.SetBool("grounded", false);
             rigidbody2D.AddForce(new Vector2(200f, jumpForce));
-
         }
     }
 

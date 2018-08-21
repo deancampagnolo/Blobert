@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
+
 public class TransformEventBeginningScript : TransformEventLevelScript {
 	// Use this for initialization
 	new void Start () {//honestly confused why there needs to be new keyword here.
@@ -33,4 +34,6 @@ public class TransformEventBeginningScript : TransformEventLevelScript {
         }
         theObjectiveManager.SendObjective("Objective: Walk Left and Right");
     }
+
+
 }

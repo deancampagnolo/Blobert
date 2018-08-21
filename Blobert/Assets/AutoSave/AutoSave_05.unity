@@ -421,6 +421,31 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 224508260579769260, guid: 44457c5c5e84a3e4390dac3ff39187c7,
+        type: 2}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224508260579769260, guid: 44457c5c5e84a3e4390dac3ff39187c7,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224508260579769260, guid: 44457c5c5e84a3e4390dac3ff39187c7,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 224508260579769260, guid: 44457c5c5e84a3e4390dac3ff39187c7,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224508260579769260, guid: 44457c5c5e84a3e4390dac3ff39187c7,
+        type: 2}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 44457c5c5e84a3e4390dac3ff39187c7, type: 2}
   m_IsPrefabAsset: 0
@@ -514,10 +539,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -578,10 +603,10 @@ MonoBehaviour:
   m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1280, y: 720}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -1232,7 +1257,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 812a2bed9b6a19e46a1950c870755762, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timesToFlash: 3
+  timesToFlash: 6
 --- !u!4 &688983186 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4258746806510270, guid: 8a2bff24ba569b84f869bd7bee09d0a8,
@@ -2091,8 +2116,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1067661591}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -31.24, y: -5.07, z: 0}
-  m_LocalScale: {x: 10000, y: 2, z: 0}
+  m_LocalPosition: {x: -31.24, y: -5.4, z: 0}
+  m_LocalScale: {x: 10000, y: 2.26, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
@@ -2808,24 +2833,6 @@ Prefab:
     - target: {fileID: 1329893722315344, guid: d7dfab60d61a21c49bb7223be35eac15, type: 2}
       propertyPath: m_Name
       value: forestOriginal
-      objectReference: {fileID: 0}
-    - target: {fileID: 1329893722315344, guid: d7dfab60d61a21c49bb7223be35eac15, type: 2}
-      propertyPath: m_Layer
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 212722518575636770, guid: d7dfab60d61a21c49bb7223be35eac15,
-        type: 2}
-      propertyPath: m_SortingLayerID
-      value: 1042069125
-      objectReference: {fileID: 0}
-    - target: {fileID: 212722518575636770, guid: d7dfab60d61a21c49bb7223be35eac15,
-        type: 2}
-      propertyPath: m_SortingLayer
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1329893722315344, guid: d7dfab60d61a21c49bb7223be35eac15, type: 2}
-      propertyPath: m_StaticEditorFlags
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d7dfab60d61a21c49bb7223be35eac15, type: 2}
