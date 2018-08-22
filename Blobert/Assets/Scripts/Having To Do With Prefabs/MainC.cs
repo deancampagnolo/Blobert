@@ -87,7 +87,7 @@ public class MainC : MonoBehaviour {
     public void Jump(bool jump) {
         if(jump && grounded) {
             grounded = false;
-            anim.SetBool("grounded", false);//FIXME for some reason when i jump it says that grounded doesn't work
+            anim.SetBool("Grounded", false);//FIXME for some reason when i jump it says that grounded doesn't work
             rigidbody2D.AddForce(new Vector2(200f, jumpForce));
         }
     }

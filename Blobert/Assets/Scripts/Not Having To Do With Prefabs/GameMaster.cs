@@ -24,11 +24,13 @@ public class GameMaster : MonoBehaviour {
     public static int momentumFactor = 100; // the speed divided by this is then subtracted to the speed (e.g. if speed is 30 with momentumFactor 4 then it would return 30 - (30/4);
     public static GameObject screenFlashRed;
     public static GameObject canvas;
+    private static GameObject levels;
 
     private void Awake() {
         forInspectorVars();
         player = GameObject.Find("Player");
         canvas = GameObject.Find("Canvas");
+        levels = GameObject.Find("Levels");
     }
 
     private void Start() {
@@ -54,6 +56,10 @@ public class GameMaster : MonoBehaviour {
 
     public static GameObject getCanvas() {
         return canvas;
+    }
+
+    public static GameObject GetLevels() {
+        return levels;
     }
 
     private void forInspectorVars() {//FIXME I am pretty sure that this isn't right
