@@ -24,6 +24,7 @@ public class MainC : MonoBehaviour {
     private bool facingRight = true;
     private Vector2 currentWalkingSpeed;
     private Vector2 walkingVelocity;
+    private float lastVelocity;
 
     // Use this for initialization
     private void Awake () {
@@ -61,7 +62,7 @@ public class MainC : MonoBehaviour {
         //rigidbody2D.velocity = GameMaster.GetMainCVelocity();
     }
 
-    public void Move(float move) {
+    public void Move(float move) {//Left == -1, Right == 1, Both == 2, None == 0, Stop ==3
         
         if(move == -1) { //notice that both anims have the setbool at "FacingRight" do not change.
             anim.SetBool("FacingRight", false);
@@ -71,17 +72,30 @@ public class MainC : MonoBehaviour {
             anim.SetFloat("Speed", 1);
         } else if(move == 0) {//Fixme Mechanics may be too hard for people to get used to.
             anim.SetFloat("Speed", 0);
+        } else if(move == 3) {
+            anim.SetFloat("Speed", 0);
         }
 
 
-        //currentWalkingSpeed = 
+        if(move == 3) {
+            rigidbody2D.velocity = rigidbody2D.velocity * Vector2.up;//up is 0,1
+        } else if (move != 2 ) {//if 2 then "change nothing"
+            GameMaster.SetMainCWalkingVelocity(new Vector2(Mathf.Abs(move) * maxSpeed, 0));//it doesn't matter if it is -1 or 1 as it is the same velocity
 
-        if (move != 2) {//if 2 then "change nothing"
-            GameMaster.SetMainCWalkingVelocity(new Vector2(move * maxSpeed, 0));
-            rigidbody2D.velocity = GameMaster.GetMainCVelocity();
+            if (move == 1) {
+                rigidbody2D.velocity = GameMaster.GetMainCVelocity();
+            } else if (move == -1) {
+                rigidbody2D.velocity = GameMaster.GetMainCVelocity();
+                rigidbody2D.velocity = rigidbody2D.velocity * new Vector2(-1, 1);//reversing only the x value
+            } else {
+                
+            }
+
+            
         }
-        
-        
+        lastVelocity = rigidbody2D.velocity.x; //note that this isn't the true last velocity some of the time, it is only when move is not ==2
+
+
     }
 
     public void Jump(bool jump) {

@@ -97,6 +97,7 @@ public class TransformEventBeginningScript : TransformEventLevelScript {
         theDialogueManager.SendDialogue("troblob", "Alright all you have left to do is to shoot your leg cannon... its really easy");
         theDialogueManager.SendDialogue("troblob", "*I really hope that new thing that we installed into blobert 86 works");
         theDialogueManager.SendDialogue("troblob", "*And lets him shoot the bang bang pow pow thing");
+        theDialogueManager.SendDialogue("troblob", "Oh and I almost forgot, due to the installation of your momentum converter when you change direction it will conserve your momentum that you had and move you in the other direction with the same force"); //This probably needs to be changed
         theDialogueManager.SendDialogue("troblob", "Alright Begin!");
 
         StartCoroutine(StartObjectiveShootLegCannon());
@@ -142,13 +143,11 @@ public class TransformEventBeginningScript : TransformEventLevelScript {
         theObjectiveManager.SendObjective("Objective: Escape the forest by continuing to go to the right, regardless of what Troblob says");
         theDialogueManager.SendDialogue("blobert", "*time to get out of this trob-hole forrest");
         while (GameMaster.GetPlayer().transform.position.x < GameMaster.GetLevels().transform.Find("Level1").position.x) {
-            
             yield return null;
         }
+
         theObjectiveManager.ObjectiveCompleted();
         isBeginningScriptFinished = true;
-
-
     }
 
     public bool IsBeginningScriptFinished() {

@@ -14,6 +14,7 @@ public class MainCController : MonoBehaviour {
     private bool jump;
     private bool leftWalk;
     private bool rightWalk;
+    private bool stop;
 
     private KeyCode biteKey;
     private KeyCode legBlastKey;
@@ -21,6 +22,7 @@ public class MainCController : MonoBehaviour {
     private KeyCode jumpKey;
     private KeyCode leftWalkKey;
     private KeyCode rightWalkKey;
+    private KeyCode stopKey;
     private int directionWalking;
 
     // Use this for initialization
@@ -52,6 +54,7 @@ public class MainCController : MonoBehaviour {
         jumpKey = KeyCode.Space;
         leftWalkKey = KeyCode.A;
         rightWalkKey = KeyCode.D;
+        stopKey = KeyCode.S;
 
     }
 
@@ -65,6 +68,7 @@ public class MainCController : MonoBehaviour {
         jump = false;
         leftWalk = false;
         rightWalk = false;
+        stop = false;
 
 
         
@@ -74,8 +78,11 @@ public class MainCController : MonoBehaviour {
         jump = Input.GetKeyDown(jumpKey);
         leftWalk = Input.GetKey(leftWalkKey);
         rightWalk = Input.GetKey(rightWalkKey);
+        stop = Input.GetKey(stopKey);
 
-        if (leftWalk && !rightWalk) {
+        if (stop) {
+            directionWalking = 3;
+        } else if (leftWalk && !rightWalk) {
             directionWalking = -1;
         } else if (rightWalk && !leftWalk) {
             directionWalking = 1;
@@ -84,7 +91,10 @@ public class MainCController : MonoBehaviour {
         }
         else if(!leftWalk && !rightWalk) {
             directionWalking = 0;
+        } else {
+            throw new System.Exception("Unknown direction walking");
         }
+        
        
 
         mainCharacter.Move(directionWalking);
