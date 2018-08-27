@@ -6,7 +6,8 @@ public class TransformEventLevel1Script : TransformEventLevelScript {
 
 
     public override void DoEvent() {
-        throw new System.NotImplementedException();
+        theDialogueManager.SendDialogue("troblob", "UMM BLOBERT");
+        theDialogueManager.SendDialogue("troblob", "WHERE DO YOU THINK YOU ARE GOING?");
     }
 
     // Use this for initialization
