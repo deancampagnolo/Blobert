@@ -49,6 +49,7 @@ public class MainC : MonoBehaviour {
                 grounded = true;
             }
         }
+        
         anim.SetBool("Grounded", grounded);
 
         if (IsPlayerDead()) {
