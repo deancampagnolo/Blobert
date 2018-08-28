@@ -79,6 +79,7 @@ public class MainC : MonoBehaviour {
 
         if(move == 3) {
             rigidbody2D.velocity = rigidbody2D.velocity * Vector2.up;//up is 0,1
+            GameMaster.SetMainCVelocityToZero();
         } else if (move != 2 ) {//if 2 then "change nothing"
             GameMaster.SetMainCWalkingVelocity(new Vector2(Mathf.Abs(move) * maxSpeed, 0));//it doesn't matter if it is -1 or 1 as it is the same velocity
 
@@ -88,12 +89,16 @@ public class MainC : MonoBehaviour {
                 rigidbody2D.velocity = GameMaster.GetMainCVelocity();
                 rigidbody2D.velocity = rigidbody2D.velocity * new Vector2(-1, 1);//reversing only the x value
             } else {
-                
+                if (lastVelocity > 0) {
+                    rigidbody2D.velocity = GameMaster.GetMainCVelocity();
+                } else {
+                    rigidbody2D.velocity = GameMaster.GetMainCVelocity();
+                    rigidbody2D.velocity = rigidbody2D.velocity * new Vector2(-1, 1);//reversing only the x value
+                }
             }
-
-            
         }
-        lastVelocity = rigidbody2D.velocity.x; //note that this isn't the true last velocity some of the time, it is only when move is not ==2
+            lastVelocity = rigidbody2D.velocity.x; //note that this isn't the true last velocity some of the time, it is only when move is not ==2
+
 
 
     }

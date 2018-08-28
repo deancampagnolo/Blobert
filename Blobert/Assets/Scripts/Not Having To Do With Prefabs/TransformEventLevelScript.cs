@@ -22,4 +22,8 @@ public abstract class TransformEventLevelScript : MonoBehaviour {
 
     public abstract void DoEvent();
 
+    public virtual bool IsScriptCompleted() {//supposed to be overrided
+        return false;
+    }
+
 }

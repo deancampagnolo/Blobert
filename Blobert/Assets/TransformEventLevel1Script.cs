@@ -4,19 +4,22 @@ using UnityEngine;
 
 public class TransformEventLevel1Script : TransformEventLevelScript {
 
-
-    public override void DoEvent() {
-        theDialogueManager.SendDialogue("troblob", "UMM BLOBERT");
-        theDialogueManager.SendDialogue("troblob", "WHERE DO YOU THINK YOU ARE GOING?");
+    new void Start() {//honestly confused why there needs to be new keyword here.
+        base.Start();
     }
 
-    // Use this for initialization
-    void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    public override void DoEvent() {
+        theDialogueManager.SendDialogue("troblob", "YO DABBA DABBA BLOBERT");
+        theDialogueManager.SendDialogue("troblob", "WHERE DO YOU THINK YOU ARE GOING?");
+        theObjectiveManager.SendObjective("Objective: Continue going right");
+        StartCoroutine(ContinueGoingRightObjective());
+
+    }
+
+    private IEnumerator ContinueGoingRightObjective() {
+        while (GameMaster.GetPlayer().transform.position.x < GameMaster.GetLevels().transform.Find("Level2").position.x) {
+            yield return null;
+        }
+        theObjectiveManager.ObjectiveCompleted();
+    }
 }

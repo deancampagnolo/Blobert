@@ -33,7 +33,7 @@ public class TransformEvents : MonoBehaviour {
     void FixedUpdate() {
         //print(GameMaster.GetPlayer().transform.position.x);
         //print(allPoints[currentEvent].GetXPosition());
-        if ((GameMaster.GetPlayer().transform.position.x > allPoints[currentEvent].GetXPosition())) {
+        if ((GameMaster.GetPlayer().transform.position.x > allPoints[currentEvent].GetXPosition()) && !allPoints[currentEvent].IsScriptCompleted()) {//and not completed
             allPoints[currentEvent].DoEvent();
             currentEvent++;
         }

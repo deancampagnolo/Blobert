@@ -153,6 +153,11 @@ public class GameMaster : MonoBehaviour {
         return mainCCurrentVelocity;
     }
 
+    public static void SetMainCVelocityToZero() {//not sure if this is the most optimal way to do this.
+        mainCWalkingVelocityX = 0;
+        mainCRocketBlastVelocityX = 0;
+    }
+
     private static void CalculateMainCVelocity() {
         //if(mainCWalkingVelocity < player.GetComponent<MainC>().GetMaxSpeed())
         mainCCurrentVelocity = new Vector2(mainCWalkingVelocityX, 0) + player.GetComponent<MainC>().GetMainCVelocityY() + new Vector2(mainCRocketBlastVelocityX, 0);// + mainCOtherVelocity;//other velocity not used yet 

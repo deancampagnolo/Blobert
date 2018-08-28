@@ -709,6 +709,11 @@ Prefab:
       propertyPath: m_Size.y
       value: 1.4052374
       objectReference: {fileID: 0}
+    - target: {fileID: 114868341536077410, guid: 6b7373f66f4eb8d44a3267a33247e16e,
+        type: 2}
+      propertyPath: force
+      value: 40
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6b7373f66f4eb8d44a3267a33247e16e, type: 2}
   m_IsPrefabAsset: 0
@@ -1947,6 +1952,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   theDialogueManager: {fileID: 0}
+  skip: 1
 --- !u!1 &1044907022
 GameObject:
   m_ObjectHideFlags: 0
