@@ -199,6 +199,8 @@
     <Compile Include="Assets\Scripts\Not Having To Do With Prefabs\TransformEventPlaceHolderScript.cs" />
     <Compile Include="Assets\Scripts\Not Having To Do With Prefabs\TransformEvents.cs" />
     <Compile Include="Assets\TransformEventLevel1Script.cs" />
+    <Compile Include="Assets\TransformEventLevel2Script.cs" />
+    <Compile Include="Assets\TransformEventLevel3Script.cs" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\AstarPathfindingProject\Plugins\DotNetZip\DotNetZipLicense.txt" />

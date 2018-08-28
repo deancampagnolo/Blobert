@@ -7,20 +7,17 @@ using UnityEngine;
 public class TransformEventBeginningScript : TransformEventLevelScript {
     // Use this for initialization
     private bool objectiveLeftRightComplete;
-    private bool isBeginningScriptFinished;
-    public bool skip = false;
 
     new void Start () {//honestly confused why there needs to be new keyword here.
         base.Start();
         objectiveLeftRightComplete = false;
-        isBeginningScriptFinished = false;//FIXME This needs to be chnaged later if I want it to work when you join for another session.
 	}
 	
 
     public override void DoEvent() {
 
 
-        if (!(isBeginningScriptFinished || skip)) {
+        if (!isEventFinished) {
             theDialogueManager.SendDialogue("troblob", "Hello Blobert");
             theDialogueManager.SendDialogue("troblob", "Welcome to my favorite place in the whole world");
             theDialogueManager.SendDialogue("troblob", "Troblobian forest, named after yours truely");
@@ -150,14 +147,6 @@ public class TransformEventBeginningScript : TransformEventLevelScript {
         }
 
         theObjectiveManager.ObjectiveCompleted();
-        isBeginningScriptFinished = true;
+        isEventFinished = true;
     }
-
-   override public bool IsScriptCompleted() {
-        print("BeginningScript Finished");
-        return isBeginningScriptFinished;
-    }
-    
-
-
 }

@@ -4,15 +4,20 @@ using UnityEngine;
 
 public class TransformEventLevel1Script : TransformEventLevelScript {
 
+  
+
     new void Start() {//honestly confused why there needs to be new keyword here.
         base.Start();
     }
 
     public override void DoEvent() {
-        theDialogueManager.SendDialogue("troblob", "YO DABBA DABBA BLOBERT");
-        theDialogueManager.SendDialogue("troblob", "WHERE DO YOU THINK YOU ARE GOING?");
-        theObjectiveManager.SendObjective("Objective: Continue going right");
-        StartCoroutine(ContinueGoingRightObjective());
+
+        if (!isEventFinished) {
+            theDialogueManager.SendDialogue("troblob", "YO DABBA DABBA BLOBERT");
+            theDialogueManager.SendDialogue("troblob", "WHERE DO YOU THINK YOU ARE GOING?");
+            theObjectiveManager.SendObjective("Objective: Continue going right");
+            StartCoroutine(ContinueGoingRightObjective());
+        }
 
     }
 
