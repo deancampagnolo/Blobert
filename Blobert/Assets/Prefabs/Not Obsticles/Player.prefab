@@ -132,7 +132,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1189889096551970}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.477, z: 0}
+  m_LocalPosition: {x: 333.6, y: -1.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4059464709329260}
@@ -181,7 +181,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1.25
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 7d1c7c13ded78bd4d9b83488b429b02e, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -224,7 +224,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 1
   serializedVersion: 2
-  m_Size: {x: 0.6850889, y: 1.4052374}
+  m_Size: {x: 0.79, y: 1.4052374}
   m_EdgeRadius: 0
 --- !u!61 &61420252185409398
 BoxCollider2D:
@@ -336,7 +336,7 @@ MonoBehaviour:
   force: 40
   whatToHit:
     serializedVersion: 2
-    m_Bits: 1280
+    m_Bits: 1792
   laserBeam: {fileID: 4807020410973028, guid: e9050d055bf33b2498235b26632ac19b, type: 2}
   muzzleFlash: {fileID: 4846296743160506, guid: ed1456d2bd099c5478503a96dd094deb,
     type: 2}

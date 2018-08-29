@@ -18,15 +18,9 @@ public class TransformEvents : MonoBehaviour {
         
         
         //allPoints = (TransformEventLevelScript[])ReverseOrderOfArray(allPoints);
-        print(allPoints.Length);
-        foreach (TransformEventLevelScript i in allPoints) {
-            print(i);
-        }
         OrganizeAllPoints();
-        foreach (TransformEventLevelScript i in allPoints) {
-            print(i);
-        }
-
+        RemoveSkipPoints();
+        
     }
 
     // Update is called once per frame
@@ -62,10 +56,34 @@ public class TransformEvents : MonoBehaviour {
         }
         
     }
+    
+    private void RemoveSkipPoints() {
+        int counter = 0;
+
+        for(int i = 0; i<allPoints.Length; i++) {
+            if (allPoints[i].IsScriptCompleted()) { 
+                allPoints[i] = null;
+            } else {
+                counter++;
+            }
+        }
+
+        TransformEventLevelScript[] newAllPoints = new TransformEventLevelScript[counter];
+
+        int currentNewIndex = 0;
+
+        for(int i = 0; i<allPoints.Length; i++) {
+            if(allPoints[i]!= null) {
+                newAllPoints[currentNewIndex] = allPoints[i];
+                currentNewIndex++;
+            }
+        }
+        allPoints = newAllPoints;
+    }
 
     private int GetIndexOfToStringInAllPoints(string theString, int minimumIndex) {
         for(int i = minimumIndex; i<allPoints.Length; i++) {
-            print(allPoints[i].name);
+            
             if (allPoints[i].name.Equals(theString)) {
                 return i;
             }

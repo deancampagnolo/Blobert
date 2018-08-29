@@ -9,6 +9,7 @@ public class TransformEventLevel2Script : TransformEventLevelScript {
     }
 
     public override void DoEvent() {
+        print("level2 DoEvent");
         if (!isEventFinished) {
             theDialogueManager.SendDialogue("troblob", "Blobert please wait, pls ;(");
             theDialogueManager.SendDialogue("troblob", "I hope you hit that spike over there >:)");
