@@ -13,6 +13,8 @@ public class ZombieAiScript : MonoBehaviour {
     public int power = 10;
     public float secondsBetweenAttacks = 1f;
     private bool directionIsReversed = false;
+    [SerializeField] private float amountAboveTarget = 0;
+    private Vector3 amountAboveTargetVector3;
 
     private Seeker seeker;
     private Rigidbody2D rb;
@@ -43,13 +45,15 @@ public class ZombieAiScript : MonoBehaviour {
         rb = GetComponent<Rigidbody2D>();
         health = 10;
 
+        amountAboveTargetVector3 = new Vector3(0, amountAboveTarget);
+
         if(target == null) {
             if (!searchingForPlayer) {
                 searchingForPlayer = true;
                 StartCoroutine(SearchForPlayer());
             }
         }
-        seeker.StartPath(transform.position, target.position, OnPathComplete);
+        seeker.StartPath(transform.position, target.position + amountAboveTargetVector3, OnPathComplete);
 		
 	}
 
@@ -69,7 +73,7 @@ public class ZombieAiScript : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-        print(health);
+
         if (IsDead()) {//I have no idea how this doesn't work.
             Destroy(gameObject.transform.parent.gameObject);
         }
@@ -114,7 +118,7 @@ public class ZombieAiScript : MonoBehaviour {
 
     IEnumerator UpdatePath() {
         while(!searchingForPlayer) {
-            seeker.StartPath(transform.position, target.position, OnPathComplete);
+            seeker.StartPath(transform.position, target.position + amountAboveTargetVector3, OnPathComplete);
 
             yield return new WaitForSeconds(1 / updateRate);
         }
@@ -164,7 +168,6 @@ public class ZombieAiScript : MonoBehaviour {
             currentWaypoint++;
             return;
         }
-        print(health);
         //IsInAttackingRange();
 
     }

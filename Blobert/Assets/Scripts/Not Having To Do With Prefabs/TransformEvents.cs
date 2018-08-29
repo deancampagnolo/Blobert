@@ -9,7 +9,7 @@ public class TransformEvents : MonoBehaviour {
    
     private int currentEvent;
 
-    private string[] orderOfEvents = new string[] { "TransformEventBeginning", "TransformEventLevel1", "TransformEventLevel2", "TransformEventLevel3", "TransformEventLevel4", "TransformEventPlaceHolder" };
+    private string[] orderOfEvents = new string[] { "TransformEventBeginning", "TransformEventLevel1", "TransformEventLevel2", "TransformEventLevel3", "TransformEventLevel4", "TransformEventLevelMeetFairy", "TransformEventLevel5", "TransformEventPlaceHolder" };
     
     // Use this for initialization
     void Start() {
@@ -31,6 +31,11 @@ public class TransformEvents : MonoBehaviour {
             allPoints[currentEvent].DoEvent();
             currentEvent++;
         }
+    }
+
+
+    public TransformEventLevelScript getCurrentScript() {
+        return allPoints[currentEvent - 1]; //because "current event" is technically next event
     }
 
     private Object[] ReverseOrderOfArray(Object[] array) {

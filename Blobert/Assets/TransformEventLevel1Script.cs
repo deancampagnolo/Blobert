@@ -26,5 +26,6 @@ public class TransformEventLevel1Script : TransformEventLevelScript {
             yield return null;
         }
         theObjectiveManager.ObjectiveCompleted();
+        isEventFinished = true;
     }
 }

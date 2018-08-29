@@ -11,7 +11,7 @@ public class TransformEventLevel4Script : TransformEventLevelScript {
     }
 
     public override void DoEvent() {
-        Instantiate(GameMaster.GetEvilMoop(), evilMoopSpawner.position, evilMoopSpawner.rotation);
+        //Instantiate(GameMaster.GetEvilMoop(), evilMoopSpawner.position, evilMoopSpawner.rotation);
         theDialogueManager.SendDialogue("troblob", "WAIIIIITTTTTTTTTT!");
         theDialogueManager.SendDialogue("troblob", "DOOON't CONTINUE!!!");
         theDialogueManager.SendDialogue("troblob", "IT'S DANGEROUS, ACTUALLY");
@@ -25,9 +25,10 @@ public class TransformEventLevel4Script : TransformEventLevelScript {
 
     private IEnumerator OverTheBushObjective() {
         theObjectiveManager.SendObjective("Objective: Cross over the bush to the right");
-        while (GameMaster.GetPlayer().transform.position.x < GameMaster.GetLevels().transform.Find("Level5").position.x) {
+        while (GameMaster.GetPlayer().transform.position.x < GameMaster.GetLevels().transform.Find("LevelMeetFairy").position.x) {
             yield return null;
         }
         theObjectiveManager.ObjectiveCompleted();
+        isEventFinished = true;
     }
 }

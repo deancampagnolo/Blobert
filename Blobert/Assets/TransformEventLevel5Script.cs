@@ -2,11 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TransformEventLevel5Script : MonoBehaviour {
+public class TransformEventLevel5Script : TransformEventLevelScript {
 
-	// Use this for initialization
-	void Start () {
-		
+    public override void DoEvent() {
+        
+    }
+
+    // Use this for initialization
+    new void Start () {
+        base.Start();
 	}
 	
 	// Update is called once per frame

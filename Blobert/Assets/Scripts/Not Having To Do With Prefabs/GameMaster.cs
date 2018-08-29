@@ -79,7 +79,7 @@ public class GameMaster : MonoBehaviour {
     public static void KillPlayer() {
         print(player.name);
         Destroy(player);
-        RespawnPlayer(playerPrefab, beginningSpawnPoint);
+        RespawnPlayer();
         print(player.name);
     }
 
@@ -98,8 +98,9 @@ public class GameMaster : MonoBehaviour {
         NPCObject.GetComponent<ZombieAiScript>().Heal(amount);
     }
 
-    public static void RespawnPlayer(Transform playerPrefab, Transform beginningSpawnPoint) {
-        player = Instantiate(playerPrefab, beginningSpawnPoint.position, beginningSpawnPoint.rotation).gameObject;
+    public static void RespawnPlayer() {
+        print(levels.GetComponent<TransformEvents>().getCurrentScript().transform.name);
+        player = Instantiate(playerPrefab, levels.GetComponent<TransformEvents>().getCurrentScript().transform.parent.position, beginningSpawnPoint.rotation).gameObject;
         //player = GameObject.FindGameObjectWithTag("Player");
         if (player == null) {
             print("OHNO");
