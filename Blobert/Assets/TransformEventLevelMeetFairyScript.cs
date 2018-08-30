@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class TransformEventLevelMeetFairyScript : TransformEventLevelScript {
 
+    [SerializeField] private GameObject fabbyFairyPrefab;
+
     public override void DoEvent() {
         
     }

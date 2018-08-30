@@ -12,6 +12,8 @@ public class DialogueManager : MonoBehaviour{
     [SerializeField] private Sprite blobertFace;
     [SerializeField] private Sprite troblobFace;
     [SerializeField] private Sprite questionMark;
+    [SerializeField] private Sprite fabbyFace;
+
     // Use this for initialization
     private void Awake() {
         sentence = new Queue<string[]>();
@@ -63,6 +65,9 @@ public class DialogueManager : MonoBehaviour{
                 break;
             case "unknown":
                 theImage.sprite = questionMark;
+                break;
+            case "fabby":
+                theImage.sprite = fabbyFace;
                 break;
             default:
                 throw new System.Exception("ChangePicture Is called but the author does not exist");

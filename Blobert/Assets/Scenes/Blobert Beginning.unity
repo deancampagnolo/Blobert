@@ -281,7 +281,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   theDialogueManager: {fileID: 0}
-  skip: 1
+  skip: 0
 --- !u!1001 &89254138
 Prefab:
   m_ObjectHideFlags: 0
@@ -757,7 +757,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4460826004038092, guid: 6b7373f66f4eb8d44a3267a33247e16e, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 190.25
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 4460826004038092, guid: 6b7373f66f4eb8d44a3267a33247e16e, type: 2}
       propertyPath: m_LocalPosition.y
@@ -973,7 +973,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   theDialogueManager: {fileID: 0}
-  skip: 1
+  skip: 0
 --- !u!4 &355812121 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4615683843382618, guid: ea9e7bd2d28344842a2a3e7bb2d21f93,
@@ -1017,6 +1017,16 @@ Prefab:
     - target: {fileID: 4155293345187360, guid: 55be6821e4d8b964caa1f8497a8abdba, type: 2}
       propertyPath: m_RootOrder
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 60412128652092744, guid: 55be6821e4d8b964caa1f8497a8abdba,
+        type: 2}
+      propertyPath: m_UsedByEffector
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 60412128652092744, guid: 55be6821e4d8b964caa1f8497a8abdba,
+        type: 2}
+      propertyPath: m_Material
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55be6821e4d8b964caa1f8497a8abdba, type: 2}
@@ -1230,7 +1240,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   theDialogueManager: {fileID: 0}
-  skip: 1
+  skip: 0
 --- !u!4 &538401907 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4258746806510270, guid: 8a2bff24ba569b84f869bd7bee09d0a8,
@@ -2367,7 +2377,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   theDialogueManager: {fileID: 0}
-  skip: 1
+  skip: 0
 --- !u!1 &1044907022
 GameObject:
   m_ObjectHideFlags: 0
@@ -3558,6 +3568,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   theDialogueManager: {fileID: 0}
   skip: 0
+  fabbyFairyPrefab: {fileID: 1008842569493884, guid: 2cb85bebf45761a468a202d2baf88108,
+    type: 2}
 --- !u!4 &1458173153 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4802326592653638, guid: 92ac1c5fcfbf8d04395362cfbabca0da,
