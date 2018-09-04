@@ -63,6 +63,12 @@ public class MainC : MonoBehaviour {
         //rigidbody2D.velocity = GameMaster.GetMainCVelocity();
     }
 
+
+    public void ForceUpwards(float amount) {
+        rigidbody2D.AddForce(new Vector2(amount, jumpForce));
+    }
+
+
     public void Move(float move) {//Left == -1, Right == 1, Both == 2, None == 0, Stop ==3
         
         if(move == -1) { //notice that both anims have the setbool at "FacingRight" do not change.
@@ -108,7 +114,7 @@ public class MainC : MonoBehaviour {
         if(jump && grounded) {
             grounded = false;
             anim.SetBool("Grounded", false);//FIXME for some reason when i jump it says that grounded doesn't work
-            rigidbody2D.AddForce(new Vector2(200f, jumpForce));
+            ForceUpwards(200f);
         }
     }
 
