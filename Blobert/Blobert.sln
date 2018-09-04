@@ -1,13 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blobert", "Assembly-CSharp.csproj", "{6E314C09-5DE3-E36B-84EE-09502F28DFB5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{6E314C09-5DE3-E36B-84EE-09502F28DFB5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blobert", "Assembly-CSharp-firstpass.csproj", "{C1D8E686-5BFB-04D9-0D79-21DEEE6507F7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-firstpass", "Assembly-CSharp-firstpass.csproj", "{C1D8E686-5BFB-04D9-0D79-21DEEE6507F7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blobert", "Assembly-CSharp-Editor.csproj", "{43F00348-184B-0AE9-5E49-0CF1820C7043}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor", "Assembly-CSharp-Editor.csproj", "{43F00348-184B-0AE9-5E49-0CF1820C7043}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blobert", "Assembly-CSharp-Editor-firstpass.csproj", "{837BCD80-DDE6-9601-0A89-95222C649085}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor-firstpass", "Assembly-CSharp-Editor-firstpass.csproj", "{837BCD80-DDE6-9601-0A89-95222C649085}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

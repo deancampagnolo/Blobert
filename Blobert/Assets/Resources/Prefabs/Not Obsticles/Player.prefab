@@ -280,12 +280,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9f4f06e13bac394a9cf3e864407b43b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: 15
+  maxSpeed: 13
   jumpForce: 430
   whatIsGround:
     serializedVersion: 2
     m_Bits: 4608
-  maxHealth: 100
+  maxHealth: 200
   health: 20
 --- !u!114 &114494703383751512
 MonoBehaviour:
