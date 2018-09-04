@@ -18,7 +18,9 @@ public class ColliderMovePlayerScript : MonoBehaviour {
     private void OnCollisionEnter2D(Collision2D collision) {
         print("there was a collision");
         if (collision.gameObject.tag.Equals("Player")) {
-            collision.gameObject.GetComponent<MainC>().ForceUpwards(theForceUpwards);
+            if (collision.gameObject.GetComponent<Rigidbody2D>().velocity.y <= 0) { //only works if player is going downwards
+                collision.gameObject.GetComponent<MainC>().ForceUpwards(theForceUpwards);
+            }
         }
     }
 }
