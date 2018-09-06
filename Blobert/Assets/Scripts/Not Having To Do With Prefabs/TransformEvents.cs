@@ -10,7 +10,7 @@ public class TransformEvents : MonoBehaviour {
     private int currentEvent;
 
     private string[] orderOfEvents = new string[] { "TransformEventBeginning", "TransformEventLevel1", "TransformEventLevel2", "TransformEventLevel3", "TransformEventLevel4", "TransformEventLevelMeetFairy", "TransformEventLevel5",
-        "TransformEventLevel6", "TransformEventPlaceHolder" };
+        "TransformEventLevel6", "TransformEventLevel7", "TransformEventLevel8", "TransformEventLevel9", "TransformEventLevel10", "TransformEventLevel11", "TransformEventPlaceHolder" };
     
     // Use this for initialization
     void Start() {
@@ -89,7 +89,7 @@ public class TransformEvents : MonoBehaviour {
 
     private int GetIndexOfToStringInAllPoints(string theString, int minimumIndex) {
         for(int i = minimumIndex; i<allPoints.Length; i++) {
-            
+
             if (allPoints[i].name.Equals(theString)) {
                 return i;
             }
