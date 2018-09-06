@@ -9,7 +9,8 @@ public class TransformEvents : MonoBehaviour {
    
     private int currentEvent;
 
-    private string[] orderOfEvents = new string[] { "TransformEventBeginning", "TransformEventLevel1", "TransformEventLevel2", "TransformEventLevel3", "TransformEventLevel4", "TransformEventLevelMeetFairy", "TransformEventLevel5", "TransformEventPlaceHolder" };
+    private string[] orderOfEvents = new string[] { "TransformEventBeginning", "TransformEventLevel1", "TransformEventLevel2", "TransformEventLevel3", "TransformEventLevel4", "TransformEventLevelMeetFairy", "TransformEventLevel5",
+        "TransformEventLevel6", "TransformEventPlaceHolder" };
     
     // Use this for initialization
     void Start() {
