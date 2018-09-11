@@ -22,7 +22,7 @@ public class CarGoingRightScript : MonoBehaviour {
     private void FixedUpdate() {
        
         if(isGoingRight) {
-            this.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(speed, 0);
+            this.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(speed, this.GetComponent<Rigidbody2D>().velocity.y);
             speed += amountSpedUp;
             if (speed > 80f) {
                 GameMaster.GetCamera().GetComponent<camera>().FreezeCamera();

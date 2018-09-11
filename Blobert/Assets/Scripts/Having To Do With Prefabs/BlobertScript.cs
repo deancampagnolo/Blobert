@@ -40,4 +40,16 @@ public class BlobertScript : MonoBehaviour {
             transform.Find("rightBite").gameObject.GetComponent<BoxCollider2D>().enabled = false;
         }
     }
+
+    public void BiteLeft(int i) {
+        if (i == 0) {
+            transform.Find("leftBite").gameObject.GetComponent<BoxCollider2D>().enabled = true;
+            print("aha");
+        }
+        if (i == 1) {
+            transform.Find("leftBite").gameObject.GetComponent<BoxCollider2D>().enabled = false;
+        }
+    }
+
+
 }
