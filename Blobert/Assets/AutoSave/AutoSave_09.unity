@@ -914,7 +914,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   theDialogueManager: {fileID: 0}
-  skip: 1
+  skip: 0
 --- !u!4 &81913738 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4093308489691012, guid: d1ae50e26fb2bc24384741b0bf25eeb9,
@@ -2249,6 +2249,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 224e16601cb0e924491f854aa21c0583, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  theDialogueManager: {fileID: 0}
+  skip: 0
 --- !u!1001 &200418426
 Prefab:
   m_ObjectHideFlags: 0
@@ -2667,11 +2669,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4460826004038092, guid: 6b7373f66f4eb8d44a3267a33247e16e, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 271.2
+      value: 1056.42
       objectReference: {fileID: 0}
     - target: {fileID: 4460826004038092, guid: 6b7373f66f4eb8d44a3267a33247e16e, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 3.8
+      value: -1.53
       objectReference: {fileID: 0}
     - target: {fileID: 4460826004038092, guid: 6b7373f66f4eb8d44a3267a33247e16e, type: 2}
       propertyPath: m_LocalPosition.z
@@ -2696,6 +2698,16 @@ Prefab:
     - target: {fileID: 4460826004038092, guid: 6b7373f66f4eb8d44a3267a33247e16e, type: 2}
       propertyPath: m_RootOrder
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 95903684108156468, guid: 6b7373f66f4eb8d44a3267a33247e16e,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212357066319174150, guid: 6b7373f66f4eb8d44a3267a33247e16e,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6b7373f66f4eb8d44a3267a33247e16e, type: 2}
@@ -3555,7 +3567,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   theDialogueManager: {fileID: 0}
-  skip: 1
+  skip: 0
 --- !u!1001 &318296361
 Prefab:
   m_ObjectHideFlags: 0
@@ -5072,7 +5084,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   theDialogueManager: {fileID: 0}
-  skip: 1
+  skip: 0
 --- !u!4 &530501649 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4615683843382618, guid: ea9e7bd2d28344842a2a3e7bb2d21f93,
@@ -9266,7 +9278,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   theDialogueManager: {fileID: 0}
-  skip: 1
+  skip: 0
 --- !u!1001 &1037375541
 Prefab:
   m_ObjectHideFlags: 0
@@ -12415,9 +12427,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1366899401}
   - component: {fileID: 1366899400}
+  - component: {fileID: 1366899403}
+  - component: {fileID: 1366899402}
   m_Layer: 0
-  m_Name: AE86_0
-  m_TagString: Untagged
+  m_Name: Car
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12475,12 +12489,50 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1366899399}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 54.090515, y: -5.29, z: -0.44347572}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 60.14, y: -5.11, z: -0.44347572}
+  m_LocalScale: {x: 1.25, y: 1.25, z: 1}
   m_Children: []
   m_Father: {fileID: 666213635}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1366899402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1366899399}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce4d8ccf955d944449bdd473c08b6993, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  carGoingRight: {fileID: 1270692948896610, guid: 6e53f2a7f3090b647b90209786302ed9,
+    type: 2}
+--- !u!61 &1366899403
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1366899399}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 4.75, y: 1.75}
+    newSize: {x: 4.75, y: 1.75}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4.75, y: 1.75}
+  m_EdgeRadius: 0
 --- !u!1001 &1372613578
 Prefab:
   m_ObjectHideFlags: 0

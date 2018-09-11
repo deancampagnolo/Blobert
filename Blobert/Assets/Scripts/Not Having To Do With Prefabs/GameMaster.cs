@@ -62,6 +62,10 @@ public class GameMaster : MonoBehaviour {
         return levels;
     }
 
+    public static GameObject GetFabby() {
+        return GameObject.FindGameObjectWithTag("FabbyTheFairy");
+    }
+
     private void forInspectorVars() {//FIXME I am pretty sure that this isn't right
         playerPrefab = playerPrefabForInspector;
         beginningSpawnPoint = beginningSpawnPointForInspector;
@@ -73,6 +77,10 @@ public class GameMaster : MonoBehaviour {
     }
     public static GameObject GetEvilMoop() {
         return evilMoopPrefab;
+    }
+
+    public static GameObject GetCamera() {
+        return GameObject.Find("Main Camera");
     }
 
 

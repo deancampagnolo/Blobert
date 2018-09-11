@@ -9,6 +9,8 @@ TagManager:
   - Enemy
   - Background
   - FriendlyAnimal
+  - Car
+  - FabbyTheFairy
   layers:
   - Default
   - TransparentFX
