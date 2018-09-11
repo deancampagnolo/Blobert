@@ -172,7 +172,9 @@
     <Compile Include="Assets\CarGoingRightScript.cs" />
     <Compile Include="Assets\CarScript.cs" />
     <Compile Include="Assets\ColliderMovePlayerScript.cs" />
+    <Compile Include="Assets\ConstantRightScript.cs" />
     <Compile Include="Assets\DialogueManagerIntro.cs" />
+    <Compile Include="Assets\HighwayTransformEventScript.cs" />
     <Compile Include="Assets\IntroEvents.cs" />
     <Compile Include="Assets\MainMenu.cs" />
     <Compile Include="Assets\ObjectiveManager.cs" />
@@ -202,6 +204,7 @@
     <Compile Include="Assets\Scripts\Not Having To Do With Prefabs\TransformEventLevelScript.cs" />
     <Compile Include="Assets\Scripts\Not Having To Do With Prefabs\TransformEventPlaceHolderScript.cs" />
     <Compile Include="Assets\Scripts\Not Having To Do With Prefabs\TransformEvents.cs" />
+    <Compile Include="Assets\TilingForHighway.cs" />
     <Compile Include="Assets\TransformEventLevel10Script.cs" />
     <Compile Include="Assets\TransformEventLevel11Script.cs" />
     <Compile Include="Assets\TransformEventLevel12Script.cs" />

@@ -5,11 +5,11 @@ using UnityEngine;
 public class camera : MonoBehaviour {
 
     private GameObject player;
-    bool freeze;
+    bool freeze = false;
 	// Use this for initialization
 	void Start () {
        player =  GameMaster.GetPlayer();
-       freeze = false;
+       
 	}
 
     // Update is called once per frame

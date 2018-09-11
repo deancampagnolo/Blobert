@@ -9,10 +9,11 @@ public class Tiling : MonoBehaviour {
     [SerializeField]private int buffer;
     //private float tilingValue;
     private GameObject background;
+    [SerializeField] string whatToFind;
     private float width;
 	// Use this for initialization
 	void Start () {
-        background = GameObject.Find("forestOriginal");
+        background = GameObject.Find(whatToFind);
         width = background.GetComponent<SpriteRenderer>().bounds.size.x;
         tilingXValue = background.transform.position.x + (width/2);//becaue transform pos x is the middle of the picture
         
