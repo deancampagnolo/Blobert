@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class HighwayTransformEventScript : MonoBehaviour {
 
@@ -19,29 +20,16 @@ public class HighwayTransformEventScript : MonoBehaviour {
         theCamera.GetComponent<camera>().FreezeCamera();
 
         theDialogueManager = canvas.transform.Find("DialogueBox").GetComponent<DialogueManager>();
-        if (theDialogueManager == null) {
-            throw new System.Exception("DialogueBox Never Found");
-
-        }
 
 
         theCar = Instantiate(car, theCarSpawnPoint.transform.position, theCarSpawnPoint.transform.rotation);
         
+        StartCoroutine(CameraFollowCar());
 
-        theDialogueManager.SendDialogue("unknown", "Alrighty what number is this one Gary?");//change name of gary probably
-        theDialogueManager.SendDialogue("unknown", "This is Blobert number...");
-        theDialogueManager.SendDialogue("unknown", "86");
-        theDialogueManager.SendDialogue("unknown", "Where the hell are his arms?");
-        theDialogueManager.SendDialogue("unknown", "Well you see, the last one climbed over the tree stump and ran away.");
-        theDialogueManager.SendDialogue("unknown", "So if he doesn't have arms, how can he run away???");
-        theDialogueManager.SendDialogue("unknown", "....");
-        theDialogueManager.SendDialogue("unknown", "...");
-        theDialogueManager.SendDialogue("unknown", "Ah screw it, lets see what he does");
-        theDialogueManager.SendDialogue("troblob", "Hello Blobert hachi roku");//chain this with an event (the spotlight) TODO probably create something that lets me put something like an animation event but for speech, perhaps using overloaded methods is the way? GLHF
-        theDialogueManager.SendDialogue("unknown", ">:(");
-        theDialogueManager.SendDialogue("troblob", "I mean 86 haha...");
-        theDialogueManager.SendDialogue("troblob", "*gosh I gotta stop being such a weeb");
-        theDialogueManager.SendDialogue("troblob", "anyways, lets start OwO"); //TODO change this
+        theDialogueManager.SendDialogue("blobert", "Alright Fabby so you said that the Troblob's castle is this way right?");
+        theDialogueManager.SendDialogue("fabby", "yare yare daze");
+
+        StartCoroutine(WaitForDialogueToEnd());
 
     }
 
@@ -58,6 +46,18 @@ public class HighwayTransformEventScript : MonoBehaviour {
             }
             yield return null;
         }
+    }
+
+    private IEnumerator WaitForDialogueToEnd() {
+        while (!theDialogueManager.getSentencePeek()[1].Equals("yare yare daze")){
+            yield return null;
+        }
+        theCamera.GetComponent<camera>().FreezeCamera();
+
+        yield return new WaitForSeconds(2f);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);//not sure if this should be LoadSceneAsync
+
+
     }
 
 
