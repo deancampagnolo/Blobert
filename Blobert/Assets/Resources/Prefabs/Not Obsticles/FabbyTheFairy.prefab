@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 95595536597116444}
   m_Layer: 0
   m_Name: FabbyTheFairy
-  m_TagString: Untagged
+  m_TagString: FabbyTheFairy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
