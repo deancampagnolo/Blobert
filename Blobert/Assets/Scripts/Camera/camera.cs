@@ -18,8 +18,8 @@ public class camera : MonoBehaviour {
             if (player == null) {
                 player = GameMaster.GetPlayer();//FIXME I fell like there is a better way of doing this.
             }
-            print(player.name);
-            print(player.transform.position.x);
+            //print(player.name);
+            //print(player.transform.position.x);
             this.transform.Translate(new Vector3(player.transform.position.x - this.transform.position.x, 0));
         }
     }

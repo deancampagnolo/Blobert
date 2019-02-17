@@ -169,6 +169,10 @@
     <Compile Include="Assets\AstarPathfindingProject\Utilities\ProfileHelper.cs" />
     <Compile Include="Assets\AstarPathfindingProject\Utilities\RetainedGizmos.cs" />
     <Compile Include="Assets\AstarPathfindingProject\Utilities\UnityReferenceHelper.cs" />
+    <Compile Include="Assets\FortressTransformEventLevel1Script.cs" />
+    <Compile Include="Assets\FortressTransformEventLevel2Script.cs" />
+    <Compile Include="Assets\FortressTransformEventLevel3Script.cs" />
+    <Compile Include="Assets\FortressTransformEventLevel4Script.cs" />
     <Compile Include="Assets\Other\Attribution.cs" />
     <Compile Include="Assets\Scripts\Camera\camera.cs" />
     <Compile Include="Assets\Scripts\Canvas\BarCalculators.cs" />

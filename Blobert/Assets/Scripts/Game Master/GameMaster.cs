@@ -6,9 +6,12 @@ public class GameMaster : MonoBehaviour {
 
     public static GameMaster gm;// not entirely sure why this is here
 
+
+    public static int whichLevel;
     public static Transform playerPrefab;
     public static GameObject evilMoopPrefab;
     public static Transform beginningSpawnPoint;
+    public int whichLevelForInspector;
     public Transform playerPrefabForInspector;
     public GameObject evilMoopForInspector;
     public Transform beginningSpawnPointForInspector;
@@ -70,6 +73,7 @@ public class GameMaster : MonoBehaviour {
         playerPrefab = playerPrefabForInspector;
         beginningSpawnPoint = beginningSpawnPointForInspector;
         evilMoopPrefab = evilMoopForInspector;
+        whichLevel = whichLevelForInspector;
     }
 
     public static GameObject GetPlayer() {
@@ -107,8 +111,21 @@ public class GameMaster : MonoBehaviour {
     }
 
     public static void RespawnPlayer() {
-        print(levels.GetComponent<TransformEvents>().getCurrentScript().transform.name);
-        player = Instantiate(playerPrefab, levels.GetComponent<TransformEvents>().getCurrentScript().transform.parent.position, beginningSpawnPoint.rotation).gameObject;
+
+        switch (whichLevel) {
+            case 1:
+                print(levels.GetComponent<TransformEvents>().getCurrentScript().transform.name);
+                player = Instantiate(playerPrefab, levels.GetComponent<TransformEvents>().getCurrentScript().transform.parent.position, beginningSpawnPoint.rotation).gameObject;
+                break;
+            case 2:
+                print(levels.GetComponent<TroblobFortressTransformEvents>().getCurrentScript().transform.name);
+                player = Instantiate(playerPrefab, levels.GetComponent<TroblobFortressTransformEvents>().getCurrentScript().transform.parent.position, beginningSpawnPoint.rotation).gameObject;
+                break;
+            default:
+                throw new System.Exception("Respawn in Not A Valid Level");
+                break;
+        }
+        
         //player = GameObject.FindGameObjectWithTag("Player");
         if (player == null) {
             print("OHNO");

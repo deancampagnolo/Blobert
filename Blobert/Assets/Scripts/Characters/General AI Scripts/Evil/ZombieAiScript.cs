@@ -117,10 +117,13 @@ public class ZombieAiScript : MonoBehaviour {
     }
 
     IEnumerator UpdatePath() {
-        while(!searchingForPlayer) {
-            seeker.StartPath(transform.position, target.position + amountAboveTargetVector3, OnPathComplete);
-
-            yield return new WaitForSeconds(1 / updateRate);
+        if (target != null) {//prob shouldnt be here
+            while (!searchingForPlayer) {
+                if (target != null) {//prob shouldnt be  here
+                    seeker.StartPath(transform.position, target.position + amountAboveTargetVector3, OnPathComplete);
+                }
+                yield return new WaitForSeconds(1 / updateRate);
+            }
         }
     }
 

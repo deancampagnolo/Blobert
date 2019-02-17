@@ -5190,6 +5190,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15d594cae5d9c3c42bfe77d9a58a1750, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  whichLevelForInspector: 1
   playerPrefabForInspector: {fileID: 4460826004038092, guid: 6b7373f66f4eb8d44a3267a33247e16e,
     type: 2}
   evilMoopForInspector: {fileID: 1406211580158618, guid: cbe9ec3f4b6b1e843843754904a20ede,

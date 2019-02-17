@@ -9,7 +9,7 @@ public class TroblobFortressTransformEvents : MonoBehaviour {
 
     private int currentEvent;
 
-    private string[] orderOfEvents = new string[] { "FortressTransformEventBeginning", "FortressTransformEventPlaceHolder" };
+    private string[] orderOfEvents = new string[] { "FortressTransformEventBeginning", "FortressTransformEventLevel1", "FortressTransformEventLevel2", "FortressTransformEventLevel3", "FortressTransformEventLevel4", "FortressTransformEventPlaceHolder" };
 
     // Use this for initialization
     void Start() {
@@ -26,10 +26,11 @@ public class TroblobFortressTransformEvents : MonoBehaviour {
     // Update is called once per frame
     void FixedUpdate() {
         //print(GameMaster.GetPlayer().transform.position.x);
-        //print(allPoints[currentEvent].GetXPosition());
+        print(allPoints[currentEvent].GetXPosition());
         if ((GameMaster.GetPlayer().transform.position.x > allPoints[currentEvent].GetXPosition()) && !allPoints[currentEvent].IsScriptCompleted()) {//and not completed
             allPoints[currentEvent].DoEvent();
             currentEvent++;
+            print(currentEvent);
         }
     }
 
