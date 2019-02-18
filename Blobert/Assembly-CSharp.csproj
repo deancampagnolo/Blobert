@@ -169,6 +169,7 @@
     <Compile Include="Assets\AstarPathfindingProject\Utilities\ProfileHelper.cs" />
     <Compile Include="Assets\AstarPathfindingProject\Utilities\RetainedGizmos.cs" />
     <Compile Include="Assets\AstarPathfindingProject\Utilities\UnityReferenceHelper.cs" />
+    <Compile Include="Assets\CameraForSpaceScene.cs" />
     <Compile Include="Assets\FortressTransformEventBlobertTakeoffScript.cs" />
     <Compile Include="Assets\FortressTransformEventLevel1Script.cs" />
     <Compile Include="Assets\FortressTransformEventLevel2Script.cs" />
@@ -227,6 +228,8 @@
     <Compile Include="Assets\Scripts\Vehicles\Car\CarGoingRightScript.cs" />
     <Compile Include="Assets\Scripts\Vehicles\Car\CarScript.cs" />
     <Compile Include="Assets\Scripts\Vehicles\Car\ConstantRightScript.cs" />
+    <Compile Include="Assets\SpaceEvents.cs" />
+    <Compile Include="Assets\SpaceTiling.cs" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\AstarPathfindingProject\Plugins\DotNetZip\DotNetZipLicense.txt" />
