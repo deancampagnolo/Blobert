@@ -2,15 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpaceEvents : MonoBehaviour {
+public abstract class SpaceEvents : TransformEventLevelScript {
+    protected float scrollingSpeedX;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    protected void Start() {
+
+        base.Start();
+        scrollingSpeedX = 10;
+    }
+
+    //public abstract bool SpaceFinished();
 }

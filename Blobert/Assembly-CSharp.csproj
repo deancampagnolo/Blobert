@@ -229,7 +229,11 @@
     <Compile Include="Assets\Scripts\Vehicles\Car\CarScript.cs" />
     <Compile Include="Assets\Scripts\Vehicles\Car\ConstantRightScript.cs" />
     <Compile Include="Assets\SpaceEvents.cs" />
+    <Compile Include="Assets\SpaceGameMaster.cs" />
     <Compile Include="Assets\SpaceTiling.cs" />
+    <Compile Include="Assets\SpaceTransformEvents.cs" />
+    <Compile Include="Assets\SpaceTransformEventsLevel1Script.cs" />
+    <Compile Include="Assets\SpaceTransformEventsPlaceHolderScript.cs" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\AstarPathfindingProject\Plugins\DotNetZip\DotNetZipLicense.txt" />
