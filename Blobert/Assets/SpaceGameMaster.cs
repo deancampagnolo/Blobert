@@ -15,8 +15,8 @@ public class SpaceGameMaster : MonoBehaviour {
 	}
 
     private void SetScrollingSpeedY() {
-        troblobShip.GetComponent<Rigidbody2D>().velocity = troblobShip.GetComponent<Rigidbody2D>().velocity + new Vector2(0, scrollingSpeedY);
-        blobertShip.GetComponent<Rigidbody2D>().velocity = blobertShip.GetComponent<Rigidbody2D>().velocity + new Vector2(0, scrollingSpeedY);
+        troblobShip.GetComponent<Rigidbody2D>().velocity = troblobShip.GetComponent<Rigidbody2D>().velocity = new Vector2(0, scrollingSpeedY);
+        blobertShip.GetComponent<Rigidbody2D>().velocity = blobertShip.GetComponent<Rigidbody2D>().velocity = new Vector2(0, scrollingSpeedY);
     }
 	
     public GameObject GetTroblobShip() {
