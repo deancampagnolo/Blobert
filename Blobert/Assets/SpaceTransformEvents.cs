@@ -8,7 +8,7 @@ public class SpaceTransformEvents : MonoBehaviour {
 
     private int currentEvent;
 
-    private string[] orderOfEvents = new string[] { "SpaceTransformEventsLevel1Script", "SpaceTransformEventsPlaceHolderScript" };
+    private string[] orderOfEvents = new string[] { "SpaceTransformEventsLevel1", "SpaceTransformEventsPlaceHolder" };
 
     // Use this for initialization
     void Start() {
@@ -20,12 +20,18 @@ public class SpaceTransformEvents : MonoBehaviour {
         OrganizeAllPoints();
         RemoveSkipPoints();
 
+        allPoints[currentEvent].DoEvent();
+        currentEvent++;
+        print(currentEvent);
+
     }
 
     // Update is called once per frame
     void FixedUpdate() {
         //print(GameMaster.GetPlayer().transform.position.x);
-        if (!allPoints[currentEvent].IsScriptCompleted()) {//I honestly don't know what is wrong with this code, if it changes the whole thing collapses :/
+        
+
+        if (allPoints[currentEvent].IsScriptCompleted()) {//I honestly don't know what is wrong with this code, if it changes the whole thing collapses :/
             allPoints[currentEvent].DoEvent();
             currentEvent++;
             print(currentEvent);
@@ -76,7 +82,7 @@ public class SpaceTransformEvents : MonoBehaviour {
 
     private int GetIndexOfToStringInAllPoints(string theString, int minimumIndex) {
         for (int i = minimumIndex; i < allPoints.Length; i++) {
-            print("Name" + allPoints[i].name);
+            print("Name " + allPoints[i].name);
             print("String" + theString);
             if (allPoints[i].name.Equals(theString)) {
                 return i;

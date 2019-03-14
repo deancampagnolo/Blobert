@@ -6,7 +6,6 @@ public class GameMaster : MonoBehaviour {
 
     public static GameMaster gm;// not entirely sure why this is here
 
-
     public static int whichLevel;
     public static Transform playerPrefab;
     public static GameObject evilMoopPrefab;
@@ -54,7 +53,6 @@ public class GameMaster : MonoBehaviour {
         if (player == null) {
             print("player is null");
         }
-
     }
 
     public static GameObject getCanvas() {
@@ -86,7 +84,6 @@ public class GameMaster : MonoBehaviour {
     public static GameObject GetCamera() {
         return GameObject.Find("Main Camera");
     }
-
 
     public static void KillPlayer() {
         print(player.name);

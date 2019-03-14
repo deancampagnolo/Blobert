@@ -6,6 +6,7 @@ public class CameraForSpaceScene : MonoBehaviour {
 
     public GameObject ship;
     bool freeze = false;
+    [SerializeField] float translation = 0;
 
     // Use this for initialization
     void Start() {
@@ -15,7 +16,7 @@ public class CameraForSpaceScene : MonoBehaviour {
     // Update is called once per frame
     void Update() {
         if (!freeze) {
-            this.transform.Translate(new Vector3(0, ship.transform.position.y - this.transform.position.y));
+            this.transform.Translate(new Vector3(0, ship.transform.position.y - this.transform.position.y - translation));
         }
     }
 
