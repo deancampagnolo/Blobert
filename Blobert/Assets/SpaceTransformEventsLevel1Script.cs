@@ -4,11 +4,15 @@ using UnityEngine;
 
 public class SpaceTransformEventsLevel1Script : SpaceEvents {
 
+    [SerializeField] private GameObject salad;
+    [SerializeField] private float buffer = 0;
 
 
     public override void DoEvent() {
         theDialogueManager = GameMaster.getCanvas().transform.Find("DialogueBox").GetComponent<DialogueManager>();
         theObjectiveManager = theDialogueManager.transform.parent.Find("ObjectiveBox").GetComponent<ObjectiveManager>(); //FIXME this is something wrong with the inheritance that forces me to put this code down, if you want to improve blobert, change this.
+
+        
 
 
         theDialogueManager.SendDialogue("blobert", "You didn't think I would let you get away with this did you?!?!?!?");
@@ -27,7 +31,6 @@ public class SpaceTransformEventsLevel1Script : SpaceEvents {
         theDialogueManager.SendDialogue("troblob", "AGHHHHHHH");
         theDialogueManager.SendDialogue("troblob", "Faster!!!");
         theDialogueManager.SendDialogue("troblob", "WTF what are these weird objects!");
-
         print(isEventFinished);
         StartCoroutine(FirstTime());
     }
@@ -36,8 +39,7 @@ public class SpaceTransformEventsLevel1Script : SpaceEvents {
         while (!theDialogueManager.getSentencePeek()[1].Equals("WTF How are you still here???")) {
             yield return null;
         }
-        isEventFinished = true;
-        sgm.AddToScrollingSpeedY(10);
+        sgm.AddToScrollingSpeedY(2);
         StartCoroutine(SecondTime());
 
     }
@@ -46,8 +48,7 @@ public class SpaceTransformEventsLevel1Script : SpaceEvents {
         while (!theDialogueManager.getSentencePeek()[1].Equals("WHATTTT???")) {
             yield return null;
         }
-        isEventFinished = true;
-        sgm.AddToScrollingSpeedY(20);
+        sgm.AddToScrollingSpeedY(4);
         StartCoroutine(ThirdTime());
 
     }
@@ -56,9 +57,9 @@ public class SpaceTransformEventsLevel1Script : SpaceEvents {
         while (!theDialogueManager.getSentencePeek()[1].Equals("WTF what are these weird objects!")) {
             yield return null;
         }
-        isEventFinished = true;
-        sgm.AddToScrollingSpeedY(40);
-
+        sgm.AddToScrollingSpeedY(8);
+        StartCoroutine(StartSpawn(salad, "salad"));
+        
     }
 
 
@@ -66,5 +67,29 @@ public class SpaceTransformEventsLevel1Script : SpaceEvents {
     void Start () {//FIXME the weird inheritance error may have something to do with this function hiding the one higher in the hierarchy
         base.Start();
 	}
+
+    private IEnumerator StartSpawn(GameObject thing, string tag) {
+        float phasesScrollingSpeed = sgm.GetScrollingSpeedY();// so that we get the scrolling speed of space when this method is first called.
+
+        while (true) {
+            Camera cam = GameMaster.GetCamera().GetComponent<Camera>();
+
+            float xPos = cam.transform.position.x + Random.Range(-1 * cam.aspect * (cam.orthographicSize-buffer), cam.aspect * (cam.orthographicSize-buffer)); //aspect times orthographic size give you half width of screen
+            float yPos = cam.transform.position.y + cam.orthographicSize + Random.Range(1,20);//orthographic size gives you half height
+
+
+
+            GameObject theThing = Instantiate(thing, new Vector3(xPos, yPos, 0), thing.transform.rotation);
+
+            switch (tag) {
+                case "salad":
+                    theThing.GetComponent<Rigidbody2D>().velocity = new Vector2(0,phasesScrollingSpeed - Random.Range(4,10));
+                    break;
+            }
+
+            yield return new WaitForSeconds(2);
+        }
+            
+    }
 
 }

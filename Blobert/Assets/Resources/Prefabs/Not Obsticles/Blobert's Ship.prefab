@@ -1641,6 +1641,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4624423253134874}
   - component: {fileID: 50677793198624486}
+  - component: {fileID: 114646582016191670}
   m_Layer: 0
   m_Name: Blobert's Ship
   m_TagString: Untagged
@@ -1881,7 +1882,6 @@ GameObject:
   - component: {fileID: 50214739732452616}
   - component: {fileID: 114828812511456718}
   - component: {fileID: 114076647224191632}
-  - component: {fileID: 255771250771575250}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -3717,7 +3717,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.0001
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -3737,7 +3737,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 200
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -4670,6 +4670,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c487da693797b7347a170660f4c60be6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114646582016191670
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1860106825918736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77c6d8b4d82970c498faf9b459a9e17b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
 --- !u!114 &114819453627897392
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -8574,20 +8586,3 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!255 &255771250771575250
-FixedJoint2D:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1978821665926108}
-  m_Enabled: 1
-  serializedVersion: 4
-  m_EnableCollision: 0
-  m_ConnectedRigidBody: {fileID: 0}
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
-  m_AutoConfigureConnectedAnchor: 1
-  m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0.246, y: -1.8859999}
-  m_DampingRatio: 0
-  m_Frequency: 0

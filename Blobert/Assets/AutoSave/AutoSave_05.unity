@@ -615,6 +615,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   theDialogueManager: {fileID: 0}
   skip: 0
+  salad: {fileID: 1525706348254940, guid: 3ceb7ff88d4bacf43ae3dbf8d877f5df, type: 2}
+  buffer: 1
 --- !u!1 &1094759766 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1102320873341546, guid: c22e3bfc24aa8ec4db834628fea3f82b,
@@ -633,7 +635,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4254320830677952, guid: c22e3bfc24aa8ec4db834628fea3f82b, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 8.83391
+      value: 6.19
       objectReference: {fileID: 0}
     - target: {fileID: 4254320830677952, guid: c22e3bfc24aa8ec4db834628fea3f82b, type: 2}
       propertyPath: m_LocalPosition.z
@@ -812,6 +814,48 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1860106825918736, guid: c74c8e4d81a1de84da22f36719b5ef32,
     type: 2}
   m_PrefabInternal: {fileID: 611803175}
+--- !u!1001 &1737627829
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4351614725643454, guid: 3ceb7ff88d4bacf43ae3dbf8d877f5df, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 4.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4351614725643454, guid: 3ceb7ff88d4bacf43ae3dbf8d877f5df, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 9.84
+      objectReference: {fileID: 0}
+    - target: {fileID: 4351614725643454, guid: 3ceb7ff88d4bacf43ae3dbf8d877f5df, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -0.004712277
+      objectReference: {fileID: 0}
+    - target: {fileID: 4351614725643454, guid: 3ceb7ff88d4bacf43ae3dbf8d877f5df, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4351614725643454, guid: 3ceb7ff88d4bacf43ae3dbf8d877f5df, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4351614725643454, guid: 3ceb7ff88d4bacf43ae3dbf8d877f5df, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4351614725643454, guid: 3ceb7ff88d4bacf43ae3dbf8d877f5df, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4351614725643454, guid: 3ceb7ff88d4bacf43ae3dbf8d877f5df, type: 2}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3ceb7ff88d4bacf43ae3dbf8d877f5df, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1 &2146914489
 GameObject:
   m_ObjectHideFlags: 0
@@ -889,4 +933,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   troblobShip: {fileID: 1094759766}
   blobertShip: {fileID: 1713995491}
-  scrollingSpeedY: 10
+  scrollingSpeedY: 2
