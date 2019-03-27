@@ -19,6 +19,9 @@ public class BlobertShipController : MonoBehaviour {
     private KeyCode leftWalkKey;
     private KeyCode rightWalkKey;
 
+    private float xPosLeftBound;
+    private float xPosRightBound;
+
 
     // Use this for initialization
     private void Awake() {
@@ -38,6 +41,13 @@ public class BlobertShipController : MonoBehaviour {
                 throw new System.Exception("ConsoleKeys not implemented yet"); //TODO CONSOLE KEY IMPLEMENTATION
                 break;
         }
+
+        Camera cam = GameMaster.GetCamera().GetComponent<Camera>();
+
+        xPosLeftBound = cam.transform.position.x + (-1 * cam.aspect * cam.orthographicSize); //aspect times orthographic size give you half width of screen
+        xPosRightBound = cam.transform.position.x + (cam.aspect * cam.orthographicSize); //aspect times orthographic size give you half width of screen
+
+
     }
 
 
@@ -61,9 +71,9 @@ public class BlobertShipController : MonoBehaviour {
         right = Input.GetKey(rightWalkKey);
 
         if(!(left && right)) {
-            if (left) {
+            if (left && this.transform.position.x > xPosLeftBound) {
                 this.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(speed * -1, this.gameObject.GetComponent<Rigidbody2D>().velocity.y);
-            }else if (right) {
+            }else if (right && this.transform.position.x < xPosRightBound) {
                 this.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(speed, this.gameObject.GetComponent<Rigidbody2D>().velocity.y);
             } else {
                 this.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(0, this.gameObject.GetComponent<Rigidbody2D>().velocity.y);

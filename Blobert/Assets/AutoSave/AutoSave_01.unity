@@ -470,32 +470,17 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 1978821665926108, guid: c74c8e4d81a1de84da22f36719b5ef32, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 255771250771575250, guid: c74c8e4d81a1de84da22f36719b5ef32,
-        type: 2}
-      propertyPath: m_AutoConfigureConnectedAnchor
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 255771250771575250, guid: c74c8e4d81a1de84da22f36719b5ef32,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 50677793198624486, guid: c74c8e4d81a1de84da22f36719b5ef32,
-        type: 2}
-      propertyPath: m_Mass
-      value: 200
-      objectReference: {fileID: 0}
     - target: {fileID: 50214739732452616, guid: c74c8e4d81a1de84da22f36719b5ef32,
         type: 2}
-      propertyPath: m_Mass
-      value: 0.0001
+      propertyPath: m_Constraints
+      value: 4
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 255771250771575250, guid: c74c8e4d81a1de84da22f36719b5ef32, type: 2}
+    - target: {fileID: 114819453627897392, guid: c74c8e4d81a1de84da22f36719b5ef32,
+        type: 2}
+      propertyPath: whatToHit.m_Bits
+      value: 1792
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c74c8e4d81a1de84da22f36719b5ef32, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &799161072
@@ -616,6 +601,15 @@ MonoBehaviour:
   theDialogueManager: {fileID: 0}
   skip: 0
   salad: {fileID: 1525706348254940, guid: 3ceb7ff88d4bacf43ae3dbf8d877f5df, type: 2}
+  buffer: 1
+  troblobShip: {fileID: 1094759766}
+  lateralSpeedOfTroblobShip: 10
+  lateralPositionTroblobShipBuffer: 3
+--- !u!50 &1064795585 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 50214739732452616, guid: c74c8e4d81a1de84da22f36719b5ef32,
+    type: 2}
+  m_PrefabInternal: {fileID: 611803175}
 --- !u!1 &1094759766 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1102320873341546, guid: c22e3bfc24aa8ec4db834628fea3f82b,
@@ -660,10 +654,9 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 50666929356912108, guid: c22e3bfc24aa8ec4db834628fea3f82b,
-        type: 2}
-      propertyPath: m_Mass
-      value: 2
+    - target: {fileID: 1102320873341546, guid: c22e3bfc24aa8ec4db834628fea3f82b, type: 2}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c22e3bfc24aa8ec4db834628fea3f82b, type: 2}
@@ -813,6 +806,23 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1860106825918736, guid: c74c8e4d81a1de84da22f36719b5ef32,
     type: 2}
   m_PrefabInternal: {fileID: 611803175}
+--- !u!255 &1713995495
+FixedJoint2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1713995491}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_EnableCollision: 0
+  m_ConnectedRigidBody: {fileID: 1064795585}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_AutoConfigureConnectedAnchor: 1
+  m_Anchor: {x: 0, y: 0}
+  m_ConnectedAnchor: {x: 1.0599997, y: -0.7399997}
+  m_DampingRatio: 0
+  m_Frequency: 0
 --- !u!1001 &1737627829
 Prefab:
   m_ObjectHideFlags: 0
@@ -822,11 +832,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4351614725643454, guid: 3ceb7ff88d4bacf43ae3dbf8d877f5df, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 4.8
+      value: 0.18
       objectReference: {fileID: 0}
     - target: {fileID: 4351614725643454, guid: 3ceb7ff88d4bacf43ae3dbf8d877f5df, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 9.84
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4351614725643454, guid: 3ceb7ff88d4bacf43ae3dbf8d877f5df, type: 2}
       propertyPath: m_LocalPosition.z
@@ -851,6 +861,10 @@ Prefab:
     - target: {fileID: 4351614725643454, guid: 3ceb7ff88d4bacf43ae3dbf8d877f5df, type: 2}
       propertyPath: m_RootOrder
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4703663922909782, guid: 3ceb7ff88d4bacf43ae3dbf8d877f5df, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -0.03
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3ceb7ff88d4bacf43ae3dbf8d877f5df, type: 2}
@@ -932,4 +946,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   troblobShip: {fileID: 1094759766}
   blobertShip: {fileID: 1713995491}
-  scrollingSpeedY: 10
+  scrollingSpeedY: 2

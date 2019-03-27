@@ -6,14 +6,17 @@ public class SpaceTransformEventsLevel1Script : SpaceEvents {
 
     [SerializeField] private GameObject salad;
     [SerializeField] private float buffer = 0;
+    [SerializeField] private GameObject troblobShip;
+    [SerializeField] private float lateralSpeedOfTroblobShip = 10f;
+    [SerializeField] private float lateralPositionTroblobShipBuffer = 2f;
 
 
     public override void DoEvent() {
         theDialogueManager = GameMaster.getCanvas().transform.Find("DialogueBox").GetComponent<DialogueManager>();
         theObjectiveManager = theDialogueManager.transform.parent.Find("ObjectiveBox").GetComponent<ObjectiveManager>(); //FIXME this is something wrong with the inheritance that forces me to put this code down, if you want to improve blobert, change this.
 
-        
 
+        StartCoroutine(TroblobMovement());
 
         theDialogueManager.SendDialogue("blobert", "You didn't think I would let you get away with this did you?!?!?!?");
         theDialogueManager.SendDialogue("troblob", "Oh what theeeee, how did you follow me?");
@@ -33,6 +36,28 @@ public class SpaceTransformEventsLevel1Script : SpaceEvents {
         theDialogueManager.SendDialogue("troblob", "WTF what are these weird objects!");
         print(isEventFinished);
         StartCoroutine(FirstTime());
+    }
+
+    private IEnumerator TroblobMovement() {
+        Camera cam = GameMaster.GetCamera().GetComponent<Camera>();
+
+        float xPosLeftBound = cam.transform.position.x + (-1 * cam.aspect * cam.orthographicSize) + lateralPositionTroblobShipBuffer; //aspect times orthographic size give you half width of screen
+        float xPosRightBound = cam.transform.position.x + (cam.aspect * cam.orthographicSize) - lateralPositionTroblobShipBuffer; //aspect times orthographic size give you half width of screen
+        print(xPosLeftBound);
+
+
+        while (true) {
+            float direction = Random.value;
+            if (direction < .5 && troblobShip.transform.position.x >xPosLeftBound) {//will be going left
+                troblobShip.GetComponent<Rigidbody2D>().velocity = new Vector2(lateralSpeedOfTroblobShip * -1, troblobShip.GetComponent<Rigidbody2D>().velocity.y);
+            } else if(troblobShip.transform.position.x < xPosRightBound) {
+                troblobShip.GetComponent<Rigidbody2D>().velocity = new Vector2(lateralSpeedOfTroblobShip, troblobShip.GetComponent<Rigidbody2D>().velocity.y);
+            } else {
+                troblobShip.GetComponent<Rigidbody2D>().velocity = new Vector2(0, troblobShip.GetComponent<Rigidbody2D>().velocity.y);
+            }
+
+            yield return new WaitForSeconds(.25f);
+        }
     }
 
     private IEnumerator FirstTime() {
