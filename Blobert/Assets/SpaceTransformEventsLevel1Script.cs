@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class SpaceTransformEventsLevel1Script : SpaceEvents {
 
+    [SerializeField] private GameObject clock;
     [SerializeField] private GameObject salad;
     [SerializeField] private float buffer = 0;
     [SerializeField] private GameObject troblobShip;
     [SerializeField] private float lateralSpeedOfTroblobShip = 10f;
     [SerializeField] private float lateralPositionTroblobShipBuffer = 2f;
+    [SerializeField] private GameObject blobertShipLeftBlastPoint;
 
 
     public override void DoEvent() {
@@ -17,7 +19,11 @@ public class SpaceTransformEventsLevel1Script : SpaceEvents {
 
 
         StartCoroutine(TroblobMovement());
-
+        blobertShipLeftBlastPoint.GetComponent<LegCannon>().SetCanFire(false);
+        //FIXME Cannot access ObjectiveManager for some reason
+        //print(theObjectiveManager);
+        //theObjectiveManager.ObjectiveCompleted();
+        //theObjectiveManager.SendObjective("Objective: Follow Troblob");
         theDialogueManager.SendDialogue("blobert", "You didn't think I would let you get away with this did you?!?!?!?");
         theDialogueManager.SendDialogue("troblob", "Oh what theeeee, how did you follow me?");
         theDialogueManager.SendDialogue("fabby", "Maybe you shouldn't leave your keys in your other rocketship?? Estúpido");
@@ -30,11 +36,16 @@ public class SpaceTransformEventsLevel1Script : SpaceEvents {
         theDialogueManager.SendDialogue("troblob", "This makes no logistical sense!!");
         theDialogueManager.SendDialogue("fabby", "Brob3rt hao fhast r whe goin?");
         theDialogueManager.SendDialogue("fabby", "I'ma bharf!");
-        theDialogueManager.SendDialogue("blobert", "Fabby I actually don't know what is happening...");
-        theDialogueManager.SendDialogue("troblob", "AGHHHHHHH");
-        theDialogueManager.SendDialogue("troblob", "Faster!!!");
-        theDialogueManager.SendDialogue("troblob", "WTF what are these weird objects!");
-        print(isEventFinished);
+        theDialogueManager.SendDialogue("fabby", "Waiyt Brobert, Whai doughnt whe sh00t h!m?");
+        theDialogueManager.SendDialogue("blobert", "With what fabby??");
+        theDialogueManager.SendDialogue("fabby", "Use your F00t C4nn0n!");
+        
+        theDialogueManager.SendDialogue("blobert", "Oh crap, that is so smart! I'll just connect it to the front of the ship");
+        theDialogueManager.SendDialogue("blobert", "Take this Troblob!");
+        
+        
+
+
         StartCoroutine(FirstTime());
     }
 
@@ -56,7 +67,7 @@ public class SpaceTransformEventsLevel1Script : SpaceEvents {
                 troblobShip.GetComponent<Rigidbody2D>().velocity = new Vector2(0, troblobShip.GetComponent<Rigidbody2D>().velocity.y);
             }
 
-            yield return new WaitForSeconds(.25f);
+            yield return new WaitForSeconds(.5f);
         }
     }
 
@@ -64,6 +75,7 @@ public class SpaceTransformEventsLevel1Script : SpaceEvents {
         while (!theDialogueManager.getSentencePeek()[1].Equals("WTF How are you still here???")) {
             yield return null;
         }
+        theObjectiveManager.SendObjective("Objective: Follow Troblob");
         sgm.AddToScrollingSpeedY(2);
         StartCoroutine(SecondTime());
 
@@ -79,14 +91,79 @@ public class SpaceTransformEventsLevel1Script : SpaceEvents {
     }
 
     private IEnumerator ThirdTime() {
-        while (!theDialogueManager.getSentencePeek()[1].Equals("WTF what are these weird objects!")) {
+        theObjectiveManager.ObjectiveCompleted();
+        while (!theDialogueManager.getSentencePeek()[1].Equals("Take this Troblob!")) {
             yield return null;
         }
-        sgm.AddToScrollingSpeedY(8);
-        StartCoroutine(StartSpawn(salad, "salad"));
+
+        theObjectiveManager.SendObjective("Objective: Shoot Troblob's Ship with the 'K' key");
+
+        blobertShipLeftBlastPoint.GetComponent<LegCannon>().SetCanFire(true);
+
+        StartCoroutine(FirstEngineGone());
+        //sgm.AddToScrollingSpeedY(8);
+        //StartCoroutine(StartSpawn(salad, "salad"));
         
     }
 
+    private IEnumerator FirstEngineGone() {
+        while (troblobShip.GetComponent<TroblobShipScript>().GetEnginesRemaining() > 7) {
+            yield return null;
+        }
+
+        theObjectiveManager.ObjectiveCompleted();
+        blobertShipLeftBlastPoint.GetComponent<LegCannon>().SetCanFire(false);
+
+        sgm.AddToScrollingSpeedY(8);
+        StartCoroutine(StartSpawn(salad, "salad"));
+        theDialogueManager.SendDialogue("troblob", "What the heckerino??? We are going faster than the speed of light!");
+        theDialogueManager.SendDialogue("blobert", "Fabby I actually don't know what is happening...");
+        theDialogueManager.SendDialogue("troblob", "AGHHHHHHH");
+        theDialogueManager.SendDialogue("troblob", "WTF what are these weird objects!");
+        theDialogueManager.SendDialogue("fabby", "S414D!!!!!!!!!!! Yukk!");
+        theDialogueManager.SendDialogue("troblob", "Blobert Please Stop Shooting Me!!! You Don't Understand What Could Happen!!");
+        theDialogueManager.SendDialogue("fabby", "D0n't Lwistten TWO hEim Brobert! H35 Tricking you!");
+        theDialogueManager.SendDialogue("blobert", "*Hmm what should I do...");
+        theDialogueManager.SendDialogue("fabby", "SHOOT HIM!");
+        theDialogueManager.SendDialogue("blobert", "Uhhh okay");
+        
+        StartCoroutine(FourthTime());
+
+        
+    }
+
+    private IEnumerator FourthTime() {
+        while (!theDialogueManager.getSentencePeek()[1].Equals("Uhhh okay")) {
+            yield return null;
+        }
+        blobertShipLeftBlastPoint.GetComponent<LegCannon>().SetCanFire(true);
+        theObjectiveManager.SendObjective("Objective: Blast Troblob a Few More Times");
+        StartCoroutine(ThirdEngineGone());
+
+    }
+
+    private IEnumerator ThirdEngineGone() {
+        while (troblobShip.GetComponent<TroblobShipScript>().GetEnginesRemaining() > 5) {
+            yield return null;
+        }
+
+        theObjectiveManager.ObjectiveCompleted();
+        blobertShipLeftBlastPoint.GetComponent<LegCannon>().SetCanFire(false);
+
+        theDialogueManager.SendDialogue("troblob", "WHAT IS HAPPENING");
+        StartCoroutine(StartSpawn(salad, "salad"));// this is put before speed up so that the salad falls faster
+        for (int i = 0; i<10; i++) {
+            sgm.AddToScrollingSpeedY(i);
+            yield return new WaitForSeconds(.1f);
+        }
+
+        StartCoroutine(StartSpawn(clock, "clock"));
+        
+
+        StartCoroutine(FourthTime());
+
+
+    }
 
     // Use this for initialization
     void Start () {//FIXME the weird inheritance error may have something to do with this function hiding the one higher in the hierarchy
@@ -106,13 +183,16 @@ public class SpaceTransformEventsLevel1Script : SpaceEvents {
 
             GameObject theThing = Instantiate(thing, new Vector3(xPos, yPos, 0), thing.transform.rotation);
 
-            switch (tag) {
+            switch (tag) { //Cannot interact with 3d objects's rigidbodies when using 2d rigidbody
                 case "salad":
                     theThing.GetComponent<Rigidbody2D>().velocity = new Vector2(0,phasesScrollingSpeed - Random.Range(4,10));
+                    yield return new WaitForSeconds(2f);
+                    break;
+                case "clock":
+                    yield return new WaitForSeconds(.5f);
                     break;
             }
 
-            yield return new WaitForSeconds(2);
         }
             
     }

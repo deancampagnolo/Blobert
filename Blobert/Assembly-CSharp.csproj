@@ -171,6 +171,8 @@
     <Compile Include="Assets\AstarPathfindingProject\Utilities\UnityReferenceHelper.cs" />
     <Compile Include="Assets\BlobertShipController.cs" />
     <Compile Include="Assets\CameraForSpaceScene.cs" />
+    <Compile Include="Assets\Clock\Scripts\Clock.cs" />
+    <Compile Include="Assets\ClockRotate.cs" />
     <Compile Include="Assets\FortressTransformEventBlobertTakeoffScript.cs" />
     <Compile Include="Assets\FortressTransformEventLevel1Script.cs" />
     <Compile Include="Assets\FortressTransformEventLevel2Script.cs" />
@@ -236,6 +238,7 @@
     <Compile Include="Assets\SpaceTransformEvents.cs" />
     <Compile Include="Assets\SpaceTransformEventsLevel1Script.cs" />
     <Compile Include="Assets\SpaceTransformEventsPlaceHolderScript.cs" />
+    <Compile Include="Assets\TroblobShipScript.cs" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\AstarPathfindingProject\Plugins\DotNetZip\DotNetZipLicense.txt" />

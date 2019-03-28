@@ -9,11 +9,14 @@ public class GameMaster : MonoBehaviour {
     public static int whichLevel;
     public static Transform playerPrefab;
     public static GameObject evilMoopPrefab;
+    public static GameObject troblobShipPrefab;
     public static Transform beginningSpawnPoint;
     public int whichLevelForInspector;
     public Transform playerPrefabForInspector;
     public GameObject evilMoopForInspector;
     public Transform beginningSpawnPointForInspector;
+    public GameObject troblobshipPrefabForInspector;
+    
 
     private static GameObject player;
     private static float mainCWalkingVelocityX;
@@ -72,6 +75,7 @@ public class GameMaster : MonoBehaviour {
         beginningSpawnPoint = beginningSpawnPointForInspector;
         evilMoopPrefab = evilMoopForInspector;
         whichLevel = whichLevelForInspector;
+        troblobShipPrefab = troblobshipPrefabForInspector;
     }
 
     public static GameObject GetPlayer() {
@@ -101,6 +105,10 @@ public class GameMaster : MonoBehaviour {
 
     public static void DamageEnemy(GameObject NPCObject, int amount) {
         NPCObject.GetComponent<ZombieAiScript>().Damage(amount);
+    }
+
+    public static void DamageShip(GameObject NPCObject) {
+        NPCObject.GetComponent<TroblobShipScript>().Damage();
     }
 
     public static void HealEnemy(GameObject NPCObject, int amount) {
