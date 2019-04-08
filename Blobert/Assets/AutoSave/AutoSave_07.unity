@@ -255,23 +255,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   theDialogueManager: {fileID: 0}
   skip: 0
---- !u!1 &313617887 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 100002, guid: 595cf544943e29a4d9a7b813e4218a3c,
-    type: 2}
-  m_PrefabInternal: {fileID: 1146020608}
---- !u!114 &313617888
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 313617887}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9d556bd27ca24b46982fed50b9cb73d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxRotation: 3
 --- !u!1001 &322541840
 Prefab:
   m_ObjectHideFlags: 0
@@ -635,12 +618,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   theDialogueManager: {fileID: 0}
   skip: 0
+  clock: {fileID: 100002, guid: 595cf544943e29a4d9a7b813e4218a3c, type: 2}
   salad: {fileID: 1525706348254940, guid: 3ceb7ff88d4bacf43ae3dbf8d877f5df, type: 2}
   buffer: 1
   troblobShip: {fileID: 1094759766}
   lateralSpeedOfTroblobShip: 5
   lateralPositionTroblobShipBuffer: 5
   blobertShipLeftBlastPoint: {fileID: 2029919911}
+  blobertShip: {fileID: 0}
 --- !u!50 &1064795585 stripped
 Rigidbody2D:
   m_CorrespondingSourceObject: {fileID: 50214739732452616, guid: c74c8e4d81a1de84da22f36719b5ef32,
@@ -727,34 +712,6 @@ Prefab:
     - target: {fileID: 400002, guid: 595cf544943e29a4d9a7b813e4218a3c, type: 2}
       propertyPath: m_RootOrder
       value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 2300002, guid: 595cf544943e29a4d9a7b813e4218a3c, type: 2}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2300002, guid: 595cf544943e29a4d9a7b813e4218a3c, type: 2}
-      propertyPath: m_DynamicOccludee
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2300002, guid: 595cf544943e29a4d9a7b813e4218a3c, type: 2}
-      propertyPath: m_ReceiveShadows
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400000, guid: 595cf544943e29a4d9a7b813e4218a3c, type: 2}
-      propertyPath: clockSpeed
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: 595cf544943e29a4d9a7b813e4218a3c, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: 595cf544943e29a4d9a7b813e4218a3c, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: 595cf544943e29a4d9a7b813e4218a3c, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 595cf544943e29a4d9a7b813e4218a3c, type: 2}

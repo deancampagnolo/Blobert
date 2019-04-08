@@ -11,6 +11,8 @@ public class SpaceTransformEventsLevel1Script : SpaceEvents {
     [SerializeField] private float lateralSpeedOfTroblobShip = 10f;
     [SerializeField] private float lateralPositionTroblobShipBuffer = 2f;
     [SerializeField] private GameObject blobertShipLeftBlastPoint;
+    [SerializeField] private GameObject blobertShip;
+    [SerializeField] private GameObject credits;
 
 
     public override void DoEvent() {
@@ -107,7 +109,7 @@ public class SpaceTransformEventsLevel1Script : SpaceEvents {
     }
 
     private IEnumerator FirstEngineGone() {
-        while (troblobShip.GetComponent<TroblobShipScript>().GetEnginesRemaining() > 7) {
+        while (troblobShip.GetComponent<TroblobShipScript>().GetEnginesRemaining() > 5) {
             yield return null;
         }
 
@@ -138,12 +140,12 @@ public class SpaceTransformEventsLevel1Script : SpaceEvents {
         }
         blobertShipLeftBlastPoint.GetComponent<LegCannon>().SetCanFire(true);
         theObjectiveManager.SendObjective("Objective: Blast Troblob a Few More Times");
-        StartCoroutine(ThirdEngineGone());
+        StartCoroutine(SecondEngineGone());
 
     }
 
-    private IEnumerator ThirdEngineGone() {
-        while (troblobShip.GetComponent<TroblobShipScript>().GetEnginesRemaining() > 5) {
+    private IEnumerator SecondEngineGone() {
+        while (troblobShip.GetComponent<TroblobShipScript>().GetEnginesRemaining() > 1) {
             yield return null;
         }
 
@@ -152,17 +154,89 @@ public class SpaceTransformEventsLevel1Script : SpaceEvents {
 
         theDialogueManager.SendDialogue("troblob", "WHAT IS HAPPENING");
         StartCoroutine(StartSpawn(salad, "salad"));// this is put before speed up so that the salad falls faster
-        for (int i = 0; i<10; i++) {
-            sgm.AddToScrollingSpeedY(i);
+        StartCoroutine(StartSpawn(clock, "clock"));
+        theDialogueManager.SendDialogue("troblob", "AHHHHHHHHHHH");
+        StartCoroutine(RotateShip(troblobShip, 4f));
+        for (int i = 0; i < 80; i++) {
+            sgm.AddToScrollingSpeedY(i / 40);
+
             yield return new WaitForSeconds(.1f);
         }
+        theDialogueManager.SendDialogue("blobert", "UMMM now what?");
+        theDialogueManager.SendDialogue("fabby", "Don't look at me!");
+        theDialogueManager.SendDialogue("fabby", "Actually now that we are this far...");
+        theDialogueManager.SendDialogue("fabby", "Might as well shoot troblob down");
+        theDialogueManager.SendDialogue("blobert", "Hmmm yeah probably");
+        theDialogueManager.SendDialogue("troblob", "NOO Blobert you don't understand, I'm literally not the bad guy!");
+        theDialogueManager.SendDialogue("fabby", "Pr3p4r3 to 3at l34d!");
+        StartCoroutine(LastEngineGone());
 
-        StartCoroutine(StartSpawn(clock, "clock"));
+
+    }
+
+    private IEnumerator LastEngineGone() {
+        while (!theDialogueManager.getSentencePeek()[1].Equals("NOO Blobert you don't understand, I'm literally not the bad guy!")) {
+            yield return null;
+        }
+        blobertShipLeftBlastPoint.GetComponent<LegCannon>().SetCanFire(true);
+        theObjectiveManager.SendObjective("Objective: Finish Troblob Off!");
+        while (troblobShip.GetComponent<TroblobShipScript>().GetEnginesRemaining() < 1) {
+            yield return null;
+        }
+        blobertShipLeftBlastPoint.GetComponent<LegCannon>().SetCanFire(false);
+        StartCoroutine(RotateShip(troblobShip, 2f));
+        for (int i = 0; i < 40; i++) {
+            sgm.AddToScrollingSpeedY(i / 40);
+
+            yield return new WaitForSeconds(.1f);
+        }
+        theDialogueManager.SendDialogue("troblob", "AHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH");
+        theDialogueManager.SendDialogue("fabby", "YOU FOOLS HHAHHAHAHAHAAHAHA");
+        theDialogueManager.SendDialogue("blobert", "What?");
+        theDialogueManager.SendDialogue("fabby", "Did you really think spoke this stupid all the time");
+        theDialogueManager.SendDialogue("blobert", "I don't understand what you are saying fabby?");
+        theDialogueManager.SendDialogue("fabby", "You stupid 2 Dimensional being...");
+        theDialogueManager.SendDialogue("blobert", "Well yeah, we are all 2D right?");
+        theDialogueManager.SendDialogue("troblob", "Oh NO!!!! Blobert Be Careful!");
+        theDialogueManager.SendDialogue("fabby", "HAHAHAHHAAH you are too late Troblob!");
+        theDialogueManager.SendDialogue("fabby", "Just a little bit more speed and we will reach the threshold!");
+        theDialogueManager.SendDialogue("blobert", "How could you do this to me fabby...");
+        StartCoroutine(StopSpeed());
+    }
+
+    private IEnumerator StopSpeed() {
+        while (!theDialogueManager.getSentencePeek()[1].Equals("How could you do this to me fabby...")) {
+            yield return null;
+        }
+        sgm.ResetScrollingSpeedY();
+        theDialogueManager.SendDialogue("fabby", "Agora eu peço a vocês o deus da 3ª dimensão para abrir o portal para o mundo melhor!");
+        theDialogueManager.SendDialogue("blobert", "AHhhhhhhhhh My Boness!");
+        theDialogueManager.SendDialogue("troblob", "what is happennningggggg!");
+        StartCoroutine(RotateShip(blobertShip, 4f));
+        StartCoroutine(RotateShip(troblobShip, 2f));
+        theDialogueManager.SendDialogue("fabby", "MUAHAHAHAHAHAAHAHAH");
+        StartCoroutine(ShrinkShips(troblobShip, 1.05f));
+        StartCoroutine(ShrinkShips(blobertShip, 1.05f));
+
+        yield return new WaitForSeconds(4f);
+
+        credits.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 100f);
+    }
+
+
+    private IEnumerator RotateShip(GameObject thing, float amount) {
+        while (true) {
+            thing.transform.Rotate(new Vector3(0, 0, amount));
+            yield return new WaitForFixedUpdate();
+        }
         
+    }
 
-        StartCoroutine(FourthTime());
-
-
+    private IEnumerator ShrinkShips(GameObject thing, float amount) {
+        while (true) {
+            thing.transform.localScale = new Vector3(thing.transform.localScale.x / amount, thing.transform.localScale.y / amount, thing.transform.localScale.z/ amount);
+            yield return new WaitForSeconds(.1f);
+        }
     }
 
     // Use this for initialization
@@ -179,16 +253,18 @@ public class SpaceTransformEventsLevel1Script : SpaceEvents {
             float xPos = cam.transform.position.x + Random.Range(-1 * cam.aspect * (cam.orthographicSize-buffer), cam.aspect * (cam.orthographicSize-buffer)); //aspect times orthographic size give you half width of screen
             float yPos = cam.transform.position.y + cam.orthographicSize + Random.Range(1,20);//orthographic size gives you half height
 
+            GameObject theThing;
 
-
-            GameObject theThing = Instantiate(thing, new Vector3(xPos, yPos, 0), thing.transform.rotation);
+            
 
             switch (tag) { //Cannot interact with 3d objects's rigidbodies when using 2d rigidbody
                 case "salad":
+                    theThing = Instantiate(thing, new Vector3(xPos, yPos, 0), thing.transform.rotation);
                     theThing.GetComponent<Rigidbody2D>().velocity = new Vector2(0,phasesScrollingSpeed - Random.Range(4,10));
                     yield return new WaitForSeconds(2f);
                     break;
                 case "clock":
+                    theThing = Instantiate(thing, new Vector3(xPos, yPos, -2), thing.transform.rotation);
                     yield return new WaitForSeconds(.5f);
                     break;
             }

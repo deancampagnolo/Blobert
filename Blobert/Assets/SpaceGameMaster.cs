@@ -34,7 +34,13 @@ public class SpaceGameMaster : MonoBehaviour {
         blobertShip.GetComponent<Rigidbody2D>().velocity = blobertShip.GetComponent<Rigidbody2D>().velocity + new Vector2(0, speed);
         scrollingSpeedY += speed;
     }
-	
+
+    public void ResetScrollingSpeedY() {
+        troblobShip.GetComponent<Rigidbody2D>().velocity = troblobShip.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
+        blobertShip.GetComponent<Rigidbody2D>().velocity = blobertShip.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
+    }
+
+
     /*public GameObject GetTroblobShip() {
         return troblobShip;
     }
@@ -43,8 +49,8 @@ public class SpaceGameMaster : MonoBehaviour {
         return blobertShip;
     }*/
 
-	// Update is called once per frame
-	void FixedUpdate () {
+    // Update is called once per frame
+    void FixedUpdate () {
 		
 
 
