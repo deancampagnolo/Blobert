@@ -36,9 +36,8 @@ public class BlobertScript : MonoBehaviour {
             transform.Find("rightBite").gameObject.GetComponent<BoxCollider2D>().enabled = true;
             print("aha");
         }
-        if(i == 1) {
-            transform.Find("rightBite").gameObject.GetComponent<BoxCollider2D>().enabled = false;
-        }
+        StartCoroutine(deleteBite("rightBite"));
+        
     }
 
     public void BiteLeft(int i) {
@@ -46,9 +45,12 @@ public class BlobertScript : MonoBehaviour {
             transform.Find("leftBite").gameObject.GetComponent<BoxCollider2D>().enabled = true;
             print("aha");
         }
-        if (i == 1) {
-            transform.Find("leftBite").gameObject.GetComponent<BoxCollider2D>().enabled = false;
-        }
+        StartCoroutine(deleteBite("leftBite"));
+    }
+
+    private IEnumerator deleteBite(string typeOfBite) {
+        yield return new WaitForSeconds(.1f);
+        transform.Find(typeOfBite).gameObject.GetComponent<BoxCollider2D>().enabled = false;
     }
 
 

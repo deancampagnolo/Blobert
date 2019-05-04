@@ -12,7 +12,6 @@ public class MainC : MonoBehaviour {
     public int health;
     private int maxBloodLust = 100;
     private int bloodLust;
-    
 
     private Transform groundCheck;//position marking where to check if the player is grounded
     
@@ -25,6 +24,8 @@ public class MainC : MonoBehaviour {
     private Vector2 currentWalkingSpeed;
     private Vector2 walkingVelocity;
     private float lastVelocity;
+    private int bloodCounter = 0;
+    private bool jumpTimePassed = true;
 
     // Use this for initialization
     private void Awake () {
@@ -41,7 +42,6 @@ public class MainC : MonoBehaviour {
     }
 
     private void FixedUpdate() {
-        
         grounded = false;
         Collider2D[] colliders = Physics2D.OverlapCircleAll(groundCheck.position, groundedRadius, whatIsGround);
         for(int i = 0; i < colliders.Length; i++) {
@@ -56,6 +56,14 @@ public class MainC : MonoBehaviour {
             GameMaster.KillPlayer();
             
         }
+
+        bloodCounter++;
+
+        if ( bloodCounter>=7&& bloodLust < maxBloodLust) {
+            bloodLust ++;
+            bloodCounter = 0;
+        }
+        
         //print(rigidbody2D.velocity.x);
         //DecrimentWalkingSpeed();
         //rigidbody2D.
@@ -67,7 +75,6 @@ public class MainC : MonoBehaviour {
     public void ForceUpwards(float amount) {
         rigidbody2D.AddForce(new Vector2(amount, jumpForce));
     }
-
 
     public void Move(float move) {//Left == -1, Right == 1, Both == 2, None == 0, Stop ==3
         
@@ -105,17 +112,21 @@ public class MainC : MonoBehaviour {
             }
         }
             lastVelocity = rigidbody2D.velocity.x; //note that this isn't the true last velocity some of the time, it is only when move is not ==2
-
-
-
     }
 
     public void Jump(bool jump) {
-        if(jump && grounded) {
+        if(jump && grounded && jumpTimePassed) {
+            StartCoroutine(StartJumpTime());
             grounded = false;
             anim.SetBool("Grounded", false);//FIXME for some reason when i jump it says that grounded doesn't work
             ForceUpwards(200f);
         }
+    }
+
+    private IEnumerator StartJumpTime() {
+        jumpTimePassed = false;
+        yield return new WaitForSeconds(.1f);
+        jumpTimePassed = true;
     }
 
     public Vector2 GetMainCVelocityY() {
@@ -133,6 +144,7 @@ public class MainC : MonoBehaviour {
         
         StaticCoroutine.DoCoroutine(GameMaster.flashScreenRed());
     }
+
     public bool IsPlayerDead() {
         if (health <= 0) {
             return true;

@@ -103,6 +103,20 @@ public class GameMaster : MonoBehaviour {
         player.GetComponent<MainC>().Damage(amount);
     }
 
+    public static void UseBloodlust(int amount) {
+        
+        player.GetComponent<MainC>().SubtractBloodLust(amount);
+    }
+
+    public static void AddBloodlust(int amount) {
+       
+        player.GetComponent<MainC>().AddBloodLust(amount);
+    }
+
+    public static int GetBloodlust() {
+        return player.GetComponent<MainC>().GetBloodLust();
+    }
+
     public static void DamageEnemy(GameObject NPCObject, int amount) {
         NPCObject.GetComponent<ZombieAiScript>().Damage(amount);
     }

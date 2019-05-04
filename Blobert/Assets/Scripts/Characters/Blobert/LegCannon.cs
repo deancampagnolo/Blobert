@@ -9,6 +9,7 @@ public class LegCannon : MonoBehaviour {
     [SerializeField] private LayerMask whatToHit;
     [SerializeField] private Transform laserBeam;
     [SerializeField] private Transform muzzleFlash;
+    [SerializeField] private int rocketBlastCost;
     public int distanceOfBlast = 100;
     [SerializeField] private float howLongTillDestroyLaser = .02f;//FIXME THis will probably have to be changed to a delta value or wait till the animation is done
     [SerializeField] private float howLongTillDestroyFlash = .02f;//FIXME ^^^
@@ -16,6 +17,7 @@ public class LegCannon : MonoBehaviour {
     Transform laserClone;
     Transform flashClone;
     bool isFireing = false;
+    bool enoughBloodLust = false;
     [SerializeField] private bool canFire = true; //this is only so that the spaceship can work
 
     public void Update() {
@@ -27,6 +29,11 @@ public class LegCannon : MonoBehaviour {
 
     private void FixedUpdate() {
         SetRocketBlastVelocity();
+        if (GameMaster.GetBloodlust() >= rocketBlastCost) {
+            enoughBloodLust = true;
+        } else {
+            enoughBloodLust = false;
+        }
     }
 
     public void SetRocketBlastVelocity() {
@@ -44,12 +51,14 @@ public class LegCannon : MonoBehaviour {
     public void Fire(int direction) {//Should this be static?
                                      //to initialize
 
-        if (canFire) {
+        if (canFire && enoughBloodLust) {
 
             if (direction < 0) {
 
                 RaycastHit2D hit;
                 RaycastHit2D hitk;
+
+                GameMaster.UseBloodlust(rocketBlastCost);
 
                 if (!inSpaceShip) {
                     isFireing = true;

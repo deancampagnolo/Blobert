@@ -19,6 +19,21 @@ public class FriendlyAnimalScript : MonoBehaviour {
 		
 	}
 
+    private void FixedUpdate() {
+        if( isAlive == false) {
+            StartCoroutine(Respawn());
+        }
+    }
+
+    private IEnumerator Respawn() {
+        isAlive = true;
+        yield return new WaitForSeconds(6);
+        
+        this.transform.rotation = new Quaternion(0, 0, 0, 0);
+        this.gameObject.GetComponent<BoxCollider2D>().enabled = true;
+
+    }
+
     void createFriendlyAnimal() {
         bloodLustPoints = defaultSavageryPoints;
     }
