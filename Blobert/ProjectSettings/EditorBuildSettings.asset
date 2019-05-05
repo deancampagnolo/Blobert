@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TroblobFortress.unity
     guid: 1bbcb92fd81d11d439212615eec69509
+  - enabled: 1
+    path: Assets/Scenes/Space Scene.unity
+    guid: e4aa278b1810d0042b3aafdb43604427
   m_configObjects: {}

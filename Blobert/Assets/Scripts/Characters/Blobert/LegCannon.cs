@@ -34,6 +34,7 @@ public class LegCannon : MonoBehaviour {
         } else {
             enoughBloodLust = false;
         }
+        
     }
 
     public void SetRocketBlastVelocity() {
@@ -118,6 +119,7 @@ public class LegCannon : MonoBehaviour {
     }
 
     private IEnumerator DestroyTheLaser(GameObject initLaserClone, GameObject initFlashClone) {
+        print("hi");
         yield return new WaitForSeconds(.1f);
         Destroy(initFlashClone.gameObject);
         Destroy(initLaserClone.gameObject);

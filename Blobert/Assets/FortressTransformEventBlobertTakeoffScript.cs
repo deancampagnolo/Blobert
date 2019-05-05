@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class FortressTransformEventBlobertTakeoffScript : TransformEventLevelScript {
 
@@ -44,6 +45,12 @@ public class FortressTransformEventBlobertTakeoffScript : TransformEventLevelScr
         GameMaster.GetFabby().GetComponent<SpriteRenderer>().enabled = false;
         GameMaster.GetPlayer().transform.Find("Animatorz").GetComponent<SpriteRenderer>().enabled = false;
         GameMaster.GetPlayer().GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionX;
+        StartCoroutine(WaitForSceneChange());
+    }
+
+    private IEnumerator WaitForSceneChange() {
+        yield return new WaitForSeconds(4f);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
 
