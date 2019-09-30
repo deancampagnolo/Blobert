@@ -1,0 +1,30 @@
+﻿<Properties StartupConfiguration="{6E314C09-5DE3-E36B-84EE-09502F28DFB5}|">
+  <MonoDevelop.Ide.Workbench>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Blobert" expanded="True">
+            <Node name="Assets" expanded="True" selected="True">
+              <Node name="Scripts" expanded="True">
+                <Node name="Characters" expanded="True">
+                  <Node name="Salad" expanded="True" />
+                </Node>
+                <Node name="Transform Events" expanded="True">
+                  <Node name="Fortress Events" expanded="True" />
+                  <Node name="Highway Events" expanded="True" />
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="2a6cfb25-e1fa-448c-a6fe-bd36edf716a9" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

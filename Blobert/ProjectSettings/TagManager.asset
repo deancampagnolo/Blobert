@@ -13,6 +13,7 @@ TagManager:
   - FabbyTheFairy
   - SpaceShip
   - Engine
+  - BlobertSpaceShip
   layers:
   - Default
   - TransparentFX

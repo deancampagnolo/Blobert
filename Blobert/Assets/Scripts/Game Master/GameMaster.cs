@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameMaster : MonoBehaviour {
 
@@ -90,10 +91,15 @@ public class GameMaster : MonoBehaviour {
     }
 
     public static void KillPlayer() {
-        print(player.name);
-        Destroy(player);
-        RespawnPlayer();
-        print(player.name);
+
+        if (whichLevel != 3) {
+            print(player.name);
+            Destroy(player);
+            RespawnPlayer();
+            print(player.name);
+        } else {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
     }
 
     public static void DamagePlayer(int amount) {
@@ -133,12 +139,13 @@ public class GameMaster : MonoBehaviour {
 
         switch (whichLevel) {
             case 1:
-                print(levels.GetComponent<TransformEvents>().getCurrentScript().transform.name);
+                //print(levels.GetComponent<TransformEvents>().getCurrentScript().transform.name);
                 player = Instantiate(playerPrefab, levels.GetComponent<TransformEvents>().getCurrentScript().transform.parent.position, beginningSpawnPoint.rotation).gameObject;
                 break;
             case 2:
-                print(levels.GetComponent<TroblobFortressTransformEvents>().getCurrentScript().transform.name);
-                player = Instantiate(playerPrefab, levels.GetComponent<TroblobFortressTransformEvents>().getCurrentScript().transform.parent.position, beginningSpawnPoint.rotation).gameObject;
+                print(levels.GetComponent<TroblobFortressTransformEvents>().getCurrentScript().transform.position);
+                //print(levels.GetComponent<TroblobFortressTransformEvents>().getCurrentScript().transform.name);
+                player = Instantiate(playerPrefab, levels.GetComponent<TroblobFortressTransformEvents>().getCurrentScript().transform.position, beginningSpawnPoint.rotation).gameObject;
                 break;
             default:
                 throw new System.Exception("Respawn in Not A Valid Level");
@@ -207,6 +214,4 @@ public class GameMaster : MonoBehaviour {
         //if(mainCWalkingVelocity < player.GetComponent<MainC>().GetMaxSpeed())
         mainCCurrentVelocity = new Vector2(mainCWalkingVelocityX, 0) + player.GetComponent<MainC>().GetMainCVelocityY() + new Vector2(mainCRocketBlastVelocityX, 0);// + mainCOtherVelocity;//other velocity not used yet 
     }
-
-
 }
