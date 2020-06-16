@@ -10,7 +10,7 @@ public class MainC : MonoBehaviour {
     [SerializeField] private LayerMask whatIsGround;
     public int maxHealth = 100;
     public int health;
-    private int maxBloodLust = 100;
+    private int softMaxBloodLust = 100;
     private int bloodLust;
 
     private Transform groundCheck;//position marking where to check if the player is grounded
@@ -59,7 +59,7 @@ public class MainC : MonoBehaviour {
 
         bloodCounter++;
 
-        if ( bloodCounter>=7&& bloodLust < maxBloodLust) {
+        if ( bloodCounter>=7&& bloodLust < softMaxBloodLust) {
             bloodLust ++;
             bloodCounter = 0;
         }
@@ -161,10 +161,11 @@ public class MainC : MonoBehaviour {
         return bloodLust;
     }
     public int GetMaxBloodLust() {
-        return maxBloodLust;
+        return softMaxBloodLust;
     }
     public void AddBloodLust(int amount) {
-        bloodLust += amount;
+        bloodLust += (bloodLust < softMaxBloodLust) ? amount : (amount / 2);
+        bloodLust += 100000;
     }
     public void SubtractBloodLust(int amount) {
         bloodLust -= amount;

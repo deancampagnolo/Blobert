@@ -161,9 +161,11 @@ public class GameMaster : MonoBehaviour {
     }
 
     public static IEnumerator flashScreenRed() {
+        mainCRocketBlastVelocityX = 0; // If you get hurt it sets velocity to 0
         screenFlashRed.SetActive(true);
         yield return new WaitForSeconds(.2f);
         screenFlashRed.SetActive(false);
+        
 
     }
 
