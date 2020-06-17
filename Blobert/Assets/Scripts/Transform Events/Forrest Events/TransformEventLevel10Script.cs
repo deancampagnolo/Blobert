@@ -10,13 +10,16 @@ public class TransformEventLevel10Script : TransformEventLevelScript {
 	}
 
     public override void DoEvent() {
-        theDialogueManager.SendDialogue("troblob", "wait, uh blobert, uhh please stop continuing");
+        theDialogueManager.SendDialogue("troblob", "wait, uh blobert, uhh please stop");
         theDialogueManager.SendDialogue("blobert", "uhh no?");
         theDialogueManager.SendDialogue("fabby", "não não não");
-        theDialogueManager.SendDialogue("troblob", "I'll give you cake ?!?!?");
+        theDialogueManager.SendDialogue("troblob", "I shall award you with... cake?!?!?");
         theDialogueManager.SendDialogue("fabby", "C4k3?? 1 10v3 Kak3!!!");
-        theDialogueManager.SendDialogue("blobert", "Fabby don't listen to him, he is trying to trick you");
-        theDialogueManager.SendDialogue("blobert", "There must be something increadibly valuable coming up");
+
+        theDialogueManager.SendDialogue("blobert", "Fabby don't listen to him, he is trying to trick you….");
+        theDialogueManager.SendDialogue("fabby", "OOOOoooOOOOooOH OOOOoOOK Blueboort!");
+        theDialogueManager.SendDialogue("blobert", "There must be something up ahead...");
+
         isEventFinished = true;
     }
 

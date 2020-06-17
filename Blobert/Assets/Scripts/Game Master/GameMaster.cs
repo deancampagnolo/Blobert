@@ -16,8 +16,9 @@ public class GameMaster : MonoBehaviour {
     public GameObject evilMoopForInspector;
     public Transform beginningSpawnPointForInspector;
     public GameObject troblobshipPrefabForInspector;
-    
+    public AudioClip song;
 
+    private AudioSource audioSource;
     private static GameObject player;
     private static float mainCWalkingVelocityX;
     private static float mainCRocketBlastVelocityX;
@@ -45,6 +46,8 @@ public class GameMaster : MonoBehaviour {
         mainCRocketBlastVelocityX = 0;
         mainCOtherVelocity = 0;
         mainCCurrentVelocity = Vector2.zero;
+
+        
     }
 
     private void FixedUpdate() {
@@ -57,6 +60,7 @@ public class GameMaster : MonoBehaviour {
             print("player is null");
         }
     }
+
 
     public static GameObject getCanvas() {
         return canvas;

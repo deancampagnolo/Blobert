@@ -17,7 +17,7 @@ public class TransformEventLevel4Script : TransformEventLevelScript {
         theDialogueManager.SendDialogue("troblob", "IT'S DANGEROUS, ACTUALLY");
         theDialogueManager.SendDialogue("troblob", "YOU ARE ENTERING THE WILD ZONE, WHAT GOES IN THERE");
         theDialogueManager.SendDialogue("troblob", "NEVER COMES OUT!!!!");
-        theDialogueManager.SendDialogue("blobert", "Aite see you on the other side!");
+        theDialogueManager.SendDialogue("blobert", "Goodbye, Troblob");
         StartCoroutine(OverTheBushObjective());
         
 

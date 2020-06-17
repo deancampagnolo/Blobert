@@ -27,27 +27,39 @@ public class IntroEvents : MonoBehaviour {
         other = canvas.transform.Find("Other").gameObject;
         gender = "";
 
-        theDialogueManager.SendDialogue("unknown", "Alrighty what number is this one Gary?");//change name of gary probably
-        theDialogueManager.SendDialogue("unknown", "This is Blobert number...");
-        theDialogueManager.SendDialogue("unknown", "86");
-        theDialogueManager.SendDialogue("unknown", "Where the hell are his arms?");
-        theDialogueManager.SendDialogue("unknown", "Well you see, the last one climbed over the tree stump and ran away.");
-        theDialogueManager.SendDialogue("unknown", "So if he doesn't have arms, how can he run away???");
-        theDialogueManager.SendDialogue("unknown", "....");
+        theDialogueManager.SendDialogue("unknown", "Which clone are we on now?");//change name of gary probably
+        theDialogueManager.SendDialogue("troblob", "86");
+        theDialogueManager.SendDialogue("unknown", "Very well… Wha...Where are his arms?");
+        theDialogueManager.SendDialogue("troblob", "The previous experiments began showing heighted signs of consciousness");
+        theDialogueManager.SendDialogue("troblob", "and attempted to climb out of the facility. Understandably, we did not want this to occur again.");
+       
+        theDialogueManager.SendDialogue("unknown", "So you removed his arms!?!?");
+        theDialogueManager.SendDialogue("troblob", "Yes, and I have since outfitted clone 86 with a modified HV-Laser Cannon on his right leg");
+        theDialogueManager.SendDialogue("troblob", " in exchange for their standardized pulse rifles..");
+        theDialogueManager.SendDialogue("unknown", "Wha…. Why didn't you just increase the clones mental conditioning or just fortify the fences...");
+        theDialogueManager.SendDialogue("troblob", "Because…. Leg cannon go pew...");
         theDialogueManager.SendDialogue("unknown", "...");
-        theDialogueManager.SendDialogue("unknown", "Ah screw it, lets see what he does");
-        theDialogueManager.SendDialogue("troblob", "Hello Blobert hachi roku");//chain this with an event (the spotlight) TODO probably create something that lets me put something like an animation event but for speech, perhaps using overloaded methods is the way? GLHF
-        theDialogueManager.SendDialogue("unknown", ">:(");
-        theDialogueManager.SendDialogue("troblob", "I mean 86 haha...");
-        theDialogueManager.SendDialogue("troblob", "*gosh I gotta stop being such a weeb");
-        theDialogueManager.SendDialogue("troblob", "anyways, lets start OwO"); //TODO change this
+        theDialogueManager.SendDialogue("troblob", "...");
+        theDialogueManager.SendDialogue("unknown", "Very well….. Conduct Experiment Number 86");
+        theDialogueManager.SendDialogue("troblob", "Yes, sir. CLONE 86, STATE YOUR OBJECTIVE");
+        theDialogueManager.SendDialogue("blobert", "TO ELIMINATE THE RESISTANCE");
+        theDialogueManager.SendDialogue("troblob", "WHAT IS YOUR GENDER CLONE?");
+        theDialogueManager.SendDialogue("troblob", "WHY MUST YOU TO ELIMINATE THE RESISTANCE");
+        theDialogueManager.SendDialogue("blobert", "THE RESISTANCE POSES THE GREATEST THREAT TO THE FACILITIES MAIN FUNCTION");
+        theDialogueManager.SendDialogue("blobert", "TO PRESERVE AND MAINTAIN THE SAFETY OF MANKIND.");
+        theDialogueManager.SendDialogue("troblob", "ahahahaheHEEHEHAHAHAHAH….");
+        theDialogueManager.SendDialogue("unknown", "Very good, Troblob, continue with your experiments…");
+        theDialogueManager.SendDialogue("troblob", ">:)");
+
+        theDialogueManager.SendDialogue("troblob", "Testing is over Blobert, return to the facility.");
+
         StartCoroutine(RevealTroblob());
 
 	}
 	
 	private IEnumerator RevealTroblob() {
         print("hi");
-        while(theDialogueManager.getSentencePeek()[1] != "Hello Blobert hachi roku") {
+        while(theDialogueManager.getSentencePeek()[1] != "Yes, sir. CLONE 86, STATE YOUR OBJECTIVE") {
             print("ok");
             yield return null;
         }
@@ -57,8 +69,8 @@ public class IntroEvents : MonoBehaviour {
     }
 
     private IEnumerator BoyOrGirl() {
-        theDialogueManager.SendDialogue("troblob", "Are you a boy or a girl?");
-        while(theDialogueManager.getSentencePeek()[1] != "Are you a boy or a girl?") {
+        theDialogueManager.SendDialogue("troblob", "WHAT IS YOUR GENDER CLONE?");
+        while(theDialogueManager.getSentencePeek()[1] != "WHAT IS YOUR GENDER CLONE?") {
             yield return null;
         }
         boy.SetActive(true);
@@ -72,24 +84,20 @@ public class IntroEvents : MonoBehaviour {
         other.SetActive(false);
         theDialogueManager.SendDialogue("blobert", "I'm " + gender + ".");
         if(gender == "Other") {
-            theDialogueManager.SendDialogue("troblob", "*Oh crap is this Blobert self aware... does it know its a robot? I'll be more cautious");
+            theDialogueManager.SendDialogue("troblob", "Hmmmm… has it already become self aware? Perhaps I should increase mental conditioning…. No matter….it has no arms… it cannot escape….");
+            
+        } else {
             theDialogueManager.SendDialogue("troblob", "HAHA I get it LMAOOO thats funny because it isn't an actual answer");
             theDialogueManager.SendDialogue("troblob", "LOOOOL that the comedic effect XDDDDD rarzmooxd!");
-        } else {
-            theDialogueManager.SendDialogue("troblob", "*This blobert thinks it is a " + gender + "! Another stupid robot ugh...");
         }
-        theDialogueManager.SendDialogue("troblob", "Anyways, \"" + gender + "\" blobert I'm going to put you through a series of tests ");
-        theDialogueManager.SendDialogue("troblob", "You HAVE to follow ALL of my directions, or I'm going to be mad and probably disable you");
-        theDialogueManager.SendDialogue("troblob", "*More than you are disabled already without your hands hehe XD");
-        theDialogueManager.SendDialogue("troblob", "Alright we are going to turn you off and put you into your first test, don't blow up like the last few!");
-        theDialogueManager.SendDialogue("troblob", "I'll see you in the forest!");
+
         StartCoroutine(ToLevelOne());
 
         
     }
 
     private IEnumerator ToLevelOne() {
-        while(theDialogueManager.getSentencePeek()[1] != "I'll see you in the forest!") {
+        while(theDialogueManager.getSentencePeek()[1] != "Testing is over Blobert, return to the facility.") {
             yield return null;
         }
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); //FIXME this needs to be changed in the future to be more direct in what you are playing.

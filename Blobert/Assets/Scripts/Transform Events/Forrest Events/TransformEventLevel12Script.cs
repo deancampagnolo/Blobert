@@ -10,14 +10,14 @@ public class TransformEventLevel12Script : TransformEventLevelScript {
 	}
 
     public override void DoEvent() {
-        theDialogueManager.SendDialogue("troblob", "HAHAHHA I'm Okay EHHEHEHE");
+        theDialogueManager.SendDialogue("troblob", "HAHAHHA I'm Okay EHHEHEHEHEHE IDIOT!");
         theDialogueManager.SendDialogue("troblob", "Just don't scratch my baby <3");
         theDialogueManager.SendDialogue("troblob", "THOSE SIDE SKIRTS ARE NOT FOR STEPPING ALSO");
         theDialogueManager.SendDialogue("troblob", "OH WAIT HAHA");
         theDialogueManager.SendDialogue("troblob", "You can't drive becuase you are missing arms LOL XD");
         theDialogueManager.SendDialogue("blobert", "I WILL BITE THE WHEEL IF I HAVE TO");
         theDialogueManager.SendDialogue("troblob", "Wait please don't :(");
-        theDialogueManager.SendDialogue("fabby", "1 kw411 s#w0t gwun!");
+        theDialogueManager.SendDialogue("fabby", "1 kw411 s#w0t gwun!AJAJAJAJJAJAJA");
         
         //Objective manager drive the car away;
     }

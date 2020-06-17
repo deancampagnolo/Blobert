@@ -13,8 +13,8 @@ public class TransformEventLevel1Script : TransformEventLevelScript {
     public override void DoEvent() {
 
         if (!isEventFinished) {
-            theDialogueManager.SendDialogue("troblob", "YO DABBA DABBA BLOBERT");
-            theDialogueManager.SendDialogue("troblob", "WHERE DO YOU THINK YOU ARE GOING?");
+            theDialogueManager.SendDialogue("troblob", "YO DABBA DABBA...BLOBERT!");
+            theDialogueManager.SendDialogue("troblob", "NANI YOU GOING?");
             theObjectiveManager.SendObjective("Objective: Continue going right");
             StartCoroutine(ContinueGoingRightObjective());
         }

@@ -10,8 +10,16 @@ public class TransformEventLevel8Script : TransformEventLevelScript {
 	}
 
     public override void DoEvent() {
-        theDialogueManager.SendDialogue("troblob", "I thought this was a bit harder than you make it seem :/");
+        theDialogueManager.SendDialogue("troblob", "URgh…. You're not meant to escape so easily….");
         theDialogueManager.SendDialogue("troblob", "*ERMIIGERRD HES GETTING TOO CLOSE TO MY BABY");
+
+        theDialogueManager.SendDialogue("fabby", "U knowz u can us3 ur cann0n 2 b00st u f4ster");
+        theDialogueManager.SendDialogue("blobert", "Oh thanks Fabby");
+        theDialogueManager.SendDialogue("fabby", "N0 pr0omblem boobman");
+        theDialogueManager.SendDialogue("blobert", "Thats not my name");
+        theDialogueManager.SendDialogue("fabby", "What do u mean thats not ur name Boobert?");
+        theDialogueManager.SendDialogue("blobert", ": Nevermind...");
+
         isEventFinished = true;
     }
 

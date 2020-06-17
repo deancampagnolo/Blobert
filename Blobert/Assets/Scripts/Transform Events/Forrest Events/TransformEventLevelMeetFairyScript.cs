@@ -16,9 +16,6 @@ public class TransformEventLevelMeetFairyScript : TransformEventLevelScript {
             Instantiate(fabbyFairyPrefab, fairySpawnPoint.transform.position, fairySpawnPoint.transform.rotation);
         }
 
-        theDialogueManager.SendDialogue("fabby","Y0 w4z p0pp1n b10B3rt!");
-        theDialogueManager.SendDialogue("fabby", "eye mah just f0110w yue");
-        theDialogueManager.SendDialogue("fabby", "ahsk m3 questioinz 1f u w4nT");
     } 
 
     // Use this for initialization

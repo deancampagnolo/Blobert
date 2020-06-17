@@ -5,9 +5,18 @@ using UnityEngine;
 public class TransformEventLevel5Script : TransformEventLevelScript {
 
     public override void DoEvent() {
-        theDialogueManager.SendDialogue("troblob", "Umm whats that fly thing following you");
-        theDialogueManager.SendDialogue("troblob", "Anyways please stop going forward :)");
-        theDialogueManager.SendDialogue("fabby", "Keep going Blobert!");
+        
+        theDialogueManager.SendDialogue("fabby", " Y0 w4z p0pp1n b10B3rt!");
+        theDialogueManager.SendDialogue("blobert", "What the fuck! ? !");
+        theDialogueManager.SendDialogue("fabby", " Y0u GO7 D4 JUIOOIICCE! ? !? !");
+        theDialogueManager.SendDialogue("blobert", " What the FUCK ? !FUCK OFF WHAT ARE YOU");
+        theDialogueManager.SendDialogue("fabby", " eye mah das rood, mi nam 1s Fabby, l00k i can halp u :)");
+        theDialogueManager.SendDialogue("fabby", " i’z dizhable dat doe");
+        theDialogueManager.SendDialogue("blobert", "*SAPPHIRE CORE EXPLOSIVES DISABLBED");
+        theDialogueManager.SendDialogue("fabby", "H - How did you do that.");
+        theDialogueManager.SendDialogue("fabby", " idunno m8 ima just f0110w yue");
+        theDialogueManager.SendDialogue("fabby", " ahsk m3 questioinz 1f u w4nT");
+
     }
 
     // Use this for initialization

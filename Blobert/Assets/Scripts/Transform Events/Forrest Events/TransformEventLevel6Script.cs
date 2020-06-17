@@ -10,11 +10,26 @@ public class TransformEventLevel6Script : TransformEventLevelScript {
 	}
 
     public override void DoEvent() {
+
         theDialogueManager.SendDialogue("blobert", "Hmm this looks hard");
         theDialogueManager.SendDialogue("troblob", "HAHAHA try getting past Poison Swampy Meadows XD");
         theDialogueManager.SendDialogue("fabby", "OwO AJAJAJA isso vai ser fácil");
-        theDialogueManager.SendDialogue("blobert", "*Looks like some parts of this will make use of my foot blaster and torque converter...");
-        
+        theDialogueManager.SendDialogue("fabby", "Try utilizing ur momentum converter owo");
+        theDialogueManager.SendDialogue("blobert", "Whats this ?");
+        theDialogueManager.SendDialogue("fabby", " oooooophohhOOoh, 13t m3 s33!!!!");
+        theDialogueManager.SendDialogue("blobert", "Hold on…");
+        theDialogueManager.SendDialogue("fabby", "AHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHhh");
+        theDialogueManager.SendDialogue("blobert", "Fabby! ? !!");
+        theDialogueManager.SendDialogue("fabby", " Oooooh!!, Wowza, my h3ads A SPINNIN");
+        theDialogueManager.SendDialogue("blobert", "Fabby, what was that?");
+        theDialogueManager.SendDialogue("fabby", "1 ThINK DATS My M3MORIES!!!!");
+        theDialogueManager.SendDialogue("blobert", "????");
+        theDialogueManager.SendDialogue("fabby", "1 Didn’t say but I’m Troblobs prisoner too, he wiped my memory and experimented on m3! I escaped and ran into the forest and then found u!!!");
+        theDialogueManager.SendDialogue("blobert", "Fabby….");
+        theDialogueManager.SendDialogue("fabby", "1tz alright!!!I d0nt feel much pain anymore…. Lets g3t the rest of my m3mroies:)");
+        theDialogueManager.SendDialogue("blobert", "Lets….");
+
+
         StartCoroutine(PoisonSwampyMeadowsComplete());
     }
 

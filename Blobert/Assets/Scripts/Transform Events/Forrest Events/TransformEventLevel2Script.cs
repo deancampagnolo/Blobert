@@ -10,7 +10,7 @@ public class TransformEventLevel2Script : TransformEventLevelScript {
 
     public override void DoEvent() {
         if (!isEventFinished) {
-            theDialogueManager.SendDialogue("troblob", "Blobert please wait, pls ;(");
+            theDialogueManager.SendDialogue("troblob", "I order you to return to the facility at ONCE!");
             theDialogueManager.SendDialogue("troblob", "I hope you hit that spike over there >:)");
             theObjectiveManager.SendObjective("Objective: Keep Going Right!");
             StartCoroutine(KeepGoingRightObjective());

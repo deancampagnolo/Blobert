@@ -69,12 +69,6 @@
     <Reference Include="UnityEngine.TestRunner">
       <HintPath>/Users/deancampagnolo/Documents/Blobert/Blobert/Library/ScriptAssemblies/UnityEngine.TestRunner.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>/Users/deancampagnolo/Documents/Blobert/Blobert/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.TextMeshPro">
-      <HintPath>/Users/deancampagnolo/Documents/Blobert/Blobert/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>/Users/deancampagnolo/Documents/Blobert/Blobert/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
@@ -83,6 +77,9 @@
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
       <HintPath>/Users/deancampagnolo/Documents/Blobert/Blobert/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro.Editor">
+      <HintPath>/Users/deancampagnolo/Documents/Blobert/Blobert/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>/Users/deancampagnolo/Documents/Blobert/Blobert/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
@@ -113,6 +110,9 @@
     </Reference>
     <Reference Include="UnityEngine.SpatialTracking">
       <HintPath>/Users/deancampagnolo/Documents/Blobert/Blobert/Library/ScriptAssemblies/UnityEngine.SpatialTracking.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro">
+      <HintPath>/Users/deancampagnolo/Documents/Blobert/Blobert/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.DataPrivacy">
       <HintPath>/Users/deancampagnolo/Documents/Blobert/Blobert/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
