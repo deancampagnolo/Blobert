@@ -11,7 +11,6 @@ public class TransformEventLevel10Script : TransformEventLevelScript {
 
     public override void DoEvent() {
         theDialogueManager.SendDialogue("troblob", "wait, uh blobert, uhh please stop");
-        theDialogueManager.SendDialogue("blobert", "uhh no?");
         theDialogueManager.SendDialogue("fabby", "não não não");
         theDialogueManager.SendDialogue("troblob", "I shall award you with... cake?!?!?");
         theDialogueManager.SendDialogue("fabby", "C4k3?? 1 10v3 Kak3!!!");

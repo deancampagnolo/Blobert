@@ -10,7 +10,7 @@ public class TransformEventLevel7Script : TransformEventLevelScript {
 	}
 
     public override void DoEvent() {
-        theDialogueManager.SendDialogue("troblob", "Hmm that was quite the display of skill, but you basically have to take damage here!");
+        theDialogueManager.SendDialogue("troblob", "Waka Waka! Stop, I command you!");
         theDialogueManager.SendDialogue("fabby", "seja idiota quieta");
         theDialogueManager.SendDialogue("blobert", "Yeah what she said");
         theDialogueManager.SendDialogue("fabby", "Exactorrily OwO brobert <3");

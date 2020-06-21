@@ -38,6 +38,15 @@ public class HighwayTransformEventScript : MonoBehaviour {
         theDialogueManager.SendDialogue("blobert", "Alright Fabby so you said that the Troblob's castle is this way right?");
         theDialogueManager.SendDialogue("blobert", "Alright Fabby so you said that the Troblob's castle is this way right?");
         theDialogueManager.SendDialogue("blobert", "Alright Fabby so you said that the Troblob's castle is this way right?");
+        theDialogueManager.SendDialogue("blobert", "Alright Fabby so you said that the Troblob's castle is this way right?");
+        theDialogueManager.SendDialogue("blobert", "Alright Fabby so you said that the Troblob's castle is this way right?");
+        theDialogueManager.SendDialogue("blobert", "Alright Fabby so you said that the Troblob's castle is this way right?");
+        theDialogueManager.SendDialogue("blobert", "Alright Fabby so you said that the Troblob's castle is this way right?");
+        theDialogueManager.SendDialogue("blobert", "Alright Fabby so you said that the Troblob's castle is this way right?");
+        theDialogueManager.SendDialogue("blobert", "Alright Fabby so you said that the Troblob's castle is this way right?");
+        theDialogueManager.SendDialogue("blobert", "Alright Fabby so you said that the Troblob's castle is this way right?");
+        theDialogueManager.SendDialogue("blobert", "Alright Fabby so you said that the Troblob's castle is this way right?");
+        theDialogueManager.SendDialogue("blobert", "Alright Fabby so you said that the Troblob's castle is this way right?");
         theDialogueManager.SendDialogue("fabby", "yare yare daze");
 
 

@@ -15,7 +15,10 @@ public class FortressTransformEventLevel1Script : TransformEventLevelScript {
 	}
 
     public override void DoEvent() {
-        theDialogueManager.SendDialogue("troblob", "Wow you have made it to level1");
+        theDialogueManager.SendDialogue("troblob", ": So…. you’ve made it this far….");
+        theDialogueManager.SendDialogue("blobert", ": I will stop you….");
+        theDialogueManager.SendDialogue("troblob", "LOL");
+
 
     }
 }

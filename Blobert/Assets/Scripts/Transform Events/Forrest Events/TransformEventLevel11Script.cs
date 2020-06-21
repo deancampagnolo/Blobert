@@ -14,8 +14,6 @@ public class TransformEventLevel11Script : TransformEventLevelScript {
         theDialogueManager.SendDialogue("fabby", "Vais queimar tudo e nunca olhar para trás!");
         
         theDialogueManager.SendDialogue("troblob", "Yes this is Village De Troblobian");
-        theDialogueManager.SendDialogue("troblob", "HAHHA if you dare tresspass, there is a huge spike pit leading to my house...");
-        theDialogueManager.SendDialogue("troblob", "Oh crap.");
         theDialogueManager.SendDialogue("fabby", "OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOH YEAHHHHHHHHHHHHHHHHHHHHh");
 
 		theDialogueManager.SendDialogue("fabby", "I, I remember...");

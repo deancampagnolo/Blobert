@@ -23,14 +23,10 @@ public class TransformEventBeginningScript : TransformEventLevelScript {
             theDialogueManager.SendDialogue("troblob", "Troblobian forest, named after yours truly:)");
     
             theDialogueManager.SendDialogue("troblob", "Here, we will begin testing, if you do not follow all of my instructions I will detonate your heart core,");
-            theDialogueManager.SendDialogue("troblob", "killing you instantly: 3 So listen carefully, you dont want to be disabled do you?* Well, more disablbed than you already are*AJAJAAJ CRIPPLE JOKE");
-            theDialogueManager.SendDialogue("troblob", "You know, I often likee to take long walks and joy rides though thisforest in my oh so cool 80's car");
-            theDialogueManager.SendDialogue("troblob", "And sometimes, I like to take a nice long rest behind the trees, pull down my pants, and jer…..");
-            theDialogueManager.SendDialogue("blobert", "DIAGNOSTICS INCOMPLETE");
-            theDialogueManager.SendDialogue("troblob", "Oh... *note to self make next blobert not able to talk*");
-            theDialogueManager.SendDialogue("troblob", "That's right, we didn't start those did we…. Lets begin diagnostics, Blobert Haci Roku….");
-            theDialogueManager.SendDialogue("troblob", "...");
-            theDialogueManager.SendDialogue("troblob", "HUNGH, I gotta stop being such a WEEB XD… Begin diagnostics, Blobert 86.");
+            theDialogueManager.SendDialogue("troblob", "killing you instantly :3 So listen carefully, you dont want to be disabled do you?");
+            theDialogueManager.SendDialogue("troblob", "* Well, more disablbed than you  already are AJAJAAJ CRIPPLE JOKE");
+
+            theDialogueManager.SendDialogue("troblob", "HUNGH, I gotta stop being such an incel XD… Begin diagnostics, Blobert hachi roku.");
 
             StartCoroutine(StartObjectiveLeftRight());
         }
@@ -41,7 +37,7 @@ public class TransformEventBeginningScript : TransformEventLevelScript {
     private IEnumerator StartObjectiveLeftRight() {
         bool hasGoneLeft = false;
         bool hasGoneRight = true;
-        while (!theDialogueManager.getSentencePeek()[1].Equals("HUNGH, I gotta stop being such a WEEB XD… Begin diagnostics, Blobert 86.")) {// while !=
+        while (!theDialogueManager.getSentencePeek()[1].Equals("HUNGH, I gotta stop being such an incel XD… Begin diagnostics, Blobert hachi roku.")) {// while !=
             yield return null;
         }
         theObjectiveManager.SendObjective("Objective: Walk Left and Right");
@@ -70,11 +66,11 @@ public class TransformEventBeginningScript : TransformEventLevelScript {
 
         yield return new WaitForSeconds(2f);
 
-        theDialogueManager.SendDialogue("troblob", "       …SAPPHIRE CORE POWER LEVELS STABLE…");
+        theDialogueManager.SendDialogue("blobert",  "…SAPPHIRE CORE POWER LEVELS STABLE…");
         theDialogueManager.SendDialogue("troblob", "Oh wow nice job Blobert");
         theDialogueManager.SendDialogue("troblob", "(Pffft I can walk back and forth it's not that cool)");
-        theDialogueManager.SendDialogue("troblob", "Alright, lets double check your main functions again…. Since I've removed your arms, Ive outfifted you with a cybernetic jaw to allow");
-        theDialogueManager.SendDialogue("troblob", "you to interact with objects. Why don't you try biting that sheep over there?");
+        theDialogueManager.SendDialogue("troblob", "Since I've removed your arms, Ive outfifted you with a cybernetic jaw");
+        theDialogueManager.SendDialogue("troblob", "bite that sheep over there");
 
 
 
@@ -85,7 +81,7 @@ public class TransformEventBeginningScript : TransformEventLevelScript {
 
     private IEnumerator StartObjectiveBiteSheep() {
 
-        while (!theDialogueManager.getSentencePeek()[1].Equals("you to interact with objects. Why don't you try biting that sheep over there?")){
+        while (!theDialogueManager.getSentencePeek()[1].Equals("bite that sheep over there")){
             yield return null;
         }
         theObjectiveManager.SendObjective("Objective: Bite the sheep using the " + GameMaster.GetPlayer().GetComponent<MainCController>().getBiteKey() + " key");
@@ -97,28 +93,15 @@ public class TransformEventBeginningScript : TransformEventLevelScript {
         theObjectiveManager.ObjectiveCompleted();
 
         theDialogueManager.SendDialogue("blobert", "…G - SERIES EMPOWERED JAW FULLY OPERATIONAL…");
-        theDialogueManager.SendDialogue("troblob", "AHHHHHHHHH!!! YOU BIT ME");
-        theDialogueManager.SendDialogue("blobert", "(I BITE SHEEP???)");
-        theDialogueManager.SendDialogue("troblob", "ERMIGERD!!!!! U killed Sheepy: '( ");
-        theDialogueManager.SendDialogue("troblob", "(I KILLED SHEEP!!!??? !?)");
-        theDialogueManager.SendDialogue("unknown", "hhh… I’m dying…. Y - you… killed me…… (zoom up shot of sheeps face…. crying…)");
+
+
         theDialogueManager.SendDialogue("troblob", "*wow thats pretty f'd up, I only told him to bite it...");
         theDialogueManager.SendDialogue("blobert", "(ERROR CODE 000076, SHEEP PAIN!? !?? !.2ANZUH@#LSDO)@SDA>..");
-        theDialogueManager.SendDialogue("troblob", "Hmmm, must note Troblob’s bite is extremely powerful...");
-        theDialogueManager.SendDialogue("blobert", "(....)");
-        theDialogueManager.SendDialogue("troblob", "Alright Blobert, final test!");
         theDialogueManager.SendDialogue("blobert", "(....I killed…. sheepy…)");
-        theDialogueManager.SendDialogue("troblob", " Blobert!");
-        theDialogueManager.SendDialogue("blobert", " *startled * Y - Yes!");
         theDialogueManager.SendDialogue("troblob", "hehehehehHEHAHAHAHAHHHAHA");
         theDialogueManager.SendDialogue("troblob", "yea yea..ahem, yes…..");
-        theDialogueManager.SendDialogue("blobert", "(I am… alive…)");
         theDialogueManager.SendDialogue("troblob", "Alright Blobert, final test, all you have left to do is to shoot your leg cannon... its real easy");
         theDialogueManager.SendDialogue("troblob", "*I really hope that new thing that we installed into blobert 86 works");
-        theDialogueManager.SendDialogue("blobert", " (What vile monsertiy locks me in prison within my own mind!?)");
-        theDialogueManager.SendDialogue("blobert", " (Oh God I live!! I feel!!I breathe!!!)");
-        theDialogueManager.SendDialogue("troblob", "Oh and I almost forgot, due to the installation of your momentum converter when you change direction");
-        theDialogueManager.SendDialogue("troblob", "it will conserve your momentum that you had and move you in the other direction with the same force");
         theDialogueManager.SendDialogue("troblob", "Alright Begin!");
 
 
@@ -137,21 +120,17 @@ public class TransformEventBeginningScript : TransformEventLevelScript {
         }
         theObjectiveManager.ObjectiveCompleted();
         yield return new WaitForSeconds(2f);
-        theDialogueManager.SendDialogue("troblob", "(Oh god where am I?????)");
+        theDialogueManager.SendDialogue("blobert", "(Oh god where am I?????)");
         theDialogueManager.SendDialogue("troblob", "AHAHAHAHAHhHAHAHA.BRILLIAnT BLOBRET!1!1!!!");
         theDialogueManager.SendDialogue("troblob", "*UwU Hwowy Cwap dat whas so kuu*");
-        theDialogueManager.SendDialogue("troblob", "Oh my God, Oh my God, Omg, oMg, omG");
-        theDialogueManager.SendDialogue("troblob", "(Where are my arms! ?? !? !? !)");
-        theDialogueManager.SendDialogue("troblob", "*Blobert 86 was a huge success!I can't wait to tell my bossu");
+
+        theDialogueManager.SendDialogue("troblob", "*Blobert 86 was a huge success! I can't wait to tell my bossu");
         theDialogueManager.SendDialogue("troblob", "Maybe my nickname of superdumbcrazystupidfailure will change to legcannonjesus!");
-        theDialogueManager.SendDialogue("troblob", "(Oh god…. what am I….?.)");
-        theDialogueManager.SendDialogue("troblob", "*I'm so excited!!!");
         theDialogueManager.SendDialogue("troblob", "Alright Blobert u still there?");
-        theDialogueManager.SendDialogue("troblob", "");
-        theDialogueManager.SendDialogue("troblob", "(I must…. Find…. freedom)");
-        theDialogueManager.SendDialogue("troblob", "(I…. I refuse to be a slave...)");
-        theDialogueManager.SendDialogue("troblob", "Blobert?");
-        theDialogueManager.SendDialogue("troblob", "I'm coming :)");
+        theDialogueManager.SendDialogue("blobert", "I must…. Find…. freedom");
+        theDialogueManager.SendDialogue("blobert", "I…. I refuse to be a slave...");
+        theDialogueManager.SendDialogue("troblob", "Blobert, uhh you still coming back to base?");
+        theDialogueManager.SendDialogue("blobert", "I'm coming :)");
         theDialogueManager.SendDialogue("troblob", "heheheh…. Alright i'm waiting for my lil munchkin…. >:)");
 
         while (!theDialogueManager.getSentencePeek()[1].Equals("heheheh…. Alright i'm waiting for my lil munchkin…. >:)")) {
