@@ -165,7 +165,6 @@ public class MainC : MonoBehaviour {
     }
     public void AddBloodLust(int amount) {
         bloodLust += (bloodLust < softMaxBloodLust) ? amount : (amount / 2);
-        bloodLust += 100000;
     }
     public void SubtractBloodLust(int amount) {
         bloodLust -= amount;

@@ -43,15 +43,6 @@ public class IntroEvents : MonoBehaviour {
         theDialogueManager.SendDialogue("unknown", "Very well….. Conduct Experiment Number 86");
         theDialogueManager.SendDialogue("troblob", "Yes, sir. CLONE 86, STATE YOUR OBJECTIVE");
         theDialogueManager.SendDialogue("blobert", "TO ELIMINATE THE RESISTANCE");
-        theDialogueManager.SendDialogue("troblob", "WHAT IS YOUR GENDER CLONE?");
-        theDialogueManager.SendDialogue("troblob", "WHY MUST YOU TO ELIMINATE THE RESISTANCE");
-        theDialogueManager.SendDialogue("blobert", "THE RESISTANCE POSES THE GREATEST THREAT TO THE FACILITIES MAIN FUNCTION");
-        theDialogueManager.SendDialogue("blobert", "TO PRESERVE AND MAINTAIN THE SAFETY OF MANKIND.");
-        theDialogueManager.SendDialogue("troblob", "ahahahaheHEEHEHAHAHAHAH….");
-        theDialogueManager.SendDialogue("unknown", "Very good, Troblob, continue with your experiments…");
-        theDialogueManager.SendDialogue("troblob", ">:)");
-
-        theDialogueManager.SendDialogue("troblob", "Testing is over Blobert, return to the facility.");
 
         StartCoroutine(RevealTroblob());
 
@@ -90,7 +81,14 @@ public class IntroEvents : MonoBehaviour {
             theDialogueManager.SendDialogue("troblob", "HAHA I get it LMAOOO thats funny because it isn't an actual answer");
             theDialogueManager.SendDialogue("troblob", "LOOOOL that the comedic effect XDDDDD rarzmooxd!");
         }
+        theDialogueManager.SendDialogue("troblob", "WHY MUST YOU TO ELIMINATE THE RESISTANCE");
+        theDialogueManager.SendDialogue("blobert", "THE RESISTANCE POSES THE GREATEST THREAT TO THE FACILITIES MAIN FUNCTION");
+        theDialogueManager.SendDialogue("blobert", "TO PRESERVE AND MAINTAIN THE SAFETY OF MANKIND.");
+        theDialogueManager.SendDialogue("troblob", "ahahahaheHEEHEHAHAHAHAH….");
+        theDialogueManager.SendDialogue("unknown", "Very good, Troblob, continue with your experiments…");
+        theDialogueManager.SendDialogue("troblob", ">:)");
 
+        theDialogueManager.SendDialogue("troblob", "Testing is over Blobert, return to the facility.");
         StartCoroutine(ToLevelOne());
 
         

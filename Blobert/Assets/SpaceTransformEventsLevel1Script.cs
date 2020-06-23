@@ -28,21 +28,17 @@ public class SpaceTransformEventsLevel1Script : SpaceEvents {
         //theObjectiveManager.SendObjective("Objective: Follow Troblob");
         theDialogueManager.SendDialogue("blobert", "You didn't think I would let you get away with this did you?!?!?!?");
         theDialogueManager.SendDialogue("troblob", "Oh what theeeee, how did you follow me?");
-        theDialogueManager.SendDialogue("fabby", "Maybe you shouldn't leave your keys in your other rocketship?? Estúpido");
+        theDialogueManager.SendDialogue("fabby", "D0n'n't leaf ur keys in your other rocketship?? Estúpido");
         theDialogueManager.SendDialogue("troblob", "Try Keeping up with me now!");
         theDialogueManager.SendDialogue("troblob", "WTF How are you still here???");
         theDialogueManager.SendDialogue("blobert", "*Wait fabby how are we still going his speed*");
-        theDialogueManager.SendDialogue("fabby", "I dunno :DDD");
         theDialogueManager.SendDialogue("troblob", "Try keeping up with me Now!");
         theDialogueManager.SendDialogue("troblob", "WHATTTT???");
         theDialogueManager.SendDialogue("troblob", "This makes no logistical sense!!");
-        theDialogueManager.SendDialogue("fabby", "Brob3rt hao fhast r whe goin?");
-        theDialogueManager.SendDialogue("fabby", "I'ma bharf!");
+        theDialogueManager.SendDialogue("fabby", "Brob3rt hao fhast r whe goin? I'ma bharf!");
         theDialogueManager.SendDialogue("fabby", "Waiyt Brobert, Whai doughnt whe sh00t h!m?");
-        theDialogueManager.SendDialogue("blobert", "With what fabby??");
-        theDialogueManager.SendDialogue("fabby", "Use your F00t C4nn0n!");
         
-        theDialogueManager.SendDialogue("blobert", "Oh crap, that is so smart! I'll just connect it to the front of the ship");
+        theDialogueManager.SendDialogue("blobert", "Oh crap, that is so smart! I'll just connect my foot to the front of the ship");
         theDialogueManager.SendDialogue("blobert", "Take this Troblob!");
         
         
@@ -217,7 +213,16 @@ public class SpaceTransformEventsLevel1Script : SpaceEvents {
         theDialogueManager.SendDialogue("fabby", "MUAHAHAHAHAHAAHAHAH");
         StartCoroutine(ShrinkShips(troblobShip, 1.05f));
         StartCoroutine(ShrinkShips(blobertShip, 1.05f));
-
+        theDialogueManager.SendDialogue("blobert", "...");
+        theDialogueManager.SendDialogue("troblob", "...");
+        theDialogueManager.SendDialogue("blobert", "...");
+        theDialogueManager.SendDialogue("troblob", "...");
+        theDialogueManager.SendDialogue("blobert", "...");
+        theDialogueManager.SendDialogue("troblob", "...");
+        theDialogueManager.SendDialogue("unknown", "Very good Fabby...");
+        theDialogueManager.SendDialogue("unknown", "Soon they will know the truth");
+        theDialogueManager.SendDialogue("unknown", "Soon I tell you!");
+        theDialogueManager.SendDialogue("unknown", "Muahahahahha!");
         yield return new WaitForSeconds(4f);
 
         credits.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 100f);
