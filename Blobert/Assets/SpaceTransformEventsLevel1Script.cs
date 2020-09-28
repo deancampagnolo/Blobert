@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SpaceTransformEventsLevel1Script : SpaceEvents {
 
@@ -13,6 +14,7 @@ public class SpaceTransformEventsLevel1Script : SpaceEvents {
     [SerializeField] private GameObject blobertShipLeftBlastPoint;
     [SerializeField] private GameObject blobertShip;
     [SerializeField] private GameObject credits;
+    [SerializeField] private GameObject toBeContinued;
 
 
     public override void DoEvent() {
@@ -223,9 +225,25 @@ public class SpaceTransformEventsLevel1Script : SpaceEvents {
         theDialogueManager.SendDialogue("unknown", "Soon they will know the truth");
         theDialogueManager.SendDialogue("unknown", "Soon I tell you!");
         theDialogueManager.SendDialogue("unknown", "Muahahahahha!");
-        yield return new WaitForSeconds(4f);
+        yield return new WaitForSeconds(8f);
+        credits.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 120f);
+        StartCoroutine(EndGame());
+    }
 
-        credits.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 100f);
+    private IEnumerator EndGame(){
+        while(!theDialogueManager.getSentencePeek()[1].Equals("Muahahahahha!"))
+        {
+            yield return null;
+        }
+        yield return new WaitForSeconds(18f);
+
+        toBeContinued.SetActive(true);
+
+        yield return new WaitForSeconds(12f);
+
+        SceneManager.LoadScene(0);
+
+
     }
 
 

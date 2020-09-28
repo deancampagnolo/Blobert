@@ -164,7 +164,7 @@ public class MainC : MonoBehaviour {
         return softMaxBloodLust;
     }
     public void AddBloodLust(int amount) {
-        bloodLust += (bloodLust < softMaxBloodLust) ? amount : (amount / 2);
+        bloodLust = (bloodLust + amount < softMaxBloodLust) ? bloodLust + amount : softMaxBloodLust;
     }
     public void SubtractBloodLust(int amount) {
         bloodLust -= amount;

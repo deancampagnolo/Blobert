@@ -30,6 +30,7 @@ public class IntroEvents : MonoBehaviour {
         theDialogueManager.SendDialogue("unknown", "Which clone are we on now?");//change name of gary probably
         theDialogueManager.SendDialogue("troblob", "86");
         theDialogueManager.SendDialogue("unknown", "Very well… Wha...Where are his arms?");
+        theDialogueManager.SendDialogue("unknown", "...");
         theDialogueManager.SendDialogue("troblob", "The previous experiments began showing heighted signs of consciousness");
         theDialogueManager.SendDialogue("troblob", "and attempted to climb out of the facility. Understandably, we did not want this to occur again.");
        
@@ -37,11 +38,11 @@ public class IntroEvents : MonoBehaviour {
         theDialogueManager.SendDialogue("troblob", "Yes, and I have since outfitted clone 86 with a modified HV-Laser Cannon on his right leg");
         theDialogueManager.SendDialogue("troblob", " in exchange for their standardized pulse rifles..");
         theDialogueManager.SendDialogue("unknown", "Wha…. Why didn't you just increase the clones mental conditioning or just fortify the fences...");
-        theDialogueManager.SendDialogue("troblob", "Because…. Leg cannon go pew...");
+        theDialogueManager.SendDialogue("troblob", "Because…. Leg cannon go pew pew pew...");
         theDialogueManager.SendDialogue("unknown", "...");
         theDialogueManager.SendDialogue("troblob", "...");
         theDialogueManager.SendDialogue("unknown", "Very well….. Conduct Experiment Number 86");
-        theDialogueManager.SendDialogue("troblob", "Yes, sir. CLONE 86, STATE YOUR OBJECTIVE");
+        theDialogueManager.SendDialogue("troblob", "Yes, sir :). CLONE 86, STATE YOUR OBJECTIVE");
         theDialogueManager.SendDialogue("blobert", "TO ELIMINATE THE RESISTANCE");
 
         StartCoroutine(RevealTroblob());
@@ -50,7 +51,7 @@ public class IntroEvents : MonoBehaviour {
 	
 	private IEnumerator RevealTroblob() {
         print("hi");
-        while(theDialogueManager.getSentencePeek()[1] != "Yes, sir. CLONE 86, STATE YOUR OBJECTIVE") {
+        while(theDialogueManager.getSentencePeek()[1] != "Yes, sir :). CLONE 86, STATE YOUR OBJECTIVE") {
             print("ok");
             yield return null;
         }

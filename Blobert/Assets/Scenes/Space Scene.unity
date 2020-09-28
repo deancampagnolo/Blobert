@@ -2023,6 +2023,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114853972540778920, guid: 9a7e586a3198bdd4289afc2855b52fbd,
+        type: 3}
+      propertyPath: m_Text
+      value: Welcome to Blobert.
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9a7e586a3198bdd4289afc2855b52fbd, type: 3}
 --- !u!1 &386793435
@@ -4115,7 +4120,7 @@ Transform:
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!1 &811738436
 GameObject:
@@ -4151,8 +4156,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -30.593748, y: -104.018745}
-  m_SizeDelta: {x: 400, y: 226.7}
+  m_AnchoredPosition: {x: -30.593748, y: -100.9}
+  m_SizeDelta: {x: 591.9, y: 3000}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &811738438
 MonoBehaviour:
@@ -4173,7 +4178,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 89ee93151f9202a4fb16dacb5ab884cd, type: 3}
+    m_Font: {fileID: 12800000, guid: 1f16052dfd5f6f54e94e97ecedd4c86b, type: 3}
     m_FontSize: 50
     m_FontStyle: 0
     m_BestFit: 0
@@ -4185,10 +4190,12 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Director~
-
-
-    Co-Creative Meister~'
+  m_Text: "Director~\n\n\nWriters~\n\n\n\nPlanning/Game Design~\n\n\nMusic Director~\n\n\n__Music__\n\n\nBoolin&Blobbin~\n\n\n\u300CMeow\u300D~\n\n\nMeowin'
+    in the Park~\n\n\nNight Ain't Right~\n\n\nRespect the Meow~\n\n\nMeowin on the
+    Moon~\n\n\n\n\nArt Director~\n\n\n__Artwork__\n\n\nBlobert~\n\nTroblob~\n\nFabby~\n\nCow~\n\nChico~\n\nChicken
+    Nugget~\n\nEvil Moop~ \n\nForest Parallax~\n\nIndustrial Parallax~\n\n\u300CKnight\u300D~\n\nMountain
+    Dusk Parallax~\n\nSalad~\n\nTofu Car~\n\nWood Log Pixel Art~\n\n\n__Program__\n\n\nLead
+    Programmer~"
 --- !u!222 &811738439
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4251,6 +4258,7 @@ MonoBehaviour:
   blobertShipLeftBlastPoint: {fileID: 2029919911}
   blobertShip: {fileID: 1713995491}
   credits: {fileID: 639963043}
+  toBeContinued: {fileID: 968673890}
 --- !u!1 &828611821
 GameObject:
   m_ObjectHideFlags: 0
@@ -4369,7 +4377,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 30.593748, y: -104.018745}
-  m_SizeDelta: {x: 400, y: 226.70001}
+  m_SizeDelta: {x: 400, y: 3000}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &839562757
 MonoBehaviour:
@@ -4390,7 +4398,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 89ee93151f9202a4fb16dacb5ab884cd, type: 3}
+    m_Font: {fileID: 12800000, guid: 1f16052dfd5f6f54e94e97ecedd4c86b, type: 3}
     m_FontSize: 50
     m_FontStyle: 0
     m_BestFit: 0
@@ -4405,7 +4413,98 @@ MonoBehaviour:
   m_Text: 'Dean Campagnolo
 
 
-    Christian Oda'
+
+    Dean Campagnolo
+
+    Christian Oda
+
+
+
+    Dean Campagnolo
+
+
+
+    Dean Campagnolo
+
+
+
+
+
+
+    Curtis "CurtieBirdie" Antonides
+
+
+    Riley "enosnas" Sansone
+
+
+    Dean "D''ado" Campagnolo
+
+
+    Dean "D''ado" Campagnolo
+
+
+    Dean "D''ado" Campagnolo
+
+
+    Dean "D''ado" Campagnolo
+
+
+
+
+    Dean Campagnolo
+
+
+
+
+
+
+    Dean Campagnolo
+
+
+    Dean Campagnolo
+
+
+    Dean Campagnolo
+
+
+    Jasmine Kieng
+
+
+    Jasper Von
+
+
+    Jerry Wu
+
+
+    Dean Campagnolo
+
+
+    Ansimuz
+
+
+    Ansimuz
+
+
+    Riley Sansone
+
+
+    Ansimuz
+
+
+    Julian Malaby
+
+
+    Curtis Antonides
+
+
+    Redfill Production
+
+
+
+
+
+
+    Dean Campagnolo'
 --- !u!222 &839562758
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5230,6 +5329,83 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.66696167, y: 0.32545865}
   m_EdgeRadius: 0
+--- !u!1 &968673890
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 968673891}
+  - component: {fileID: 968673893}
+  - component: {fileID: 968673892}
+  m_Layer: 5
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &968673891
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 968673890}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1814071358}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 1000, y: 200}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &968673892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 968673890}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.6132076, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 1f16052dfd5f6f54e94e97ecedd4c86b, type: 3}
+    m_FontSize: 150
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 300
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: To Be Continued...
+--- !u!222 &968673893
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 968673890}
+  m_CullTransparentMesh: 0
 --- !u!1 &1013186097
 GameObject:
   m_ObjectHideFlags: 0
@@ -6113,47 +6289,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1001 &1146020608
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 400002, guid: 595cf544943e29a4d9a7b813e4218a3c, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 2.83
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: 595cf544943e29a4d9a7b813e4218a3c, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 5.69
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: 595cf544943e29a4d9a7b813e4218a3c, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.984
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: 595cf544943e29a4d9a7b813e4218a3c, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: 595cf544943e29a4d9a7b813e4218a3c, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.86602545
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: 595cf544943e29a4d9a7b813e4218a3c, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: 595cf544943e29a4d9a7b813e4218a3c, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.49999994
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: 595cf544943e29a4d9a7b813e4218a3c, type: 3}
-      propertyPath: m_RootOrder
-      value: 10
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 595cf544943e29a4d9a7b813e4218a3c, type: 3}
 --- !u!1 &1167744794
 GameObject:
   m_ObjectHideFlags: 0
@@ -9763,51 +9898,6 @@ FixedJoint2D:
   m_ConnectedAnchor: {x: 1.7099996, y: -0.7399997}
   m_DampingRatio: 0
   m_Frequency: 0
---- !u!1001 &1737627829
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4351614725643454, guid: 3ceb7ff88d4bacf43ae3dbf8d877f5df, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 6.32
-      objectReference: {fileID: 0}
-    - target: {fileID: 4351614725643454, guid: 3ceb7ff88d4bacf43ae3dbf8d877f5df, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4351614725643454, guid: 3ceb7ff88d4bacf43ae3dbf8d877f5df, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.004712277
-      objectReference: {fileID: 0}
-    - target: {fileID: 4351614725643454, guid: 3ceb7ff88d4bacf43ae3dbf8d877f5df, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4351614725643454, guid: 3ceb7ff88d4bacf43ae3dbf8d877f5df, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4351614725643454, guid: 3ceb7ff88d4bacf43ae3dbf8d877f5df, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4351614725643454, guid: 3ceb7ff88d4bacf43ae3dbf8d877f5df, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4351614725643454, guid: 3ceb7ff88d4bacf43ae3dbf8d877f5df, type: 3}
-      propertyPath: m_RootOrder
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 4703663922909782, guid: 3ceb7ff88d4bacf43ae3dbf8d877f5df, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.03
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 3ceb7ff88d4bacf43ae3dbf8d877f5df, type: 3}
 --- !u!1 &1779405112
 GameObject:
   m_ObjectHideFlags: 0
@@ -11418,9 +11508,9 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 89270d8aeb628492d81ed41c39b209c6, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.339
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
