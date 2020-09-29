@@ -2028,6 +2028,11 @@ PrefabInstance:
       propertyPath: m_Text
       value: Welcome to Blobert.
       objectReference: {fileID: 0}
+    - target: {fileID: 114788960244973512, guid: 9a7e586a3198bdd4289afc2855b52fbd,
+        type: 3}
+      propertyPath: m_Text
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9a7e586a3198bdd4289afc2855b52fbd, type: 3}
 --- !u!1 &386793435

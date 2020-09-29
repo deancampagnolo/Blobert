@@ -90,6 +90,7 @@ ScriptsOnlyBuild:
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
+    - UnityEditor.TestTools.TestRunner.TestListCacheData
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.EventTrigger
@@ -101,6 +102,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Shadow
     - UnityEngine.UI.Text
     com.unity.multiplayer-hlapi.Runtime.dll:
+    - UnityEngine.Networking.NetworkCallbacks
     - UnityEngine.Networking.NetworkIdentity
   sceneClasses:
     Assets/Scenes/Blobert Beginning.unity:
@@ -542,7 +544,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12494}
     - Class: 114
-      Script: {instanceID: 26318}
+      Script: {instanceID: 16558}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 124

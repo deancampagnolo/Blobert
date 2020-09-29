@@ -12598,6 +12598,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 20506783978709604, guid: b8574e5e747006c4da6403b011e45217,
+        type: 3}
+      propertyPath: m_Depth
+      value: -10
+      objectReference: {fileID: 0}
     - target: {fileID: 4182451782877196, guid: b8574e5e747006c4da6403b011e45217, type: 3}
       propertyPath: m_LocalPosition.x
       value: 388.18314
@@ -12629,11 +12634,6 @@ PrefabInstance:
     - target: {fileID: 4182451782877196, guid: b8574e5e747006c4da6403b011e45217, type: 3}
       propertyPath: m_RootOrder
       value: 28
-      objectReference: {fileID: 0}
-    - target: {fileID: 20506783978709604, guid: b8574e5e747006c4da6403b011e45217,
-        type: 3}
-      propertyPath: m_Depth
-      value: -10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b8574e5e747006c4da6403b011e45217, type: 3}
@@ -26177,6 +26177,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114788960244973512, guid: 9a7e586a3198bdd4289afc2855b52fbd,
+        type: 3}
+      propertyPath: m_Text
+      value: Find Troblob
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9a7e586a3198bdd4289afc2855b52fbd, type: 3}
